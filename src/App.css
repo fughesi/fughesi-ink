@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+:root {
+  /* COLOR */
+  --White: hsl(0, 0%, 100%);
+  --softRed: hsl(345, 95%, 55%);
+  --grayBlue: hsl(237, 18%, 20%);
+  --desatBlue: hsl(236, 21%, 26%);
+  --darkBlue: hsl(235, 16%, 14%);
+  --blueBlack: hsl(234, 17%, 12%);
+
+  /* WEIGHTS */
+  --reg: 400;
+  --bold: 700;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+
+  /* outline: 1px solid red; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+*::selection {
+  color: var(--White);
+  background: tomato;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  scroll-behavior: smooth;
+  font-family: "Red Hat Text", sans-serif;
+
+  background: var(--darkBlue) url("./images/bg-stars.svg") no-repeat;
+  object-fit: cover;
+}
+
+.appWrap {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+
+  animation: fadeIn 1500ms ease-in;
+  
+  display: grid;
+  grid-template: 250px minmax(100px, 1fr) minmax(100px, 1fr) / 10px calc(100vw - 20px) 10px;
+  grid-template-areas: 
+    ". a ."
+    ". b ."
+    "c c c";
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  100% {
+    opacity: 1;
   }
 }

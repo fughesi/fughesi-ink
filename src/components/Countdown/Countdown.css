@@ -1,0 +1,85 @@
+@import url("../../App.css");
+
+#countdownMain {
+  grid-area: b;
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  place-content: center;
+  place-items: center;
+}
+
+.timerTable {
+  display: flex;
+  place-content: center;
+  place-items: center;
+
+  width: 100%;
+  justify-content: center;
+}
+
+.timerTable div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timerTable p {
+  margin: 5em 0;
+  font-size: 0.625rem;
+  font-weight: var(--bold);
+  color: var(--grayBlue);
+  letter-spacing: 0.3em;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.BG,
+.BG::after {
+  height: 40px;
+  width: 80px;
+
+  border-radius: 7.5px;
+  background: rgb(174, 238, 212);
+  background: radial-gradient(
+    circle,
+    rgba(174, 238, 212, 0.5724973516949152) 0%,
+    rgba(148, 233, 192, 1) 100%
+  );
+}
+
+.BG {
+  position: relative;
+  margin: 0 0.75em;
+
+  display: flex;
+  place-content: center;
+
+  opacity: 0.8;
+  box-shadow: 0 2px 3px #0005;
+}
+
+.BG::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  z-index: 0;
+
+  opacity: 0.8;
+  box-shadow: 0 5px 1px #0006, inset 0 2px 0px hsla(237, 18%, 59%, 1);
+  mix-blend-mode: hue;
+}
+
+.time {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-12%);
+
+  font-size: 2.5em;
+  font-weight: var(--bold);
+  color: var(--softRed);
+  text-shadow: 0 0 1px #000;
+}
