@@ -1,15 +1,22 @@
-import React from "react";
-// import "./App.css";
-// import Header from "./components/Header/Header";
-// import Countdown from "./components/Countdown/Countdown";
-// import Socials from "./components/Socials/Socials";
-// import Product from "./components/Products/Product";
-import Products from "./components/Products/Products";
+import React, { useState } from "react";
+import "./App.css";
+import DarkMode from "./components/DarkMode/DarkMode";
+import Designs from "./components/Designs/Designs";
 
 function App() {
+  //state variables
+  const [darkmode, setDarkmode] = useState(true);
+
+  function setMode() {
+    setDarkmode((i) => !i);
+    console.log(darkmode)
+  }
+
   return (
     <main className="appWrap">
-      <Products />
+      <Designs />
+
+      <DarkMode handleClick={setMode} darkmode={darkmode} />
     </main>
   );
 }

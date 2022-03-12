@@ -1,39 +1,6 @@
-:root {
-  /* COLOR */
-  --White: hsl(0, 0%, 100%);
-  --softRed: hsl(345, 95%, 55%);
-  --grayBlue: hsl(237, 18%, 20%);
-  --desatBlue: hsl(236, 21%, 26%);
-  --darkBlue: hsl(235, 16%, 14%);
-  --blueBlack: hsl(234, 17%, 12%);
+@import url("./styles.css");
 
-  /* WEIGHTS */
-  --reg: 400;
-  --bold: 700;
-}
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-
-  /* outline: 1px solid red; */
-}
-
-*::selection {
-  color: var(--White);
-  background: tomato;
-}
-
-body {
-  margin: 0;
-  height: 100vh;
-  scroll-behavior: smooth;
-  font-family: "Red Hat Text", sans-serif;
-
-  background: var(--darkBlue) url("./images/bg-stars.svg") no-repeat;
-  object-fit: cover;
-}
 
 .appWrap {
   position: relative;
@@ -43,19 +10,11 @@ body {
 
   animation: fadeIn 1500ms ease-in;
   
-  display: grid;
+  /* display: grid;
   grid-template: 250px minmax(100px, 1fr) minmax(100px, 1fr) / 10px calc(100vw - 20px) 10px;
   grid-template-areas: 
     ". a ."
     ". b ."
-    "c c c";
+    "c c c"; */
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
