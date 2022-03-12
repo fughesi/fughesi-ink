@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import "./App.css";
+import Portfolio from "./components/Portfolio/Portfolio";
 import DarkMode from "./components/DarkMode/DarkMode";
+import Navbar from "./components/Navbar/Navbar";
+import TopContainer from "./components/TopContainer/TopContainer";
+import Cards from "./components/Cards/Cards";
+import Footer from "./components/Footer/Footer";
+import Info from "./components/Info/Info";
 import Designs from "./components/Designs/Designs";
 
 function App() {
@@ -9,13 +15,16 @@ function App() {
 
   function setMode() {
     setDarkmode((i) => !i);
-    console.log(darkmode)
   }
 
   return (
     <main className="appWrap">
-      <Designs />
-
+      <Navbar />
+      <TopContainer />
+      <Cards />
+      <Info />
+      <Portfolio />
+      <Footer />
       <DarkMode handleClick={setMode} darkmode={darkmode} />
     </main>
   );
