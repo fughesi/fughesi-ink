@@ -18,6 +18,7 @@ function App() {
 
   return (
     <main className="appWrap">
+      {/* <div className="comingSoon"><h1>COMING SOON...</h1></div> */}
       <Navbar />
       <TopContainer />
       <Cards />
