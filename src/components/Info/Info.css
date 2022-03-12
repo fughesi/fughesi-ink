@@ -1,1 +1,22 @@
 @import url("../../styles.css");
+
+.info {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+
+  padding: 3rem;
+  background: var(--primary);
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 700px) {
+  .info {
+    grid-template-columns: 1fr;
+  }
+  .info .btn {
+      display: block;
+      text-align: center;
+      margin: auto;
+  }
+}

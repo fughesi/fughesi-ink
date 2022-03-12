@@ -1,1 +1,8 @@
 @import url("../../styles.css");
+
+.footer {
+  margin-top: 2rem;
+  color: var(--dark);
+  text-align: left;
+  padding: 1rem;
+}

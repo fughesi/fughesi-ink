@@ -7,11 +7,10 @@ import TopContainer from "./components/TopContainer/TopContainer";
 import Cards from "./components/Cards/Cards";
 import Footer from "./components/Footer/Footer";
 import Info from "./components/Info/Info";
-import Designs from "./components/Designs/Designs";
 
 function App() {
   //state variables
-  const [darkmode, setDarkmode] = useState(true);
+  const [darkmode, setDarkmode] = useState(false);
 
   function setMode() {
     setDarkmode((i) => !i);

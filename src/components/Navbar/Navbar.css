@@ -1,1 +1,35 @@
 @import url("../../styles.css");
+
+.mainNav ul {
+  display: grid;
+  gap: 20px;
+  padding: 0;
+
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.mainNav a {
+  display: block;
+  padding: 0.8rem;
+
+  text-align: center;
+
+  color: var(--dark);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  background: var(--primary);
+  box-shadow: var(--shadow);
+
+  transition: 200ms ease-in-out;
+}
+
+.mainNav a:hover {
+  background: var(--dark);
+  color: var(--white);
+}
+
+@media (max-width: 700px) {
+  .mainNav ul {
+    grid-template-columns: 1fr;
+  }
+}

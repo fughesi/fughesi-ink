@@ -1,20 +1,32 @@
 @import url("./styles.css");
 
-
-
 .appWrap {
   position: relative;
-  /* overflow: hidden; */
+  padding: 1.5rem;
   height: 100vh;
   width: 100vw;
 
   animation: fadeIn 1500ms ease-in;
-  
-  /* display: grid;
-  grid-template: 250px minmax(100px, 1fr) minmax(100px, 1fr) / 10px calc(100vw - 20px) 10px;
-  grid-template-areas: 
-    ". a ."
-    ". b ."
-    "c c c"; */
+
+  display: grid;
+  gap: 20px;
 }
 
+.btn {
+  padding: 0.6rem 1.3rem;
+  border: 0;
+  border-radius: 4px;
+  text-align: center;
+  background: var(--dark);
+  color: var(--white);
+}
+
+img {
+  max-width: 100%;
+}
+
+@media (max-width: 500px) {
+  .appWrap {
+    padding: 0;
+  }
+}
