@@ -1,8 +1,12 @@
 import React, { useEffect } from "react";
 
-export default function About() {
+export default function Home() {
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
-  return <div>About</div>;
+  return (
+    <div>
+      LTHIS IS THE HOME PAGE
+    </div>
+  );
 }

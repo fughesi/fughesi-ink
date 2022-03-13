@@ -7,7 +7,8 @@ export default function Navbar() {
     <nav className="mainNav">
       <ul>
         <li>
-          <a href="#">Home</a>
+        <Link to="/">Home</Link> 
+          {/* <a href="#">Home</a> */}
         </li>
         <li>
         <Link to="/about">About</Link> 
