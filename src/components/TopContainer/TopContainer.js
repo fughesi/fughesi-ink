@@ -14,7 +14,7 @@ export default function TopContainer() {
           reprehenderit quaerat quae corporis quod. Repellendus velit veniam
           qui, illo est iusto nulla, consequatur perferendis deserunt, ad vitae.
         </p>
-        <a href="#" class="btn">
+        <a href="#" className="btn">
           Read More
         </a>
       </header>

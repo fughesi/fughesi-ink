@@ -1,15 +1,17 @@
-@import url("../../styles.css");
+@import url("../../App.css");
 
-.mainNav ul {
+ .mainNav ul {
   display: grid;
   gap: 20px;
   padding: 0;
 
   grid-template-columns: repeat(4, 1fr);
+  z-index: 200;
 }
 
-.mainNav a {
-  display: block;
+
+.mainNav li {
+display: block;
   padding: 0.8rem;
 
   text-align: center;
@@ -23,9 +25,12 @@
   transition: 200ms ease-in-out;
 }
 
+.mainNav li * {
+  color: var(--dark);
+}
+
 .mainNav a:hover {
-  background: var(--dark);
-  color: var(--white);
+
 }
 
 @media (max-width: 700px) {

@@ -8,17 +8,16 @@ export default function Navbar() {
       <ul>
         <li>
         <Link to="/">Home</Link> 
-          {/* <a href="#">Home</a> */}
         </li>
         <li>
         <Link to="/about">About</Link> 
-          {/* <a href={About}>About</a> */}
         </li>
         <li>
-          <a href="#">Services</a>
+          <Link to="/graphics">Graphics</Link>
+
         </li>
         <li>
-          <a href="#">Contact</a>
+          <Link to="/contact">Contact</Link>
         </li>
       </ul>
     </nav>

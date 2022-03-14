@@ -1,20 +1,70 @@
-@import url("./styles.css");
+:root {
+  /* COLOR */
+  --white: hsl(0, 0%, 100%);
+  --softRed: hsl(345, 95%, 55%);
+  --grayBlue: hsl(237, 18%, 20%);
+  --desatBlue: hsl(236, 21%, 26%);
+  --darkBlue: hsl(235, 16%, 14%);
+  --blueBlack: hsl(234, 17%, 12%);
+  --primary: #ddd;
+  --dark: #333;
 
-.darkModeOn  {
-color: white !important;
-background: #222 !important;
+  /* BOX SHADOW */
+  --shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+  /* WEIGHTS */
+  --reg: 400;
+  --bold: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  /* outline: 1px solid red; */
+}
+
+*::selection {
+  color: var(--White);
+  background: tomato;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  scroll-behavior: smooth;
+  font-family: "Red Hat Text", sans-serif;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.darkModeOn {
+  color: white !important;
+  background: #222 !important;
 }
 
 .appWrap {
-  position: relative ;
-  padding: 1.5rem ;
-  height: 100vh ;
-  width: 100vw ;
+  position: relative;
+  padding: 1.5rem;
+  height: 100vh;
+  width: 100vw;
 
-  animation: fadeIn 1500ms ease-in ; 
+  animation: fadeIn 1500ms ease-in;
 
-  display: grid ;
-  gap: 20px ;
+  display: grid;
+  gap: 20px;
 }
 
 .btn {
@@ -29,13 +79,6 @@ background: #222 !important;
 img {
   max-width: 100%;
 }
-
-@media (max-width: 500px) {
-  .appWrap {
-    padding: 0;
-  }
-}
-
 
 /*  under construction page */
 .comingSoon {
@@ -69,6 +112,8 @@ img {
     width: 450px;
   }
 }
+
+/* blinking carrot */
 @keyframes blink-caret {
   from,
   to {
@@ -76,5 +121,12 @@ img {
   }
   50% {
     border-color: orange;
+  }
+}
+
+/* media queries */
+@media (max-width: 500px) {
+  .appWrap {
+    padding: 0;
   }
 }

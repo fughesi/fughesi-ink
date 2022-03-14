@@ -1,8 +1,23 @@
-@import url("../../styles.css");
+@import url("../../App.css");
 
 .footer {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+
+.copyright {
   margin-top: 2rem;
   color: var(--dark);
   text-align: left;
   padding: 1rem;
+}
+
+.socials {
+  position: fixed;
+  height: 50px;
+  width: 250px;
+  inset: auto calc(50% - 100px) 0px auto;
+  background: var(--desatBlue);
+  border-radius: 50% 50% 0% 0% / 100% 100% 0% 0% 
 }

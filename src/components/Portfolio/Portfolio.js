@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Photos from "../../PhotoJSON";
 import "./Portfolio.css";
 
-export default function Portfolio() {
+export default function Portfolio({ top }) {
+  // map over the photoJSON file for all the graphics
   const photoArr = Photos.map((i) => {
     return (
       <div>
@@ -11,7 +12,11 @@ export default function Portfolio() {
       </div>
     );
   });
+console.log(top)
+  //make sure the page loads from the top
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, [top === true]);
 
-  console.log(photoArr);
   return <section className="portfolio">{photoArr}</section>;
 }

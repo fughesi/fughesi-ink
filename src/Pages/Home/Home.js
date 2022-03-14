@@ -1,4 +1,7 @@
 import React, { useEffect } from "react";
+import TopContainer from "../../components/TopContainer/TopContainer";
+import Cards from "../../components/Cards/Cards";
+import Info from "../../components/Info/Info";
 
 export default function Home() {
   useEffect(() => {
@@ -6,7 +9,9 @@ export default function Home() {
   }, []);
   return (
     <div>
-      LTHIS IS THE HOME PAGE
+      <TopContainer />
+      <Cards />
+      <Info />
     </div>
   );
 }

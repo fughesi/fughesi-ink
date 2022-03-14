@@ -1,15 +1,15 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Route, Routes, Outlet } from "react-router-dom";
-import Portfolio from "./components/Portfolio/Portfolio";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import DarkMode from "./components/DarkMode/DarkMode";
 import Navbar from "./components/Navbar/Navbar";
-import TopContainer from "./components/TopContainer/TopContainer";
-import Cards from "./components/Cards/Cards";
+import Graphics from "./Pages/Graphics/Graphics";
 import Footer from "./components/Footer/Footer";
-import Info from "./components/Info/Info";
+import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
-import Home from "./Pages/Home/Home"
+import Contact from "./Pages/Contact/Contact";
+import NotFound from "./Pages/NotFound/NotFound";
+import BackToTop from "./components/BackToTop/BackToTop";
 
 function App() {
   //state variables
@@ -27,29 +27,18 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Routes>
-      <Route path="/" element={<Home />} exact/>
-        <Route path="/about" element={<About />} exact/>
-          <Route
-            path="*"
-            element={
-              <main style={{ padding: "1rem" }}>
-                <h1>There's nothing here!</h1>
-              </main>
-            }
-          />
-        {/* </Route> */}
-      </Routes>
       <main className={darkmode ? "appWrap darkModeOn" : "appWrap"}>
-        {/* <div className="comingSoon"><h1>COMING SOON...</h1></div> */}
         <Navbar />
-        <TopContainer />
-        <Cards />
-        <Info />
-        <Portfolio />
-        <Footer />
-        <DarkMode handleClick={setMode} darkmode={darkmode} />
+        <Routes>
+          <Route path="/" element={<Home />} exact />
+          <Route path="/About" element={<About />} exact />
+          <Route path="/contact" element={<Contact />} exact />
+          <Route path="/graphics" element={<Graphics />} exact />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </main>
+      {/* <Footer /> */}
+      <DarkMode handleClick={setMode} darkmode={darkmode} />
     </BrowserRouter>
   );
 }
