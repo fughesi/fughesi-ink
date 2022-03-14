@@ -3,8 +3,8 @@ import "./DarkMode.css";
 
 export default function DarkMode({ darkmode, handleClick }) {
   return (
-    <section className="stickyPosition">
-      <main className="darkModeContainer">
+    <div className="stickyPosition">
+      <div className="darkModeContainer">
         <p className={darkmode ? "Dtext" : "Ltext"}>
           {darkmode ? "Dark Mode" : "Light Mode"}
         </p>
@@ -13,7 +13,7 @@ export default function DarkMode({ darkmode, handleClick }) {
           <i className="fas fa-sun"></i>
           <div className={`ball ${darkmode ? "on" : "off"}`}></div>
         </div>
-      </main>
-    </section>
+      </div>
+    </div>
   );
 }

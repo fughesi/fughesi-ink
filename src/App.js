@@ -9,7 +9,6 @@ import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/Contact";
 import NotFound from "./Pages/NotFound/NotFound";
-import BackToTop from "./components/BackToTop/BackToTop";
 
 function App() {
   //state variables
