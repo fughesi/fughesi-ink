@@ -1,6 +1,7 @@
 :root {
   /* COLOR */
   --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
   --softRed: hsl(345, 95%, 55%);
   --grayBlue: hsl(237, 18%, 20%);
   --desatBlue: hsl(236, 21%, 26%);

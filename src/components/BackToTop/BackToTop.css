@@ -2,34 +2,40 @@
 
 .UpArrow {
   position: fixed;
-  inset: auto 0 0 0;
+  inset: auto auto 0 auto;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  
+
 }
 
-.UpArrow:hover,
-.UpArrow:focus {
-  animation: floating cubic-bezier(0.25, 1.7, 0.35, 0.8) 750ms infinite;
-}
-
-.arrow-icon {
+.arrowIcon {
   height: 2.8em;
-  width: 2.8em;
+
   display: block;
   padding: 0.5em;
-  margin: 1em auto;
+
   position: relative;
   cursor: pointer;
   border-radius: 4px;
 }
 
+.arrowIcon:hover {
+  animation: floating ease-in-out 1750ms infinite;
+}
+
 .leftBar {
-  position: absolute;
+  /* position: absolute; */
   background-color: transparent;
   top: 0;
   left: 0;
   width: 40px;
   height: 10px;
   display: block;
-  transform: rotate(-35deg);
+  transform: rotate(35deg);
   float: right;
   border-radius: 2px;
 }
@@ -46,14 +52,14 @@
 }
 
 .rightBar {
-  position: absolute;
+  /* position: absolute; */
   background-color: transparent;
   top: 0px;
   left: 26px;
   width: 40px;
   height: 10px;
   display: block;
-  transform: rotate(35deg);
+  transform: rotate(-35deg);
   float: right;
   border-radius: 2px;
 }
@@ -70,11 +76,11 @@
   z-index: -1;
 }
 
-/* .open {
-  transform-origin: center center;
-  transform: rotate(-70deg);
-  transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 0.8);
-} */
+.tops {
+  margin-top: 0;
+  color: var(--black);
+  text-align: center;
+}
 
 @keyframes floating {
   0%,
@@ -85,17 +91,3 @@
     transform: translateY(20%);
   }
 }
-/* transform-origin: center center;
-transform: rotate(70deg); */
-
-/* .open {
-    .leftBar::after {
-    transform-origin: center center;
-    transform: rotate(-70deg);
-  }
-  .rightBar:after {
-    transform-origin: center center;
-    transform: rotate(70deg);
-  }
-
-} */

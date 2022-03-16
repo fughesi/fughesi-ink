@@ -6,8 +6,7 @@ export default function Graphics() {
   // state variables
   const [top, setTop] = useState(true);
   const [bottom, setBottom] = useState(!top);
-
-  let height = document.body.offsetHeight;
+  const [scrollHeight, setScrollHeight] = useState(window.scrollY);
 
   //back to the top of the page when clicked
   function pageup() {
@@ -21,19 +20,27 @@ export default function Graphics() {
   }
 
   // find scroll position
-  window.addEventListener("scroll", (event) => {
-    let scroll = window.scrollY;
-  });
-  console.log(scroll);
+  useEffect(() => {
+    function watchHeight(event) {
+      setScrollHeight(window.scrollY);
+    }
+
+    window.addEventListener("scroll", watchHeight);
+
+    return () => {
+      window.removeEventListener("scroll");
+    };
+  }, []);
 
   return (
     <div>
       <Portfolio top={top} bottom={bottom} />
-      {height === 2000 && (
+      {scrollHeight > 2500 && (
         <BackToTop
           handleClick={(() => pageup, scroll)}
           top={top}
           bottom={bottom}
+          className="backToTop"
         />
       )}
     </div>
