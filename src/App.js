@@ -1,14 +1,18 @@
 import "./App.css";
-import React, { useState, useEffect } from "react";
+import React, { useState, lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Loading from "../src/components/Loading/Loading";
 import DarkMode from "./components/DarkMode/DarkMode";
 import Navbar from "./components/Navbar/Navbar";
-import Graphics from "./Pages/Graphics/Graphics";
 import Footer from "./components/Footer/Footer";
-import Home from "./Pages/Home/Home";
-import About from "./Pages/About/About";
-import Contact from "./Pages/Contact/Contact";
-import NotFound from "./Pages/NotFound/NotFound";
+const Graphics = lazy(() => import("./Pages/Graphics/Graphics"));
+const Home = lazy(() => import("./Pages/Home/Home"));
+const About = lazy(() => import("./Pages/About/About"));
+const Contact = lazy(() => import("./Pages/Contact/Contact"));
+const NotFound = lazy(() => import("./Pages/NotFound/NotFound"));
+// import About from "./Pages/About/About";
+// import Contact from "./Pages/Contact/Contact";
+// import NotFound from "./Pages/NotFound/NotFound";
 
 function App() {
   //state variables
@@ -24,6 +28,7 @@ function App() {
       <div className="appWrap">
         <Navbar />
         <main className={darkmode ? "appWrap darkModeOn" : "appWrap"}>
+            <Suspense fallback={<Loading />} >
           <Routes>
             <Route path="/" element={<Home />} exact />
             <Route path="/About" element={<About />} exact />
@@ -31,6 +36,7 @@ function App() {
             <Route path="/graphics" element={<Graphics />} exact />
             <Route path="*" element={<NotFound />} />
           </Routes>
+            </Suspense>
         </main>
         {/* <Footer /> */}
         <DarkMode handleClick={setMode} darkmode={darkmode} />

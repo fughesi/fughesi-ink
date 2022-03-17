@@ -1,0 +1,13 @@
+.load {
+  position: fixed;
+  inset: 0 0 0 0;
+
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.load h1 {
+  text-align: center;
+  color: tomato;
+}
