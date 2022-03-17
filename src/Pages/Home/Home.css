@@ -1,1 +1,109 @@
-@import url("../../../App.css");
+@import url("../../App.css");
+
+.homeMain {
+  background: url("../../images//portraits/ready.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.showcase {
+  /* box-shadow: var(--shadow); */
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  grid-area: showcase;
+  padding: 3rem;
+  min-height: 400px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.recolorBG {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0.55;
+  background: black;
+  mix-blend-mode: multiply;
+}
+
+.welcome {
+  margin-left: -15px;
+  margin-bottom: -10px;
+}
+
+.dot {
+  display: inline-block;
+  font-size: 0.25em;
+  text-decoration-line: overline;
+  /* transform:  rotate(90deg); */
+}
+
+.fughesi {
+  position: sticky;
+  top: 2rem;
+
+  margin-top: 0;
+  font-size: 3.8rem;
+  margin-bottom: 0%;
+  color: var(--white);
+
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
+}
+
+.multiply {
+  height: 600px;
+  background: #0008;
+  mix-blend-mode: multiply;
+}
+
+.showcase p {
+  font-size: 1.3rem;
+  color: var(--white);
+}
+.topContainer {
+  display: grid;
+  gap: 20px;
+
+  grid-template-areas:
+    "showcase showcase topboxA"
+    "showcase showcase topboxB";
+}
+
+.price {
+  font-size: 2.5rem;
+}
+
+/************
+MEDIA QUERIES  
+*************/
+
+@media (max-width: 700px) {
+  .topContainer {
+    grid-template-areas:
+      "showcase showcase"
+      "topboxA topboxB";
+  }
+  .h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .topContainer {
+    grid-template-areas:
+      "showcase"
+      "topboxA"
+      "topboxB";
+  }
+  .h1 {
+    font-size: 2.5rem;
+  }
+}

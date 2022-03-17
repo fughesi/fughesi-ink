@@ -19,15 +19,10 @@ function App() {
     setDarkmode((i) => !i);
   }
 
-  //make sure the page loads from the top
-  useEffect(() => {
-    window.scroll(0, 0);
-  }, []);
-
   return (
     <BrowserRouter>
+      <Navbar />
       <main className={darkmode ? "appWrap darkModeOn" : "appWrap"}>
-        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} exact />
           <Route path="/About" element={<About />} exact />

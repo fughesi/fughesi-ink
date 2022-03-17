@@ -7,8 +7,10 @@
 }
 
 .box {
-    background: var(--primary);
-    text-align: center;
-    padding: 1.5rem 2rem;
-    box-shadow: var(--shadow);
+  background: url("../../images/Icons/Dots.svg") repeat;
+  object-fit: fill;
+
+  text-align: center;
+  padding: 1.5rem 2rem;
+  box-shadow: var(--shadow);
 }
