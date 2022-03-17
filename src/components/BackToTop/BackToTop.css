@@ -4,90 +4,34 @@
   position: fixed;
   inset: auto auto 0 auto;
   width: 100vw;
+
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center; 
-  
-
+  align-items: center;
 }
 
-.arrowIcon {
-  height: 2.8em;
+.backToTop {
+  margin-bottom: 0.75rem;
+  background: var(--black);
+  padding: 1.5rem 3rem;
 
-  display: block;
-  padding: 0.5em;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px var(--white);
 
-  position: relative;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-.arrowIcon:hover {
-  animation: floating ease-in-out 1750ms infinite;
-}
-
-.leftBar {
-  /* position: absolute; */
-  background-color: transparent;
-  top: 0;
-  left: 0;
-  width: 40px;
-  height: 10px;
-  display: block;
-  transform: rotate(35deg);
-  float: right;
-  border-radius: 2px;
-}
-.leftBar::after {
-  content: "";
-  background-color: white;
-  width: 40px;
-  height: 10px;
-  display: block;
-  float: right;
-  border-radius: 6px 10px 10px 6px;
-  transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 0.8);
-  z-index: -1;
-}
-
-.rightBar {
-  /* position: absolute; */
-  background-color: transparent;
-  top: 0px;
-  left: 26px;
-  width: 40px;
-  height: 10px;
-  display: block;
-  transform: rotate(-35deg);
-  float: right;
-  border-radius: 2px;
-}
-
-.rightBar::after {
-  content: "";
-  background-color: white;
-  width: 40px;
-  height: 10px;
-  display: block;
-  float: right;
-  border-radius: 10px 6px 6px 10px;
-  transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 0.8);
-  z-index: -1;
-}
-
-.tops {
-  margin-top: 0;
-  color: var(--black);
+  color: var(--white);
   text-align: center;
+  font-size: 0.75rem;
+
+  animation: fade 1500ms ease-in-out once center;
+  cursor: pointer;
+  user-select: none;
 }
 
-@keyframes floating {
-  0%,
-  100% {
-    transform: translateY(0);
+@keyframes fade {
+  0% {
+    opacity: 0;
   }
-  50% {
-    transform: translateY(20%);
+  100% {
+    opacity: 1;
   }
 }

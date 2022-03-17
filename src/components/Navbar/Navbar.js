@@ -11,10 +11,14 @@ export default function Navbar() {
     <nav className="mainNav">
       <ul>
         <li>
-          <Link to="/"><Home width={100} height={55}/></Link>
+          <Link to="/">
+            <Home width={100} height={55} />
+          </Link>
         </li>
         <li>
-          <Link to="/about"><About width={100} height={55} /></Link>
+          <Link to="/about">
+            <About width={100} height={55} />
+          </Link>
         </li>
         <li>
           <Link to="/graphics">

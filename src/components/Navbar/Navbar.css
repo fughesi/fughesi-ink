@@ -1,17 +1,16 @@
 @import url("../../App.css");
 
-.mainNav {
-  position: fixed;
-  inset: 0 0 auto auto;
-}
 
 .mainNav ul {
+  inset: 0 0 auto auto;
+  position: fixed;
   display: grid;
   gap: 20px;
   padding: 0;
 
   grid-template-columns: repeat(4, 1fr);
-  z-index: 200;
+  z-index: 2;
+  margin-bottom: 80px;
 }
 
 .mainNav li {

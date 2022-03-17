@@ -6,8 +6,9 @@
   background-attachment: fixed;
 }
 
-.showcase {
-  /* box-shadow: var(--shadow); */
+.fughesi {
+  position: sticky;
+  top: 1rem;
 }
 
 .hero {
@@ -28,26 +29,37 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  opacity: 0.55;
-  background: black;
-  mix-blend-mode: multiply;
+  opacity: 0.33;
+  /* background: black; */
+  /* background-image: radial-gradient(white, black); */
+  mix-blend-mode: overlay;
 }
 
 .welcome {
+  position: relative;
   margin-left: -15px;
   margin-bottom: -10px;
+}
+
+.welcome::after {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background: red;
 }
 
 .dot {
   display: inline-block;
   font-size: 0.25em;
-  text-decoration-line: overline;
-  /* transform:  rotate(90deg); */
+  transform: rotate(33deg);
 }
 
 .fughesi {
-  position: sticky;
-  top: 2rem;
+  /* position: sticky;
+  top: 2rem; */
 
   margin-top: 0;
   font-size: 3.8rem;
@@ -60,6 +72,10 @@
 
 .multiply {
   height: 600px;
+
+  background: url("../../images/Icons/Dots.svg") no-repeat;
+  object-fit: cover;
+
   background: #0008;
   mix-blend-mode: multiply;
 }

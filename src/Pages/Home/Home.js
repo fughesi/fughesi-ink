@@ -27,12 +27,13 @@ export default function Home() {
     <main className="homeMain">
       {/* <div className="recolorBG"></div> */}
       <section className="hero" aria-labelledby="primary landing page">
-        <p className="welcome">Welcome to</p>
-
-        <h1
-          className="fughesi"
-          style={{ transform: `translateY(${offsetY * 0.25}px)` }}
+        <p
+          className="welcome"
+          style={{ transform: `translateY(${offsetY * 0.8}px)` }}
         >
+          Welcome to
+        </p>
+        <h1 className="fughesi">
           FUGHESI <span className="dot">dot</span> ink
         </h1>
 
@@ -45,14 +46,14 @@ export default function Home() {
         </a>
       </section>
 
-      <div className="topbox topboxA multiply">
+      <div className="multiply">
         <h4>Membership</h4>
         <p className="price">$199/mo</p>
         <a href="#" className="btn">
           Buy Now
         </a>
       </div>
-      <div className="topbox topboxB multiply">
+      <div className="multiply">
         <h4>Pro Membership</h4>
         <p className="price">$299/mo</p>
         <a href="#" className="btn">
@@ -62,8 +63,12 @@ export default function Home() {
 
       <Cards />
       <Info />
-      <IG width={150} />
-      <FB width={150} />
+      <a href="https://www.instagram.com/fughesi/" target="_blank">
+        <IG width={150} />
+      </a>
+      <a href="https://www.facebook.com/fughesiInk" target="_blank">
+        <FB width={150} />
+      </a>
     </main>
   );
 }

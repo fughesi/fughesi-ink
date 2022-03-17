@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./Graphics.css";
 import Portfolio from "../../components/Portfolio/Portfolio";
 import BackToTop from "../../components/BackToTop/BackToTop";
 
@@ -20,29 +21,28 @@ export default function Graphics() {
   }
 
   // find scroll position
+  const watchHeight = (event) => {
+    setScrollHeight(window.scrollY);
+  };
   useEffect(() => {
-    function watchHeight(event) {
-      setScrollHeight(window.scrollY);
-    }
-
     window.addEventListener("scroll", watchHeight);
-
     return () => {
       window.removeEventListener("scroll");
     };
   }, []);
 
   return (
-    <div>
+    <main className="graphicsMain">
+      <div className="topPlaceholder">FUGHESI  Ink</div>
       <Portfolio top={top} bottom={bottom} />
       {scrollHeight > 2500 && (
         <BackToTop
           handleClick={(() => pageup, scroll)}
           top={top}
           bottom={bottom}
-          className="backToTop"
+          // className="backToTop"
         />
       )}
-    </div>
+    </main>
   );
 }

@@ -4,6 +4,24 @@
   animation: fadeIn ease-in-out 750ms once;
 }
 
+.graphicsMain {
+  position: relative;
+}
+
+.topPlaceholder {
+  position: sticky;
+  top: 0;
+
+  padding: 1.5em;
+  background: var(--white);
+  height: 150px;
+  box-shadow: 0 0 10px var(--black);
+
+  font-size: 2em;
+
+  z-index: 0;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;

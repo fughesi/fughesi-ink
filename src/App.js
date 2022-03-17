@@ -21,18 +21,20 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Navbar />
-      <main className={darkmode ? "appWrap darkModeOn" : "appWrap"}>
-        <Routes>
-          <Route path="/" element={<Home />} exact />
-          <Route path="/About" element={<About />} exact />
-          <Route path="/contact" element={<Contact />} exact />
-          <Route path="/graphics" element={<Graphics />} exact />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </main>
-      {/* <Footer /> */}
-      <DarkMode handleClick={setMode} darkmode={darkmode} />
+      <div className="appWrap">
+        <Navbar />
+        <main className={darkmode ? "appWrap darkModeOn" : "appWrap"}>
+          <Routes>
+            <Route path="/" element={<Home />} exact />
+            <Route path="/About" element={<About />} exact />
+            <Route path="/contact" element={<Contact />} exact />
+            <Route path="/graphics" element={<Graphics />} exact />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
+        {/* <Footer /> */}
+        <DarkMode handleClick={setMode} darkmode={darkmode} />
+      </div>
     </BrowserRouter>
   );
 }
