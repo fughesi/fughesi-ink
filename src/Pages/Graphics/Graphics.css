@@ -1,9 +1,5 @@
 @import url(../../App.css);
 
-.backToTop {
-  animation: fadeIn ease-in-out 750ms once;
-}
-
 .graphicsMain {
   position: relative;
 }

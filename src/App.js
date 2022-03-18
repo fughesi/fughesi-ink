@@ -21,8 +21,8 @@ function App() {
 
   return (
     <BrowserRouter>
+    {/* <Navbar /> */}
       <div className="appWrap">
-        <Navbar />
         <main className={darkmode ? "appWrap darkModeOn" : "appWrap"}>
           <Routes>
             <Route path="/" element={<Home />} exact />
@@ -32,7 +32,6 @@ function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
-        {/* <Footer /> */}
         <DarkMode handleClick={setMode} darkmode={darkmode} />
       </div>
     </BrowserRouter>

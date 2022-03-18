@@ -6,7 +6,7 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-.box {
+.card {
   background: url("../../images/Icons/Dots.svg") repeat;
   object-fit: fill;
 

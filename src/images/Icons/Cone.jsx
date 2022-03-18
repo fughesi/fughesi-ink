@@ -4,7 +4,6 @@ export default function Cone(props) {
   return (
     <svg
       id="Layer_1"
-      data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 150 147.61"
       fill="none"

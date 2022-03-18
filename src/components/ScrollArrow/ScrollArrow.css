@@ -1,0 +1,54 @@
+@import url("../../App.css");
+
+.box {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.box span {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: -10px;
+
+  animation: pulse 2s ease-in infinite;
+}
+
+.box span:nth-child(1) {
+  animation-delay: -0.75s;
+  border-bottom: 1.25px solid red;
+  border-right: 1.25px solid red;
+
+  transform: rotate(45deg);
+}
+
+.box span:nth-child(2) {
+  border-bottom: 2.25px solid red;
+  border-right: 2.25px solid red;
+
+  transform: rotate(45deg);
+  animation-delay: -0.375s;
+}
+
+.box span:nth-child(3) {
+  border-bottom: 3px solid red;
+  border-right: 3px solid red;
+
+  transform: rotate(45deg);
+  animation-delay: -0.08s;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}

@@ -41,15 +41,6 @@ body {
   font-family: "Red Hat Text", sans-serif;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .darkModeOn {
   color: white !important;
   background: #222 !important;
@@ -72,3 +63,5 @@ body {
 img {
   max-width: 100%;
 }
+
+

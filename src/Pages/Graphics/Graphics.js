@@ -27,20 +27,19 @@ export default function Graphics() {
   useEffect(() => {
     window.addEventListener("scroll", watchHeight);
     return () => {
-      window.removeEventListener("scroll");
+      window.removeEventListener("scroll", watchHeight);
     };
   }, []);
 
   return (
     <main className="graphicsMain">
-      <div className="topPlaceholder">FUGHESI  Ink</div>
+      <div className="topPlaceholder">FUGHESI Ink</div>
       <Portfolio top={top} bottom={bottom} />
       {scrollHeight > 2500 && (
         <BackToTop
           handleClick={(() => pageup, scroll)}
           top={top}
           bottom={bottom}
-          // className="backToTop"
         />
       )}
     </main>

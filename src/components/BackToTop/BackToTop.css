@@ -8,6 +8,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: fade ;
+  transition: 1500ms once center ease-in-out;
 }
 
 .backToTop {
@@ -22,7 +24,6 @@
   text-align: center;
   font-size: 0.75rem;
 
-  animation: fade 1500ms ease-in-out once center;
   cursor: pointer;
   user-select: none;
 }

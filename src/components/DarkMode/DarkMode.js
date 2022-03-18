@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Moon from "../../images/Icons/Moon"
+import Sun from "../../images/Icons/Sun"
 import "./DarkMode.css";
 
 export default function DarkMode({ darkmode, handleClick }) {
@@ -9,8 +11,8 @@ export default function DarkMode({ darkmode, handleClick }) {
           {darkmode ? "Dark Mode" : "Light Mode"}
         </p>
         <div onClick={handleClick} className={darkmode ? "dark" : "light"}>
-          <i className="fas fa-moon"></i>
-          <i className="fas fa-sun"></i>
+          <Moon width={15} fill={"#f7c800"}/>
+          <Sun width={18} fill={"#fff802"} />
           <div className={`ball ${darkmode ? "on" : "off"}`}></div>
         </div>
       </div>

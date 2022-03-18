@@ -4,7 +4,6 @@ export default function IG(props) {
   return (
     <svg
       id="Layer_1"
-      dataName="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 271.01 247.03"
       {...props}

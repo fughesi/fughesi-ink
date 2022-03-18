@@ -6,17 +6,12 @@
   background-attachment: fixed;
 }
 
-.fughesi {
-  position: sticky;
-  top: 1rem;
-}
-
 .hero {
   position: relative;
   height: 100vh;
   width: 100vw;
   grid-area: showcase;
-  padding: 3rem;
+  padding: 3rem 3rem 0 3rem;
   min-height: 400px;
 
   display: flex;
@@ -38,7 +33,6 @@
 .welcome {
   position: relative;
   margin-left: -15px;
-  margin-bottom: -10px;
 }
 
 .welcome::after {
@@ -58,43 +52,80 @@
 }
 
 .fughesi {
-  /* position: sticky;
-  top: 2rem; */
-
+  position: sticky;
+  top: 1rem;
   margin-top: 0;
   font-size: 3.8rem;
-  margin-bottom: 0%;
-  color: var(--white);
+  margin-bottom: 0;
 
+  color: var(--white);
   text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
     -1px -1px 0 #000;
 }
 
-.multiply {
-  height: 600px;
+.arrowBoard {
+  transform: translateY(75%);
+}
+
+.description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
 
   background: url("../../images/Icons/Dots.svg") no-repeat;
   object-fit: cover;
 
   background: #0008;
-  mix-blend-mode: multiply;
+  /* mix-blend-mode: multiply; */
 }
 
-.showcase p {
-  font-size: 1.3rem;
+.description h3 {
+  margin: auto;
+  font-size: 4rem;
   color: var(--white);
 }
-.topContainer {
-  display: grid;
-  gap: 20px;
 
-  grid-template-areas:
-    "showcase showcase topboxA"
-    "showcase showcase topboxB";
+.info {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+
+  padding: 3rem;
+
+  background: #2c3e50; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #3498db,
+    #2c3e50
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #3498db,
+    #2c3e50
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  box-shadow: var(--shadow);
 }
 
-.price {
-  font-size: 2.5rem;
+.infoRight {
+  display: flex;
+  justify-content: space-around;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.none {
+  display: none;
+}
+
+.absolute {
+  position: absolute;
+  top: 1rem;
+
+  z-index: 2;
 }
 
 /************
@@ -121,5 +152,16 @@ MEDIA QUERIES
   }
   .h1 {
     font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .info {
+    grid-template-columns: 1fr;
+  }
+  .info .btn {
+    display: block;
+    text-align: center;
+    margin: auto;
   }
 }

@@ -9,28 +9,30 @@ import "./Navbar.css";
 export default function Navbar() {
   return (
     <nav className="mainNav">
-      <ul>
-        <li>
-          <Link to="/">
-            <Home width={100} height={55} />
-          </Link>
-        </li>
-        <li>
-          <Link to="/about">
-            <About width={100} height={55} />
-          </Link>
-        </li>
-        <li>
-          <Link to="/graphics">
-            <Graphics width={100} height={55} />
-          </Link>
-        </li>
-        <li>
-          <Link to="/contact">
-            <Contact width={100} height={55} />
-          </Link>
-        </li>
-      </ul>
+      <section aria-describedby="nav links" className="NavBG">
+        <ul>
+          <li>
+            <Link to="/">
+              <Home width={100} height={55} />
+            </Link>
+          </li>
+          <li>
+            <Link to="/about">
+              <About width={100} height={55} />
+            </Link>
+          </li>
+          <li>
+            <Link to="/graphics">
+              <Graphics width={100} height={55} />
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact">
+              <Contact width={100} height={55} />
+            </Link>
+          </li>
+        </ul>
+      </section>
     </nav>
   );
 }
