@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function Contact(props) {
+  // font family: Amatic SC
   return (
     <svg
       id="Layer_1"
