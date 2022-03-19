@@ -11,7 +11,6 @@ const About = lazy(() => import("./Pages/About/About"));
 const Contact = lazy(() => import("./Pages/Contact/Contact"));
 const NotFound = lazy(() => import("./Pages/NotFound/NotFound"));
 
-
 function App() {
   //state variables
   const [darkmode, setDarkmode] = useState(false);
@@ -23,10 +22,9 @@ function App() {
 
   return (
     <BrowserRouter>
-    <Navbar />
-      <div className="appWrap">
-        <main className={darkmode ? "appWrap darkModeOn" : "appWrap"}>
-            <Suspense fallback={<Loading />} >
+      <Navbar />
+      <main className={darkmode ? "appWrap darkModeOn" : "appWrap"}>
+        <Suspense fallback={<Loading />}>
           <Routes>
             <Route path="/" element={<Home />} exact />
             <Route path="/About" element={<About />} exact />
@@ -34,10 +32,9 @@ function App() {
             <Route path="/graphics" element={<Graphics />} exact />
             <Route path="*" element={<NotFound />} />
           </Routes>
-            </Suspense>
-        </main>
-        <DarkMode handleClick={setMode} darkmode={darkmode} />
-      </div>
+        </Suspense>
+      </main>
+      <DarkMode handleClick={setMode} darkmode={darkmode} />
     </BrowserRouter>
   );
 }

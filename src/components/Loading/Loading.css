@@ -5,10 +5,44 @@
   display: grid;
   place-items: center;
   height: 100vh;
+
+  animation: load 2s ease-in; 
 }
 
 .load h1 {
-  text-align: center;
-  font-size: 5rem;
+  letter-spacing: 0.8rem;
+  font-size: minmax(2rem, 5rem);
   color: tomato;
+}
+
+.elipse span {
+  padding: 0 5px;
+  animation: twinkle 1.5s ease infinite;
+}
+
+.elipse span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.elipse span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes load {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 1;
+  }
 }

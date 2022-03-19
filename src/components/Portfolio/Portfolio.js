@@ -1,13 +1,24 @@
 import React, { useState, useEffect } from "react";
+import {
+  LazyLoadImage,
+  trackWindowScroll,
+} from "react-lazy-load-image-component";
 import Photos from "../../PhotoJSON";
 import "./Portfolio.css";
 
-export default function Portfolio() {
+function Portfolio() {
   // map over the photoJSON file for all the graphics
   const photoArr = Photos.map((i) => {
     return (
       <div>
-        <img key={i.id} src={i.src} alt={i.alt}></img>
+        <LazyLoadImage
+          effect="blur"
+          key={i.id}
+          id={i.id}
+          src={i.src}
+          alt={i.alt}
+          // scrollPosition={scrollPosition}
+        />
         <p>{i.name}</p>
       </div>
     );
@@ -24,3 +35,5 @@ export default function Portfolio() {
     </section>
   );
 }
+
+export default trackWindowScroll(Portfolio);
