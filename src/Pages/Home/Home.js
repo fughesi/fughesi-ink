@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import ScrollArrow from "../../components/ScrollArrow/ScrollArrow";
 import Footer from "../../components/Footer/Footer";
-import Navbar from "../../components/Navbar/Navbar";
 import Cards from "../../components/Cards/Cards";
 import IG from "../../images/Icons/IG";
 import FB from "../../images/Icons/FB";
 import "./Home.css";
 
 export default function Home() {
+
   // state variables
   const [offsetY, setOffsetY] = useState(0);
   const [arrowsGone, setArrowsGone] = useState(0);
@@ -39,12 +39,11 @@ export default function Home() {
   console.log(arrowsGone);
   return (
     <>
-      <Navbar />
       <main className="homeMain">
         <section className="hero" aria-labelledby="hero section">
           <p
-            className={arrowsGone < 600 ? "welcome" : "none"}
-            style={{ transform: `translateY(${offsetY * 2}px)` }}
+            className={arrowsGone < 1 ? "welcome" : "none"}
+            // style={{ transform: `translateY(${offsetY * 2}px)` }}
           >
             Welcome to
           </p>

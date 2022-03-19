@@ -19,16 +19,54 @@ export default function Form() {
       [name]: value,
     }));
   }
-  console.log(formData)
+  console.log(formData);
+
   return (
-    <div className="formContainer">
-      <form className="form">
-        <input name="firstName" type="text" onChange={addText} value={formData.firstName}></input>
-        <input name="lastName" type="text" onChange={addText} value={formData.lastName}></input>
-        <input name="phone" type="text" onChange={addText} value={formData.phone}></input>
-        <input name="email" type="text" onChange={addText} value={formData.email}></input>
-        <input name="comment" type="text" onChange={addText} value={formData.comment}></input>
-      </form>
-    </div>
+    <>
+      <div className="formContainer">
+        <form className="form" id="form">
+          <input
+            name="firstName"
+            type="text"
+            onChange={addText}
+            className="firstname"
+            value={formData.firstName}
+            placeholder="First Name"
+          ></input>
+          <input
+            name="lastName"
+            type="text"
+            onChange={addText}
+            className="lastname"
+            value={formData.lastName}
+            placeholder="Last Name"
+          ></input>
+          <input
+            name="phone"
+            type="text"
+            onChange={addText}
+            className="phone"
+            value={formData.phone}
+            placeholder="Phone Number"
+          ></input>
+          <input
+            name="email"
+            type="text"
+            onChange={addText}
+            className="email"
+            value={formData.email}
+            placeholder="Email"
+          ></input>
+          <textarea
+            name="comment"
+            type="textarea"
+            onChange={addText}
+            className="comment"
+            value={formData.comment}
+            placeholder="Comment"
+          ></textarea>
+        </form>
+      </div>
+    </>
   );
 }

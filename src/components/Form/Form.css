@@ -1,1 +1,26 @@
 @import url("../../App.css");
+
+.formContainer {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.form {
+  height: 400px;
+  display: grid;
+  gap: 10px;
+  grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+  place-items: center;
+}
+
+.form * {
+  height: 25px;
+  width: 100%;
+}
+
+.comment {
+  height: 175px;
+  width: 500px;
+  grid-column: 1 / span 2;
+}

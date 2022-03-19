@@ -10,9 +10,7 @@ const Home = lazy(() => import("./Pages/Home/Home"));
 const About = lazy(() => import("./Pages/About/About"));
 const Contact = lazy(() => import("./Pages/Contact/Contact"));
 const NotFound = lazy(() => import("./Pages/NotFound/NotFound"));
-// import About from "./Pages/About/About";
-// import Contact from "./Pages/Contact/Contact";
-// import NotFound from "./Pages/NotFound/NotFound";
+
 
 function App() {
   //state variables
@@ -25,7 +23,7 @@ function App() {
 
   return (
     <BrowserRouter>
-    {/* <Navbar /> */}
+    <Navbar />
       <div className="appWrap">
         <main className={darkmode ? "appWrap darkModeOn" : "appWrap"}>
             <Suspense fallback={<Loading />} >
