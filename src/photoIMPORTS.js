@@ -1,4 +1,7 @@
 const IMG = {
+
+//charicatureGraphics
+
   AstronautIceCream: require("./images/charicatureGraphics/Astronaut Ice Cream.png"),
   BarberSkater: require("./images/charicatureGraphics/Barber Skater.png"),
   BasketBallBombers: require("./images/charicatureGraphics/Basketball Bombers.png"),
@@ -99,6 +102,46 @@ const IMG = {
   WarTank: require("./images/charicatureGraphics/War Tank.png"),
   YourTimeWillCome: require("./images/charicatureGraphics/Your Time Will Come.png"),
   ZombieCassette: require("./images/charicatureGraphics/Zombie Cassette.png"),
+  
+  //pocketGraphics
+  
+  Abduction: require("./images/pocketGraphics/alien abduction pocketSource.png"),
+  AngryWaves: require("./images/pocketGraphics/Angry waves pocket.png"),
+  Aquarium: require("./images/pocketGraphics/aquarium pocket.png"),
+  BeAwesome: require("./images/pocketGraphics/be awesome pocketSource.png"),
+  Cactus: require("./images/pocketGraphics/cactus pocket.png"),
+  CatSkeleton: require("./images/pocketGraphics/cat skeleton pocketSource.png"),
+  ChildMoon: require("./images/pocketGraphics/Child on moon pocket.png"),
+  CourageDog: require("./images/pocketGraphics/courage dog pocketSource.png"),
+  CuteCat: require("./images/pocketGraphics/cute cat pocket.png"),
+  Dollar: require("./images/pocketGraphics/Dollar pocketSource.png"),
+  FallingCat: require("./images/pocketGraphics/falling cat pocketSource.png"),
+  Fish: require("./images/pocketGraphics/fish pocketSource.png"),
+  Ghost: require("./images/pocketGraphics/Ghost pocket.png"),
+  GoldenCoins: require("./images/pocketGraphics/Golden coins pocket.png"),
+  Heart: require("./images/pocketGraphics/Heart pocket.png"),
+  Hotdog: require("./images/pocketGraphics/Hotdog-pocket.png"),
+  Husky: require("./images/pocketGraphics/husky pocket.png"),
+  Icecream: require("./images/pocketGraphics/icecream pocket.png"),
+  Knife: require("./images/pocketGraphics/knife pocket.png"),
+  LoveAtFirstBite: require("./images/pocketGraphics/Love at first bite.png"),
+  Minion: require("./images/pocketGraphics/minion pocketSource.png"),
+  MonkeyButt: require("./images/pocketGraphics/monkey butt pocketSource.png"),
+  Octopus: require("./images/pocketGraphics/Octopus pocket.png"),
+  Palm: require("./images/pocketGraphics/palm pocketSource.png"),
+  Panda: require("./images/pocketGraphics/Panda pocketSource.png"),
+  PinupGirl: require("./images/pocketGraphics/Pin up girl pocket.png"),
+  PinkPanther: require("./images/pocketGraphics/pink panter pocketSource.png"),
+  Popcorn: require("./images/pocketGraphics/Popcorn pocket.png"),
+  Pug: require("./images/pocketGraphics/pug pocketSource.png"),
+  SeaStar: require("./images/pocketGraphics/Seastarspocket.png"),
+  Sun: require("./images/pocketGraphics/Sun umbrella pocket.png"),
+  Swimming: require("./images/pocketGraphics/Swimming pocketSource.png"),
+  TropicalFruit: require("./images/pocketGraphics/Tropical fruits pocket.png"),
+  WateringFlowers: require("./images/pocketGraphics/Watering flowers.png"),
+  ZombieHands: require("./images/pocketGraphics/Zombie hands pocket.png"),
+
+
 };
 
 export default IMG;

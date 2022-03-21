@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Graphics.css";
-import Portfolio from "../../components/Portfolio/Portfolio";
+import Portfolio from "../../components/Portfolio/CharicatureIMG/CharicatureIMG";
 import BackToTop from "../../components/BackToTop/BackToTop";
 
 export default function Graphics() {
