@@ -1,5 +1,7 @@
 import React from "react";
 import "./Footer.css";
+import Tshirt from "../../images/Icons/Tshirt";
+import Heart from "../../images/Icons/Heart";
 
 export default function Footer() {
   return (
@@ -10,6 +12,12 @@ export default function Footer() {
           <sup>{"\u00A9"}</sup>2022
         </span>
       </p>
+      <div className="iconGroup">
+      <Tshirt width={20} className="shirtIcon" />
+      +
+      <Heart width={16} className="heartIcon"/>
+      </div>
+      <div></div>
     </footer>
   );
 }

@@ -21,6 +21,6 @@
 
 .comment {
   height: 175px;
-  width: 500px;
+  max-width: 500px;
   grid-column: 1 / span 2;
 }

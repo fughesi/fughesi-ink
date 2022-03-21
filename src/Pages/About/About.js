@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Construction from "../Construction/Construction";
+import Construction from "../../components/Construction/Construction";
 
 export default function About() {
   // state variables

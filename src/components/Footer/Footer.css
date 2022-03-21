@@ -3,12 +3,26 @@
 .footer {
   position: relative;
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+
+  background: #fff;
 }
 
 .copyright {
-  margin-top: 2rem;
   color: var(--dark);
   text-align: left;
   padding: 1rem;
+}
+
+.shirtIcon,
+.heartIcon {
+  transform: translateY(10%);
+  margin: 0 7px;
+}
+
+.iconGroup {
+  align-self: center;
+  justify-self: center;
 }

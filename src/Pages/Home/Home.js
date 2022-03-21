@@ -7,7 +7,6 @@ import FB from "../../images/Icons/FB";
 import "./Home.css";
 
 export default function Home() {
-
   // state variables
   const [offsetY, setOffsetY] = useState(0);
   const [arrowsGone, setArrowsGone] = useState(0);
@@ -79,12 +78,19 @@ export default function Home() {
             </a>
           </div>
           <div className="infoRight">
-            <a href="https://www.instagram.com/fughesi/" target="_blank">
-              <IG width={150} />
-            </a>
-            <a href="https://www.facebook.com/fughesiInk" target="_blank">
-              <FB width={150} />
-            </a>
+            <div className="tooltip">
+              <span className="tooltipText">Follow on Instagram</span>
+              <a href="https://www.instagram.com/fughesi/" target="_blank" >
+                <IG width={150} />
+              </a>
+            </div>
+
+            <div className="tooltip">
+              <span className="tooltipText">Follow on Facebook</span>
+              <a href="https://www.facebook.com/fughesiInk" target="_blank" >
+                <FB width={150} />
+              </a>
+            </div>
           </div>
         </section>
 

@@ -17,7 +17,6 @@ function Portfolio() {
           id={i.id}
           src={i.src}
           alt={i.alt}
-          // scrollPosition={scrollPosition}
         />
         <p>{i.name}</p>
       </div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Form from "../../components/Form/Form";
-import Construction from "../Construction/Construction";
+import Construction from "../../components/Construction/Construction";
 import "./Contact.css";
 
 export default function Contact() {
