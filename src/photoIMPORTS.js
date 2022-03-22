@@ -140,7 +140,25 @@ const IMG = {
   TropicalFruit: require("./images/pocketGraphics/Tropical fruits pocket.png"),
   WateringFlowers: require("./images/pocketGraphics/Watering flowers.png"),
   ZombieHands: require("./images/pocketGraphics/Zombie hands pocket.png"),
-
+  
+  // popArtGraphics
+  
+  AlbertKisstein: require("./images/PopArtGraphics/ALBERT KISSTEIN low.png"),
+  AmericanPsycho2: require("./images/PopArtGraphics/AMERICAN PSYCHO 2 low.png"),
+  AmericanPsycho: require("./images/PopArtGraphics/AMERICAN PSYCHO low.png"),
+  BenjaminDranklin: require("./images/PopArtGraphics/Benjamin Dranklin low.png"),
+  CharimanMeow: require("./images/PopArtGraphics/CHAIRMAN MEOW low.png"),
+  Chef: require("./images/PopArtGraphics/CHEF low.png"),
+  Dream: require("./images/PopArtGraphics/DREAM low.png"),
+  GotMLK: require("./images/PopArtGraphics/GOT MLK low.png"),
+  Heilstein: require("./images/PopArtGraphics/HEILSTEIN low.png"),
+  JusticeForGeorgeFloyd: require("./images/PopArtGraphics/justice for george floyd low.png"),
+  LincolnUnknown: require("./images/PopArtGraphics/lincoln unknown low.png"),
+  Merica: require("./images/PopArtGraphics/MERICA low.png"),
+  MericaTrump: require("./images/PopArtGraphics/MERICA TRUMP low.png"),
+  RocketBoy: require("./images/PopArtGraphics/ROCKETBOY low.png"),
+  RocketMan: require("./images/PopArtGraphics/ROCKETMAN low.png"),
+  Trump: require("./images/PopArtGraphics/TRUMP low.png"),
 
 };
 
