@@ -8,12 +8,13 @@
   justify-content: space-between;
 
   background: #fff;
+  font-size: .625rem
 }
 
 .copyright {
   color: var(--dark);
   text-align: left;
-  padding: 1rem;
+  padding: 1rem .5rem 1rem .3rem ;
 }
 
 .shirtIcon,

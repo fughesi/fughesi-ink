@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./Graphics.css";
-import Portfolio from "../../components/Portfolio/CharicatureIMG/CharicatureIMG";
+import Portfolio1 from "../../components/Portfolio/CharicatureIMG/CharicatureIMG";
+import Portfolio2 from "../../components/Portfolio/RandomIMG/RandomIMG";
+import Portfolio3 from "../../components/Portfolio/PocketIMG/PocketIMG";
+import Portfolio4 from "../../components/Portfolio/PopArtIMG/PopArtIMG";
+import DarkMode from "../../components/DarkMode/DarkMode";
 import BackToTop from "../../components/BackToTop/BackToTop";
 
-export default function Graphics() {
+export default function Graphics({ setMode, darkmode}) {
   // state variables
   const [top, setTop] = useState(true);
   const [bottom, setBottom] = useState(!top);
@@ -34,7 +38,12 @@ export default function Graphics() {
   return (
     <main className="graphicsMain">
       <div className="topPlaceholder">FUGHESI Ink</div>
-      <Portfolio top={top} bottom={bottom} />
+      <Portfolio1 top={top} bottom={bottom} />
+      <Portfolio2 top={top} bottom={bottom} />
+      <Portfolio3 top={top} bottom={bottom} />
+      <Portfolio4 top={top} bottom={bottom} />
+      
+      
       {scrollHeight > 2500 && (
         <BackToTop
           handleClick={(() => pageup, scroll)}
@@ -42,6 +51,8 @@ export default function Graphics() {
           bottom={bottom}
         />
       )}
+      <DarkMode handleClick={setMode} darkmode={darkmode} />
+
     </main>
   );
 }

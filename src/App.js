@@ -34,7 +34,6 @@ function App() {
           </Routes>
         </Suspense>
       </main>
-      <DarkMode handleClick={setMode} darkmode={darkmode} />
     </BrowserRouter>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Construction from "../../components/Construction/Construction";
-import PocketIMG from "../../components/Portfolio/PocketIMG/PocketIMG"
+import PresidentMG from "../../components/Portfolio/PresidentIMG/PresidentIMG";
+import PocketIMG from "../../components/Portfolio/PocketIMG/PocketIMG";
 
 export default function About() {
   // state variables
@@ -16,6 +17,9 @@ export default function About() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  return (<PocketIMG />)
+  return (
+    <>
+      <Construction />
+    </>
+  );
 }
-{/* <Construction />; */}
