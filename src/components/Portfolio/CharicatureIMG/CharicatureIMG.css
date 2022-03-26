@@ -12,3 +12,8 @@ img {
     width: 100%;
     box-shadow: var(--shadow);
 }
+
+  
+.nameIMG { 
+    text-align: center;
+}

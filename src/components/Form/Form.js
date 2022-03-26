@@ -19,7 +19,7 @@ export default function Form() {
       [name]: value,
     }));
   }
-  console.log(formData);
+  
 
   return (
     <>

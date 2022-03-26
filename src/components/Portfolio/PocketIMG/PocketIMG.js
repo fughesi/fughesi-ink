@@ -11,14 +11,8 @@ function PocketIMG() {
   const photoArr = Photos.map((i) => {
     return (
       <div>
-        <LazyLoadImage
-          effect="blur"
-          key={i.id}
-          id={i.id}
-          src={i.src}
-          alt={i.alt}
-        />
-        <p>{i.name}</p>
+        <LazyLoadImage key={i.id} id={i.id} src={i.src} alt={i.alt} />
+        <p className="nameIMG">{i.name}</p>
       </div>
     );
   });

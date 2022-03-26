@@ -6,6 +6,10 @@
   background-attachment: fixed;
 }
 
+.blur {
+  filter: blur(5px);
+}
+
 .hero {
   position: relative;
   height: 100vh;

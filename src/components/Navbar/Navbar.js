@@ -6,32 +6,36 @@ import About from "../../images/fonts/About";
 import Home from "../../images/fonts/Home";
 import "./Navbar.css";
 
-export default function Navbar() {
+export default function Navbar({ toggler, nav }) {
+ 
+
   return (
     <nav className="mainNav">
-      <div className="hamburger">
-        <span></span>
+      <div className="togDiv" onClick={toggler}>
+        <div className={nav ? "hamburger" : "hamburger"}>
+          <div className={nav ? "rotate" : ""}></div>
+        </div>
       </div>
-      <section aria-describedby="nav links" className="NavBG">
+      <section aria-describedby="nav links" className={nav ? "NavBG scale" : "NavBG"}>
         <ul>
           <li>
             <Link to="/">
-              <Home width={100} height={55} className="link" />
+              <Home width={100} height={55} className="link" onClick={toggler}/>
             </Link>
           </li>
           <li>
             <Link to="/about">
-              <About width={100} height={55} className="link" />
+              <About width={100} height={55} className="link" onClick={toggler} />
             </Link>
           </li>
           <li>
             <Link to="/graphics">
-              <Graphics width={100} height={55} className="link" />
+              <Graphics width={100} height={55} className="link" onClick={toggler} />
             </Link>
           </li>
           <li>
             <Link to="/contact">
-              <Contact width={100} height={55} className="link" />
+              <Contact width={100} height={55} className="link" onClick={toggler} />
             </Link>
           </li>
         </ul>

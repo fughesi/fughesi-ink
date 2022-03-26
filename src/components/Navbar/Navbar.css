@@ -1,82 +1,100 @@
 @import url("../../App.css");
 
 .mainNav {
-  position: absolute;
-  top: 0;
-  right: 0%;
-  z-index: 2;
+  min-width: 100vw;
+  overflow: hidden;
+}
 
-  display: grid;
-  grid-template: auto / 60px 120px;
-  grid-template-areas: "hamburger links";
+.togDiv {
+  position: fixed;
+
+  height: 6rem;
+  width: 6rem;
+  z-index: 101;
 }
 
 .hamburger {
-  grid-area: "hamburger";
-  margin-top: 15px;
-  max-width: 40px;
-  height: 50px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  top: 40%;
+  left: 20%;
 }
 
-.hamburger span {
+.hamburger div {
   position: relative;
-  background: red;
-  width: 100%;
+  transition: 250ms ease-in-out;
+  background-color: red;
+  width: 2rem;
   height: 2px;
 }
 
-.hamburger span::before,
-.hamburger span::after {
+.hamburger div::before,
+.hamburger div::after {
   content: "";
   position: absolute;
-  background: red;
+  background-color: red;
   width: 100%;
   height: 2px;
   bottom: -12px;
 }
 
-.hamburger span::before {
-  background: red;
+.hamburger div::before {
   bottom: 12px;
-    /* visibility: hidden; */
-
 }
 
-.mainNav ul {
-  grid-area: "links";
-  inset: 0 0 auto auto;
-  display: grid;
-  gap: 20px;
+.rotate {
+  transform: rotate(495deg);
+}
 
-  grid-template-rows: repeat(4, 1fr);
+.rotate::before,
+.rotate::after {
+  top: 0%;
+  transform: rotate(90deg);
+}
+
+.NavBG {
+  position: fixed;
+  inset: 0 0 0 0;
+
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  place-items: center;
+
+  transform: scale(0);
+  transition: 250ms ease-in-out;
+  z-index: 100;
+}
+
+.scale {
+  transform: scale(1);
+}
+
+.NavBG > ul {
+  margin: 0;
   padding: 0;
-  background: #fff3;
 }
 
 .mainNav li {
-  padding: 0.75rem;
+  padding: 1rem;
 }
 
-.mainNav li:hover,
-.mainNav li:active {
-  border-bottom: 1.5px solid orangered;
+.link {
+  background: #f00;
+  mix-blend-mode: normal;
+}
+
+.link:hover,
+.link:active {
+  border-bottom: 4.5px solid black;
 }
 
 .link:active {
   box-shadow: inset 0 0 5px #000;
 }
 
-.mainNav li * {
-  background: #f008;
-}
-
+/* 
 @media (max-width: 700px) {
   .mainNav ul {
     grid-template-rows: 1fr;
   }
-}
+} */

@@ -7,7 +7,7 @@ import Portfolio4 from "../../components/Portfolio/PopArtIMG/PopArtIMG";
 import DarkMode from "../../components/DarkMode/DarkMode";
 import BackToTop from "../../components/BackToTop/BackToTop";
 
-export default function Graphics({ setMode, darkmode}) {
+export default function Graphics({ setMode, darkmode, nav }) {
   // state variables
   const [top, setTop] = useState(true);
   const [bottom, setBottom] = useState(!top);
@@ -36,15 +36,14 @@ export default function Graphics({ setMode, darkmode}) {
   }, []);
 
   return (
-    <main className="graphicsMain">
+    <main className={nav ? "graphicsMain blur" : "graphicsMain"}>
       <div className="topPlaceholder">FUGHESI Ink</div>
       <Portfolio1 top={top} bottom={bottom} />
       <Portfolio2 top={top} bottom={bottom} />
       <Portfolio3 top={top} bottom={bottom} />
       <Portfolio4 top={top} bottom={bottom} />
-      
-      
-      {scrollHeight > 2500 && (
+
+      {scrollHeight > 2750 && (
         <BackToTop
           handleClick={(() => pageup, scroll)}
           top={top}
@@ -52,7 +51,6 @@ export default function Graphics({ setMode, darkmode}) {
         />
       )}
       <DarkMode handleClick={setMode} darkmode={darkmode} />
-
     </main>
   );
 }

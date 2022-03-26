@@ -3,7 +3,7 @@ import Form from "../../components/Form/Form";
 import Construction from "../../components/Construction/Construction";
 import "./Contact.css";
 
-export default function Contact() {
+export default function Contact({ nav }) {
   // state variables
   const [offsetY, setOffsetY] = useState(0);
   // callback function to get page location in Y axis
@@ -21,8 +21,8 @@ export default function Contact() {
   }, []);
 
   return (
-    <div>
+    <main className={nav ? "contactMain blur" : "contactMain"}>
       <Form />
-    </div>
+    </main>
   );
 }

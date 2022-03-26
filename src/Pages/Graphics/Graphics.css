@@ -2,11 +2,14 @@
 
 .graphicsMain {
   position: relative;
+  width: 100%;
 }
 
 .topPlaceholder {
   position: sticky;
+  overflow: hidden;
   top: 0;
+  width: 100%;
 
   padding: 1.5em;
   background: var(--white);
@@ -14,15 +17,7 @@
   box-shadow: 0 0 10px var(--black);
 
   font-size: 2em;
+  text-align: center;
 
-  z-index: 0;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  z-index: 2;
 }

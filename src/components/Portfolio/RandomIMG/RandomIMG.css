@@ -13,3 +13,6 @@
         box-shadow: var(--shadow);
     }
     
+    .nameIMG { 
+        text-align: center;
+    }

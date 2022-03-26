@@ -14,22 +14,28 @@ const NotFound = lazy(() => import("./Pages/NotFound/NotFound"));
 function App() {
   //state variables
   const [darkmode, setDarkmode] = useState(false);
+  const [nav, setNav] = useState(false);
 
   // toggling dark mode on or off
   function setMode() {
     setDarkmode((i) => !i);
   }
 
+  // toggle state to update navbar
+  function toggler() {
+    setNav((i) => !i);
+  }
+
   return (
     <BrowserRouter>
-      <Navbar />
+      <Navbar toggler={toggler} nav={nav} />
       <main className={darkmode ? "appWrap darkModeOn" : "appWrap"}>
         <Suspense fallback={<Loading />}>
           <Routes>
-            <Route path="/" element={<Home />} exact />
-            <Route path="/About" element={<About />} exact />
-            <Route path="/contact" element={<Contact />} exact />
-            <Route path="/graphics" element={<Graphics />} exact />
+            <Route path="/" element={<Home nav={nav} />} exact />
+            <Route path="/About" element={<About nav={nav} />} exact />
+            <Route path="/contact" element={<Contact nav={nav} />} exact />
+            <Route path="/graphics" element={<Graphics nav={nav} />} exact />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
