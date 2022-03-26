@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Construction from "../../components/Construction/Construction";
-import PresidentMG from "../../components/Portfolio/PresidentIMG/PresidentIMG";
-import PocketIMG from "../../components/Portfolio/PocketIMG/PocketIMG";
+
 
 export default function About({ nav }) {
   // state variables
