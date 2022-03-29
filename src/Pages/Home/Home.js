@@ -12,7 +12,8 @@ export default function Home({ nav }) {
   const [arrowsGone, setArrowsGone] = useState(0);
 
   // callback function to get page location in Y axis
-  const handleScroll = () => setOffsetY(window.pageYOffset);
+  function handleScroll() { setOffsetY(window.pageYOffset)}
+  // const handleScroll = () => setOffsetY(window.pageYOffset);
 
   // parallax effect
   useEffect(() => {
@@ -35,7 +36,7 @@ export default function Home({ nav }) {
       window.removeEventListener("scroll", removeArrows);
     };
   }, []);
-  console.log(arrowsGone);
+  
   return (
     <main className={nav ? "homeMain blur" : "homeMain"}>
       <section className="hero" aria-labelledby="hero section">
@@ -46,8 +47,8 @@ export default function Home({ nav }) {
           Welcome to
         </p>
 
-        <h1 className="fughesi">
-          FUGHESI <span className="dot">dot</span> ink
+        <h1 className="fughesi" data-fill-text="FUGHESI">
+          FUGHESI 
         </h1>
         <div className={arrowsGone < 140 ? "arrowBoard" : "invisible"}>
           <ScrollArrow

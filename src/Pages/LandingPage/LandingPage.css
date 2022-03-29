@@ -1,0 +1,68 @@
+@import url("../../App.css");
+
+.mainLandingPage {
+  display: grid;
+  min-height: 100vh;
+  grid-template: 65vh 35vh / 1fr;
+  grid-template-areas:
+    "top"
+    "bottom";
+}
+
+.topLandingPage {
+  grid-area: "top";
+  min-height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  background: #1c92d2; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f2fcfe,
+    #1c92d2
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f2fcfe,
+    #1c92d2
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.topLandingPage span {
+  display: block;
+  margin: 0 auto;
+  font-size: min(5vw, 7rem);
+  color: transparent;
+  -webkit-text-stroke: red 1px;
+}
+
+.fug::before {
+  content: attr(data-fill-text);
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  /* color: rgb(255, 0, 0); */
+  color: antiquewhite;
+  -webkit-text-stroke: transparent 0px;
+  overflow: hidden;
+  transition: width 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.ink::before {
+  content: attr(data-fill-text);
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  color: rgb(255, 0, 0);
+  -webkit-text-stroke: transparent 0px;
+  overflow: hidden;
+  transition: width 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.fug:hover::before {
+  width: 100%;
+}
+
+.ink:hover::before {
+  width: 100%;
+}

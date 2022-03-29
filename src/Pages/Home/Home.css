@@ -62,10 +62,42 @@
   font-size: 3.8rem;
   margin-bottom: 0;
 
+  color: transparent;
+  -webkit-text-stroke: red 1px;
+
+  /* text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
+  -1px -1px 0 #000; */
+}
+
+.fughesi::before {
+  content: attr(data-fill-text);
+  position: absolute;
+  top: 0%;
+  left: 0px;
+  width: 0%;
+  height: 100%;
+  color: #fff;
+  -webkit-text-stroke: transparent 0px;
+  overflow: hidden;
+  transition: width 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.fughesi:hover::before {
+  width: 100%;
+  text-align: start;
+}
+/* .fughesi {
+  position: sticky;
+  top: 1rem;
+  margin-top: 0;
+  font-size: 3.8rem;
+  margin-bottom: 0;
+  
   color: var(--white);
+  -webkit-text-stroke: red 1px; 
   text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
     -1px -1px 0 #000;
-}
+} */
 
 .arrowBoard {
   transform: translateY(75%);

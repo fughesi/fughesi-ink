@@ -2,7 +2,7 @@ import "./App.css";
 import React, { useState, lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Loading from "../src/components/Loading/Loading";
-import DarkMode from "./components/DarkMode/DarkMode";
+import LandingPage from "./Pages/LandingPage/LandingPage"
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 const Graphics = lazy(() => import("./Pages/Graphics/Graphics"));
@@ -32,7 +32,7 @@ function App() {
       <main className={darkmode ? "appWrap darkModeOn" : "appWrap"}>
         <Suspense fallback={<Loading />}>
           <Routes>
-            <Route path="/" element={<Home nav={nav} />} exact />
+            <Route path="/" element={<LandingPage nav={nav} />} exact />
             <Route path="/About" element={<About nav={nav} />} exact />
             <Route path="/contact" element={<Contact nav={nav} />} exact />
             <Route path="/graphics" element={<Graphics nav={nav} />} exact />
