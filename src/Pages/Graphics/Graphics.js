@@ -37,7 +37,7 @@ export default function Graphics({ setMode, darkmode, nav }) {
 
   return (
     <main className={nav ? "graphicsMain blur" : "graphicsMain"}>
-      <div className="topPlaceholder">FUGHESI Ink</div>
+      {/* <div className="topPlaceholder">FUGHESI Ink</div> */}
       <Portfolio1 top={top} bottom={bottom} />
       <Portfolio2 top={top} bottom={bottom} />
       <Portfolio3 top={top} bottom={bottom} />

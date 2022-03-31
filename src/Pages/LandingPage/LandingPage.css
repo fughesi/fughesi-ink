@@ -3,60 +3,94 @@
 .mainLandingPage {
   display: grid;
   min-height: 100vh;
-  grid-template: 65vh 35vh / 1fr;
+  max-width: 100%;
+  grid-template: 65vh 35vh / 1.5rem 1fr 1.5rem;
   grid-template-areas:
-    "top"
-    "bottom";
+    ". top ."
+    ". bottom .";
+  background: var(--white);
 }
 
 .topLandingPage {
-  grid-area: "top";
+  grid-area: top;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   min-height: 100%;
-  width: 100%;
-  display: grid;
-  place-items: center;
-  background: #1c92d2; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #f2fcfe,
-    #1c92d2
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #f2fcfe,
-    #1c92d2
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  max-width: 100%;
 }
 
-.topLandingPage span {
+.topLandingPage h1 {
+  margin-bottom: 0;
+}
+.topLandingPage em {
+  position: relative;
+  font-style: normal;
   display: block;
+  font-weight: var(--reg);
+  font-size: var(--p1);
+}
+
+.topLandingPage em::after {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0%;
+  height: 0.25em;
+  width: 5em;
+  background-color: var(--color4);
+}
+
+.hoverFill {
+  position: relative;
+  display: inline-block;
   margin: 0 auto;
-  font-size: min(5vw, 7rem);
+  font-size: var(--h1);
   color: transparent;
-  -webkit-text-stroke: red 1px;
+  -webkit-text-stroke: var(--color4) 1px;
+}
+
+.topLandingPage span:last-child {
+  padding-left: 0.6rem;
 }
 
 .fug::before {
   content: attr(data-fill-text);
   position: absolute;
   width: 0%;
-  height: 100%;
-  /* color: rgb(255, 0, 0); */
-  color: antiquewhite;
+  color: var(--color4);
   -webkit-text-stroke: transparent 0px;
   overflow: hidden;
-  transition: width 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: width 0.8s ease-in-out;
+}
+
+.dot {
+  position: relative;
+  display: inline-block;
+  transform: rotate(-45deg) translateY(-30%);
+  font-size: 0.75rem;
+  font-size: var(--p1);
+}
+
+.dot::after {
+  content: "";
+  position: absolute;
+  bottom: 15%;
+  left: 103%;
+  height: 0.25em;
+  width: 0.25em;
+  border-radius: 50%;
+  background-color: var(--color4);
 }
 
 .ink::before {
   content: attr(data-fill-text);
   position: absolute;
   width: 0%;
-  height: 100%;
-  color: rgb(255, 0, 0);
+  color: var(--color4);
   -webkit-text-stroke: transparent 0px;
   overflow: hidden;
-  transition: width 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: width 0.8s ease-in-out;
 }
 
 .fug:hover::before {
@@ -65,4 +99,20 @@
 
 .ink:hover::before {
   width: 100%;
+}
+
+.topLandingPage p {
+  margin: 0 0 0 2.5em;
+  width: 100%;
+  font-size: var(--p2);
+}
+
+.colorsDiv div {
+  display: flex;
+  /* height: 10em; */
+}
+
+.colorsDiv div:nth-child(1) {
+  width: 1.5em;
+  background-color: var(--color5);
 }
