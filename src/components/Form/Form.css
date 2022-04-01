@@ -1,22 +1,32 @@
 @import url("../../App.css");
 
 .formContainer {
+  position: relative;
   display: grid;
   place-items: center;
   height: 100vh;
+  max-width: 80%;
 }
 
 .form {
-  height: 400px;
   display: grid;
   gap: 10px;
   grid-template: repeat(3, 1fr) / repeat(2, 1fr);
   place-items: center;
+  z-index: 2;
+
+  height: 400px;
+  border-radius: 10px;
+  background-color: #eee;
+  box-shadow: var(--shadow);
 }
 
 .form * {
+  margin: 1em;
   height: 25px;
-  width: 100%;
+  width: 90%;
+  border: 0;
+  border-radius: 5px;
 }
 
 .comment {
@@ -24,3 +34,31 @@
   max-width: 500px;
   grid-column: 1 / span 2;
 }
+
+button {
+  cursor: pointer;
+  grid-column: 1 / span 2;
+  background-color: var(--color4);
+  transition: 0.5s ease;
+}
+
+button:hover,
+button:focus {
+  background-color: red;
+}
+
+input,
+select,
+textarea {
+  color: var(--color4);
+  padding: 0.5em;
+}
+
+/* 
+.BGdiv {
+  position: absolute;
+  z-index: 1;
+  height: 400px;
+  width: 105%;
+  background-color: #222;
+} */

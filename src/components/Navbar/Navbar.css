@@ -13,9 +13,8 @@
   background: var(--white);
   height: 5rem;
   box-shadow: var(--shadow);
-  /* box-shadow: 0 0 10px var(--black); */
 
-  z-index: 2;
+  z-index: 9;
 }
 
 .navDiv {
@@ -23,6 +22,7 @@
   justify-content: flex-start;
   align-items: center;
   min-height: 100%;
+  z-index: 10;
 }
 
 .fughesiInk {
@@ -37,7 +37,8 @@
   inset: 0 0 auto auto;
   height: 6rem;
   width: 6rem;
-  z-index: 101;
+  z-index: 10;
+  
 }
 
 .hamburger {
@@ -89,7 +90,7 @@
 
   transform: scale(0);
   transition: 250ms ease-in-out;
-  z-index: 100;
+  z-index: 9;
 }
 
 .scale {

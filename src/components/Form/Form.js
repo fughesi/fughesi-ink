@@ -19,7 +19,6 @@ export default function Form() {
       [name]: value,
     }));
   }
-  
 
   return (
     <>
@@ -51,7 +50,7 @@ export default function Form() {
           ></input>
           <input
             name="email"
-            type="text"
+            type="email"
             onChange={addText}
             className="email"
             value={formData.email}
@@ -65,7 +64,9 @@ export default function Form() {
             value={formData.comment}
             placeholder="Comment"
           ></textarea>
+          <button>SUBMIT</button>
         </form>
+        <div className="BGdiv"></div>
       </div>
     </>
   );
