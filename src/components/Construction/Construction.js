@@ -8,7 +8,7 @@ export default function Construction() {
       <h1>Page Under Construction!</h1>
 
       
-        <Cone width={250} />
+        <Cone width={100} />
     </div>
   );
 }

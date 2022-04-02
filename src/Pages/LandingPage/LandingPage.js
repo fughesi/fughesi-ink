@@ -4,13 +4,9 @@ import "./LandingPage.css";
 export default function LandingPage({ nav }) {
   // state variables
   const [offsetY, setOffsetY] = useState(0);
-  const [arrowsGone, setArrowsGone] = useState(0);
 
   // callback function to get page location in Y axis
-  function handleScroll() {
-    setOffsetY(window.pageYOffset);
-  }
-  // const handleScroll = () => setOffsetY(window.pageYOffset);
+  const handleScroll = () => setOffsetY(window.pageYOffset);
 
   // parallax effect
   useEffect(() => {
@@ -21,17 +17,6 @@ export default function LandingPage({ nav }) {
   // window to start at top of page on load
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
-
-  // find scroll position
-  const removeArrows = (event) => {
-    setArrowsGone(window.scrollY);
-  };
-  useEffect(() => {
-    window.addEventListener("scroll", removeArrows);
-    return () => {
-      window.removeEventListener("scroll", removeArrows);
-    };
   }, []);
 
   return (
@@ -69,6 +54,7 @@ export default function LandingPage({ nav }) {
           style={{ transform: `translateY(${offsetY * 0.6}px)` }}
         >
           <p>a custom graphics T-shirt and apparel company!</p>
+
           <div></div>
           <div></div>
           <div></div>

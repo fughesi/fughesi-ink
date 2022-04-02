@@ -9,7 +9,8 @@
   grid-template-areas: 
     ". b c";
 
-  background: #fff;
+  background-color: #fff;
+  box-shadow: var(--shadow);
 }
 
 .copyright {

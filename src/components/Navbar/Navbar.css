@@ -35,7 +35,7 @@
 .togDiv {
   position: fixed;
   inset: 0 0 auto auto;
-  height: 6rem;
+  height: 5rem;
   width: 6rem;
   z-index: 10;
   
@@ -52,7 +52,7 @@
   transition: 250ms ease-in-out;
   background-color: var(--color4);
   width: 2rem;
-  height: 2px;
+  height: 1.5px;
 }
 
 .hamburger div::before,
@@ -76,7 +76,7 @@
 .rotate::before,
 .rotate::after {
   top: 0%;
-  transform: rotate(90deg);
+  transform: rotate(90deg) scaleY(.6);
 }
 
 .NavBG {
@@ -107,7 +107,7 @@
 }
 
 .link {
-  background: #f00;
+  background-color: var(--color4);
   mix-blend-mode: normal;
 }
 

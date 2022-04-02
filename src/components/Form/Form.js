@@ -20,10 +20,12 @@ export default function Form() {
     }));
   }
 
+console.log(formData)
+
   return (
     <>
       <div className="formContainer">
-        <form className="form" id="form">
+        <form className="form" id="form" onSubmit={(e) => e.preventDefault()}>
           <input
             name="firstName"
             type="text"
@@ -31,7 +33,7 @@ export default function Form() {
             className="firstname"
             value={formData.firstName}
             placeholder="First Name"
-          ></input>
+            ></input>
           <input
             name="lastName"
             type="text"
@@ -39,7 +41,7 @@ export default function Form() {
             className="lastname"
             value={formData.lastName}
             placeholder="Last Name"
-          ></input>
+            ></input>
           <input
             name="phone"
             type="text"
@@ -47,7 +49,7 @@ export default function Form() {
             className="phone"
             value={formData.phone}
             placeholder="Phone Number"
-          ></input>
+            ></input>
           <input
             name="email"
             type="email"
@@ -55,7 +57,7 @@ export default function Form() {
             className="email"
             value={formData.email}
             placeholder="Email"
-          ></input>
+            ></input>
           <textarea
             name="comment"
             type="textarea"
@@ -63,7 +65,7 @@ export default function Form() {
             className="comment"
             value={formData.comment}
             placeholder="Comment"
-          ></textarea>
+            ></textarea>
           <button>SUBMIT</button>
         </form>
         <div className="BGdiv"></div>
@@ -71,3 +73,4 @@ export default function Form() {
     </>
   );
 }
+

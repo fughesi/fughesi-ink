@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
-import "./Graphics.css";
-import Portfolio1 from "../../components/Portfolio/CharicatureIMG/CharicatureIMG";
-import Portfolio2 from "../../components/Portfolio/RandomIMG/RandomIMG";
-import Portfolio3 from "../../components/Portfolio/PocketIMG/PocketIMG";
-import Portfolio4 from "../../components/Portfolio/PopArtIMG/PopArtIMG";
-import DarkMode from "../../components/DarkMode/DarkMode";
+// import DarkMode from "../../components/DarkMode/DarkMode";
 import BackToTop from "../../components/BackToTop/BackToTop";
+import { Link } from "react-router-dom";
+import "./Graphics.css";
+
 
 export default function Graphics({ setMode, darkmode, nav }) {
   // state variables
@@ -36,21 +34,35 @@ export default function Graphics({ setMode, darkmode, nav }) {
   }, []);
 
   return (
-    <main className={nav ? "graphicsMain blur" : "graphicsMain"}>
-      {/* <div className="topPlaceholder">FUGHESI Ink</div> */}
-      <Portfolio1 top={top} bottom={bottom} />
-      <Portfolio2 top={top} bottom={bottom} />
-      <Portfolio3 top={top} bottom={bottom} />
-      <Portfolio4 top={top} bottom={bottom} />
+    
+      <main className={nav ? "graphicsMain blur" : "graphicsMain"}>
+        <ul>
+          <li>
+            <Link to="/CharicaturesGraphics">Charicatures</Link>
+          </li>
+          <li>
+            <Link to="/PocketGraphics">Pocket</Link>
+          </li>
+          <li>
+            <Link to="/PopArtGraphics">PopArt</Link>
+          </li>
+          <li>
+            <Link to="/PresidentGraphics">Presidents</Link>
+          </li>
+          <li>
+            <Link to="/RandomGraphics">Random</Link>
+          </li>
+        </ul>
+       
+        {scrollHeight > 2750 && (
+          <BackToTop
+            handleClick={(() => pageup, scroll)}
+            top={top}
+            bottom={bottom}
+          />
+        )}
+        {/* <DarkMode handleClick={setMode} darkmode={darkmode} /> */}
+      </main>
 
-      {scrollHeight > 2750 && (
-        <BackToTop
-          handleClick={(() => pageup, scroll)}
-          top={top}
-          bottom={bottom}
-        />
-      )}
-      <DarkMode handleClick={setMode} darkmode={darkmode} />
-    </main>
   );
 }

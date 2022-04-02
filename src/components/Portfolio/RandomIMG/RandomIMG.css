@@ -1,18 +1,22 @@
 @import url("../../../App.css");
 
 .portfolio {
-    margin-top: 100px;
-    
-        display: grid;
-        gap: 20px;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-    
-    img {
-        width: 100%;
-        box-shadow: var(--shadow);
-    }
-    
-    .nameIMG { 
-        text-align: center;
-    }
+  margin-top: 100px;
+
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+img {
+  width: 100%;
+  box-shadow: var(--shadow);
+}
+
+.nameIMG {
+  text-align: center;
+}
+
+.blur {
+  filter: blur(5px);
+}

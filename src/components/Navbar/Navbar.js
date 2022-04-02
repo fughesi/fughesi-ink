@@ -33,8 +33,8 @@ export default function Navbar({ toggler, nav }) {
             </Link>
           </li>
           <li>
-            <Link to="/about">
-              <About
+            <Link to="/graphics">
+              <Graphics
                 width={100}
                 height={55}
                 className="link"
@@ -43,8 +43,8 @@ export default function Navbar({ toggler, nav }) {
             </Link>
           </li>
           <li>
-            <Link to="/graphics">
-              <Graphics
+            <Link to="/about">
+              <About
                 width={100}
                 height={55}
                 className="link"
