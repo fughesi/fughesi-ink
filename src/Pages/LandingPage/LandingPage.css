@@ -4,10 +4,11 @@
   display: grid;
   min-height: 100vh;
   max-width: 100%;
-  grid-template: 65vh 35vh / 1.5rem 1fr 1.5rem;
+  grid-template: 65vh auto 35vh / 1.5rem 1fr 1.5rem;
   grid-template-areas:
     ". top ."
-    ". bottom .";
+    ". cards ."
+    "bottom bottom bottom ";
   background: var(--white);
 }
 
@@ -30,9 +31,10 @@
   align-self: flex-start;
   font-style: normal;
   display: block;
+  text-align: left;
   font-weight: var(--reg);
   font-size: var(--p1);
-  margin-bottom: .5em ;
+  margin-bottom: 0.5em;
 }
 
 .topLandingPage em::after {
@@ -54,7 +56,8 @@
   -webkit-text-stroke: var(--color4) 1px;
 }
 
-.fug::before {
+.fug::before,
+.ink::before {
   content: attr(data-fill-text);
   position: absolute;
   width: 0%;
@@ -84,20 +87,7 @@
   background-color: var(--color4);
 }
 
-.ink::before {
-  content: attr(data-fill-text);
-  position: absolute;
-  width: 0%;
-  color: var(--color4);
-  -webkit-text-stroke: transparent 0px;
-  overflow: hidden;
-  transition: width 0.8s ease-in-out;
-}
-
-.fug:hover::before {
-  width: 100%;
-}
-
+.fug:hover::before,
 .ink:hover::before {
   width: 100%;
 }
@@ -111,7 +101,7 @@
 .colorsDiv div {
   display: inline-block;
   height: 1em;
-  width: 25px;
+  width: 1.5625rem;
 }
 
 .colorsDiv div:nth-child(2) {
@@ -128,4 +118,47 @@
 }
 .colorsDiv div:nth-child(6) {
   background-color: var(--color1);
+}
+
+.cards {
+  grid-area: cards;
+}
+
+.info {
+  grid-area: bottom;
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: repeat(2, auto);
+
+  padding: 0.3rem;
+  background: linear-gradient(to left, #3498db, #2c3e50);
+  box-shadow: var(--shadow);
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltipText {
+  visibility: hidden;
+  position: absolute;
+  top: -50%;
+  left: calc(-50% - 0.3125rem);
+  width: 7.5rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: var(--white);
+  text-align: center;
+  border-radius: 0.375rem;
+  padding: 0.3125rem 0;
+  font-size: 0.5rem;
+}
+
+.tooltip:hover .tooltipText {
+  visibility: visible;
+}
+
+.infoRight {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
 }

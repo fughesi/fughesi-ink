@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import BackButton from "../../BackButton/BackButton"
 import Photos from "../../../PhotoPocketJSON";
 import DarkMode from "../../DarkMode/DarkMode";
 import BackToTop from "../../BackToTop/BackToTop";
@@ -64,6 +65,7 @@ function PocketIMG({ setMode, darkmode, nav }) {
           bottom={bottom}
         />
       )}
+      <BackButton />
       <DarkMode handleClick={setMode} darkmode={darkmode} />
     </section>
   );

@@ -8,5 +8,5 @@
 }
 
 .blur {
-  filter: blur(5px);
+  filter: blur(var(--blur));
 }

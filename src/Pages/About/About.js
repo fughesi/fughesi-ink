@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Construction from "../../components/Construction/Construction";
-
+import Cards from "../../components/Cards/Cards"
 
 export default function About({ nav }) {
   // state variables
@@ -22,7 +22,8 @@ export default function About({ nav }) {
 
   return (
     <main className={nav ? "aboutMain blur" : "aboutMain"}>
-      <Construction />
+      {/* <Construction /> */}
+      <Cards />
     </main>
   );
 }

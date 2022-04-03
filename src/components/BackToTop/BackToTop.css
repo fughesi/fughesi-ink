@@ -14,7 +14,7 @@
   margin-bottom: 0.75rem;
   background: var(--color5);
   padding: 0.75em 1.5em;
-  z-index: 5;
+  z-index: 10;
 
   border-radius: 1rem;
   box-shadow: var(--shadow);

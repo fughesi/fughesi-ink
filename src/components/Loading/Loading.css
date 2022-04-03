@@ -6,17 +6,17 @@
   place-items: center;
   height: 100vh;
 
-  animation: load 2s ease-in; 
+  animation: load 2s ease-in;
 }
 
 .load h1 {
   letter-spacing: 0.8rem;
   font-size: minmax(2rem, 5rem);
-  color: tomato;
+  color: var(--color4);
 }
 
 .elipse span {
-  padding: 0 5px;
+  padding: 0 0.3125rem;
   animation: twinkle 1.5s ease infinite;
 }
 

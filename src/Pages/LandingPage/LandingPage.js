@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import IG from "../../images/Icons/IG";
+import FB from "../../images/Icons/FB";
+import Cards from "../../components/Cards/Cards";
 import "./LandingPage.css";
 
 export default function LandingPage({ nav }) {
@@ -63,7 +66,37 @@ export default function LandingPage({ nav }) {
         </div>
       </section>
 
-      <section aria-describedby="info cards"></section>
+      <section className="cards" aria-describedby="info cards">
+        <Cards  />
+      </section>
+
+      <section className="info" aria-labelledby="information">
+        <div className="infoLeft">
+          <h2>Your Business On The Web</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+            repudiandae perspiciatis sed
+          </p>
+          <a href="#" className="btn">
+            Learn More
+          </a>
+        </div>
+        <div className="infoRight">
+          <div className="tooltip">
+            <span className="tooltipText">Follow on Instagram</span>
+            <a href="https://www.instagram.com/fughesi/" target="_blank">
+              <IG width={50} />
+            </a>
+          </div>
+
+          <div className="tooltip">
+            <span className="tooltipText">Follow on Facebook</span>
+            <a href="https://www.facebook.com/fughesiInk" target="_blank">
+              <FB width={50} />
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

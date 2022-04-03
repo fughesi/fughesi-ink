@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import ScrollArrow from "../../components/ScrollArrow/ScrollArrow";
-import Footer from "../../components/Footer/Footer";
 import Cards from "../../components/Cards/Cards";
 import IG from "../../images/Icons/IG";
 import FB from "../../images/Icons/FB";
@@ -94,7 +93,7 @@ export default function Home({ nav }) {
         </div>
       </section>
 
-      <Footer />
+
     </main>
   );
 }
