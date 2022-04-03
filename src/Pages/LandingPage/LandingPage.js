@@ -26,20 +26,20 @@ export default function LandingPage({ nav }) {
     <main className={nav ? "mainLandingPage blur" : "mainLandingPage"}>
       <section aria-describedby="top landing page" className="topLandingPage">
         <h1>
-          <em style={{ transform: `translateY(${offsetY * 0.1}px)` }}>
+          <em style={{ transform: `translateY(${offsetY * 0.15}px)` }}>
             Welcome to
           </em>{" "}
           <span
             data-fill-text="FUGHESI"
             className="fug hoverFill"
-            style={{ transform: `translateY(${offsetY * 0.5}px)` }}
+            style={{ transform: `translateY(${offsetY * 0.20}px)` }}
           >
             FUGHESI
           </span>{" "}
           <span
             className="dot"
             style={{
-              transform: `translateY(${offsetY * 0.5}px) rotate(-45deg)`,
+              transform: `translateY(${offsetY * 0.25}px) rotate(-45deg)`,
             }}
           >
             dot
@@ -47,14 +47,15 @@ export default function LandingPage({ nav }) {
           <span
             data-fill-text="INK"
             className="ink hoverFill"
-            style={{ transform: `translateY(${offsetY * 0.5}px)` }}
+            style={{ transform: `translateY(${offsetY * 0.3}px)` }}
           >
             INK
           </span>
         </h1>
+
         <div
           className="colorsDiv"
-          style={{ transform: `translateY(${offsetY * 0.6}px)` }}
+          style={{ transform: `translateY(${offsetY * 0.35}px)` }}
         >
           <p>a custom graphics T-shirt and apparel company!</p>
 
@@ -67,7 +68,7 @@ export default function LandingPage({ nav }) {
       </section>
 
       <section className="cards" aria-describedby="info cards">
-        <Cards  />
+        <Cards />
       </section>
 
       <section className="info" aria-labelledby="information">

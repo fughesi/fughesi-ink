@@ -12,6 +12,7 @@
   /* SIZES */
   --p1: max(2vw, 0.75rem);
   --p2: max(2.5vw, 0.1rem);
+  --p3: clamp(1.5vw, 0.75rem, 0.6rem);
   --h1: max(9vw, 2.2rem);
 
   /* WEIGHTS */

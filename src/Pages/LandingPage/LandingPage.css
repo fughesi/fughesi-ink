@@ -4,7 +4,7 @@
   display: grid;
   min-height: 100vh;
   max-width: 100%;
-  grid-template: 65vh auto 35vh / 1.5rem 1fr 1.5rem;
+  grid-template: 100vh auto 35vh / 1.5rem 1fr 1.5rem;
   grid-template-areas:
     ". top ."
     ". cards ."
@@ -130,7 +130,8 @@
   gap: 1rem;
   grid-template-rows: repeat(2, auto);
 
-  padding: 0.3rem;
+  margin-top: 2rem;
+  padding: 0.5rem;
   background: linear-gradient(to left, #3498db, #2c3e50);
   box-shadow: var(--shadow);
 }
@@ -161,4 +162,8 @@
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
+}
+
+.infoRight svg {
+  padding-bottom: 1rem;
 }
