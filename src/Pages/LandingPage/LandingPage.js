@@ -3,6 +3,7 @@ import IG from "../../images/Icons/IG";
 import FB from "../../images/Icons/FB";
 import Cards from "../../components/Cards/Cards";
 import "./LandingPage.css";
+import MonkeyHead from "../../images/portraits/monkeyFace3D.png"
 
 export default function LandingPage({ nav }) {
   // state variables
@@ -25,6 +26,7 @@ export default function LandingPage({ nav }) {
   return (
     <main className={nav ? "mainLandingPage blur" : "mainLandingPage"}>
       <section aria-describedby="top landing page" className="topLandingPage">
+        <img src={MonkeyHead} alt="monkeyhead logo" width="150"/>
         <h1>
           <em style={{ transform: `translateY(${offsetY * 0.15}px)` }}>
             Welcome to
@@ -78,21 +80,21 @@ export default function LandingPage({ nav }) {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
             repudiandae perspiciatis sed
           </p>
-          <a href="#" className="btn">
+          {/* <a href="#" className="btn">
             Learn More
-          </a>
+          </a> */}
         </div>
         <div className="infoRight">
           <div className="tooltip">
             <span className="tooltipText">Follow on Instagram</span>
-            <a href="https://www.instagram.com/fughesi/" target="_blank">
+            <a href="https://www.instagram.com/fughesi/" target="_blank" rel="noreferrer" >
               <IG width={50} />
             </a>
           </div>
 
           <div className="tooltip">
             <span className="tooltipText">Follow on Facebook</span>
-            <a href="https://www.facebook.com/fughesiInk" target="_blank">
+            <a href="https://www.facebook.com/fughesiInk" target="_blank" rel="noreferrer">
               <FB width={50} />
             </a>
           </div>
@@ -102,4 +104,4 @@ export default function LandingPage({ nav }) {
   );
 }
 
-// className={arrowsGone < 1 ? "welcome" : "none"}
+

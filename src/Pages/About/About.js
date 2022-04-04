@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Construction from "../../components/Construction/Construction";
-import Cards from "../../components/Cards/Cards"
+// import Construction from "../../components/Construction/Construction";
+import Checkout from "../../components/Checkout/Checkout";
 
 export default function About({ nav }) {
   // state variables
@@ -23,7 +23,7 @@ export default function About({ nav }) {
   return (
     <main className={nav ? "aboutMain blur" : "aboutMain"}>
       {/* <Construction /> */}
-      <Cards />
+      <Checkout />
     </main>
   );
 }

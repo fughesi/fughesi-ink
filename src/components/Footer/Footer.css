@@ -1,7 +1,7 @@
 @import url("../../App.css");
 
 .footer {
-  position: relative;
+  /* position: relative; */
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);

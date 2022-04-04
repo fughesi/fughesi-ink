@@ -4,7 +4,7 @@
   display: grid;
   min-height: 100vh;
   max-width: 100%;
-  grid-template: 100vh auto 35vh / 1.5rem 1fr 1.5rem;
+  grid-template: 100vh auto minmax(35vh, 60vh) / 1.5rem 1fr 1.5rem;
   grid-template-areas:
     ". top ."
     ". cards ."
@@ -156,6 +156,14 @@
 
 .tooltip:hover .tooltipText {
   visibility: visible;
+}
+
+.infoLeft {
+  padding: 1rem;
+}
+
+.infoLeft .btn {
+    padding-left: 0;
 }
 
 .infoRight {
