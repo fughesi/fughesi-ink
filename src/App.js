@@ -45,7 +45,7 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar toggler={toggler} nav={nav} />
-      <main className={darkmode ? "appWrap darkModeOn" : "appWrap"}>
+      <main className="appWrap">
         <Suspense fallback={<Loading />}>
           <Routes>
             {/* <Route path="/" element={<Home nav={nav} />} exact /> */}
@@ -55,7 +55,7 @@ function App() {
             <Route
               path="/graphics"
               element={
-                <Graphics nav={nav} darkmode={darkmode} setMode={setMode} />
+                <Graphics nav={nav} /> //darkmode={darkmode} setMode={setMode} />
               }
               exact
             />

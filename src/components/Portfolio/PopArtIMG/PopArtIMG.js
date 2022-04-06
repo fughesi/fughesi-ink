@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import BackButton from "../../BackButton/BackButton"
+import BackButton from "../../BackButton/BackButton";
 import Photos from "../../../PhotoPopArtJSON";
 import DarkMode from "../../DarkMode/DarkMode";
 import BackToTop from "../../BackToTop/BackToTop";
@@ -55,7 +55,9 @@ function Portfolio({ darkmode, setMode, nav }) {
   return (
     <section
       aria-labelledby="pop art graphics"
-      className={nav ? "portfolio blur" : "portfolio"}
+      className={`${nav ? "portfolio blur" : "portfolio"} ${
+        darkmode ? "portfolio darkModeOn" : "portfolio"
+      }`}
     >
       {photoArr}
       {scrollHeight > 2750 && (

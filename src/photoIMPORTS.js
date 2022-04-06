@@ -186,8 +186,8 @@ const IMG = {
   
   // randomGraphics
   
-  AbbeyRoadKiller: require("./images/randomGraphics/Abbey Road Killer.png"),
-  AnchorBones: require("./images/randomGraphics/Anchor Bones.png"),
+  AbbeyRoadKiller: require("./images/randomGraphics/Abbey Road Killer Red-02.png"),
+  AnchorBones: require("./images/randomGraphics/Anchor Bones-02.png"),
   Anchor: require("./images/randomGraphics/Anchor.png"),
   Astrocode: require("./images/randomGraphics/Astrocode.png"),
   Awesome: require("./images/randomGraphics/Awesome.png"),

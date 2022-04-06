@@ -26,7 +26,7 @@ export default function LandingPage({ nav }) {
   return (
     <main className={nav ? "mainLandingPage blur" : "mainLandingPage"}>
       <section aria-describedby="top landing page" className="topLandingPage">
-        <img src={MonkeyHead} alt="monkeyhead logo" width="150"/>
+        {/* <img src={MonkeyHead} alt="monkeyhead logo" width="150"/> */}
         <h1>
           <em style={{ transform: `translateY(${offsetY * 0.15}px)` }}>
             Welcome to

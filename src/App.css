@@ -59,11 +59,6 @@ body {
   font-family: "Red Hat Text", sans-serif;
 }
 
-.darkModeOn {
-  color: #eee !important;
-  background: #222 !important;
-}
-
 .appWrap {
   position: relative;
 }

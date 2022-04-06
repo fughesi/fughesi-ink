@@ -10,7 +10,7 @@ export default function Navbar({ toggler, nav }) {
   return (
     <nav className="mainNav">
       <div className="navDiv">
-        <h3 className="fughesiInk">FUGHESI Ink</h3>
+        <Link to="/"><h3 className="fughesiInk">FUGHESI Ink</h3></Link>
         <div className="togDiv" onClick={toggler}>
           <div className="hamburger">
             <div className={nav ? "rotate" : ""}></div>

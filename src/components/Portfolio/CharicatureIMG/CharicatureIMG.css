@@ -1,8 +1,6 @@
 @import url("../../../App.css");
 
 .portfolio {
-  margin-top: 6.25rem;
-
   display: grid;
   gap: 1.25rem;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -15,6 +13,11 @@ img {
 
 .nameIMG {
   text-align: center;
+}
+
+.darkModeOn {
+  color: #eee !important;
+  background: #222 !important;
 }
 
 .blur {
