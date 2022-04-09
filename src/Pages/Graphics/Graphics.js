@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
-import DarkMode from "../../components/DarkMode/DarkMode";
 import BackToTop from "../../components/BackToTop/BackToTop";
 import { Link } from "react-router-dom";
 import "./Graphics.css";
 
-export default function Graphics({ setMode, darkmode, nav }) {
+export default function Graphics({ nav }) {
   // state variables
   const [top, setTop] = useState(true);
   const [bottom, setBottom] = useState(!top);
@@ -36,6 +35,9 @@ export default function Graphics({ setMode, darkmode, nav }) {
     <main className={nav ? "graphicsMain blur" : "graphicsMain"}>
       <ul>
         <li>
+          <Link to="/BlackHistoryGraphics">Black History</Link>
+        </li>
+        <li>
           <Link to="/CharicaturesGraphics">Charicatures</Link>
         </li>
         <li>
@@ -52,14 +54,32 @@ export default function Graphics({ setMode, darkmode, nav }) {
         </li>
       </ul>
 
-      {scrollHeight > 2750 && (
+      <h3>Cartoon collection</h3>
+      <ul>
+        <li>
+          <Link to="/CatCartoonGraphics">Cats</Link>
+        </li>
+        <li>
+          <Link to="/DogCartoonGraphics">Dogs</Link>
+        </li>
+        <li>
+          <Link to="/MonsterCartoonGraphics">Monsters</Link>
+        </li>
+        <li>
+          <Link to="/SnakeCartoonGraphics">Snakes</Link>
+        </li>
+        <li>
+          <Link to="/DragonCartoonGraphics">Dragons</Link>
+        </li>
+      </ul>
+
+      {scrollHeight > 3000 && (
         <BackToTop
           handleClick={(() => pageup, scroll)}
           top={top}
           bottom={bottom}
         />
       )}
-      {/* <DarkMode handleClick={setMode} darkmode={darkmode} /> */}
     </main>
   );
 }

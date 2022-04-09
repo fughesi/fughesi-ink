@@ -4,13 +4,6 @@ import { nanoid } from "nanoid";
 const Photos = [
   {
     id: nanoid(),
-    src: IMG.AbbeyRoadKiller,
-    alt: "eraseThis",
-    name: "Abbey Road Killer",
-    fee: 3,
-  },
-  {
-    id: nanoid(),
     src: IMG.AnchorBones,
     alt: "eraseThis",
     name: "Anchor Bones",
@@ -98,13 +91,6 @@ const Photos = [
     src: IMG.Burger,
     alt: "eraseThis",
     name: "Burger",
-    fee: 3,
-  },
-  {
-    id: nanoid(),
-    src: IMG.Chainsaw,
-    alt: "eraseThis",
-    name: "Chainsaw",
     fee: 3,
   },
   {

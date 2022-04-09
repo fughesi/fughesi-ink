@@ -20,10 +20,8 @@
 
   color: var(--color1);
   text-align: center;
-  font-size: var(--p3);
-  /* font-size: 0.625rem; */
+  font-size: var(--button1);
 
   cursor: pointer;
   user-select: none;
 }
-

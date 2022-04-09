@@ -29,6 +29,7 @@
   margin: 0;
   padding-left: 1rem;
   font-weight: var(--reg);
+  font-size: var(--title1);
   color: var(--color4);
 }
 

@@ -5,24 +5,42 @@ import Loading from "../src/components/Loading/Loading";
 import LandingPage from "./Pages/LandingPage/LandingPage";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
-const Home = lazy(() => import("./Pages/Home/Home"));
+// const Home = lazy(() => import("./Pages/Home/Home"));
 const Graphics = lazy(() => import("./Pages/Graphics/Graphics"));
 const About = lazy(() => import("./Pages/About/About"));
 const Contact = lazy(() => import("./Pages/Contact/Contact"));
 const CharicatureIMG = lazy(() =>
-  import("./components/Portfolio/CharicatureIMG/CharicatureIMG")
+  import("./components/Portfolio/CharicatureIMG")
 );
 const PocketIMG = lazy(() =>
-  import("./components/Portfolio/PocketIMG/PocketIMG")
+  import("./components/Portfolio/PocketIMG")
+);
+const CatCartoonIMG = lazy(() =>
+  import("./components/Portfolio/CartoonCatIMG")
+);
+const DogCartoonIMG = lazy(() =>
+  import("./components/Portfolio/CartoonDogIMG")
+);
+const SnakeCartoonIMG = lazy(() =>
+  import("./components/Portfolio/CartoonSnakeIMG")
+);
+const MonsterCartoonIMG = lazy(() =>
+  import("./components/Portfolio/CartoonMonsterIMG")
+);
+const DragonCartoonIMG = lazy(() =>
+  import("./components/Portfolio/CartoonDragonIMG")
 );
 const PopArtIMG = lazy(() =>
-  import("./components/Portfolio/PopArtIMG/PopArtIMG")
+  import("./components/Portfolio/PopArtIMG")
 );
 const PresidentIMG = lazy(() =>
-  import("./components/Portfolio/PresidentIMG/PresidentIMG")
+  import("./components/Portfolio/PresidentIMG")
 );
 const RandomIMG = lazy(() =>
-  import("./components/Portfolio/RandomIMG/RandomIMG")
+  import("./components/Portfolio/RandomIMG")
+);
+const BlackHistoryIMG = lazy(() =>
+  import("./components/Portfolio/BlackHistoryIMG")
 );
 const NotFound = lazy(() => import("./Pages/NotFound/NotFound"));
 
@@ -95,6 +113,48 @@ function App() {
               path="/RandomGraphics"
               element={
                 <RandomIMG nav={nav} darkmode={darkmode} setMode={setMode} />
+              }
+              exact
+            />
+            <Route
+              path="/BlackHistoryGraphics"
+              element={
+                <BlackHistoryIMG nav={nav} darkmode={darkmode} setMode={setMode} />
+              }
+              exact
+            />
+            <Route
+              path="/CatCartoonGraphics"
+              element={
+                <CatCartoonIMG nav={nav} darkmode={darkmode} setMode={setMode} />
+              }
+              exact
+            />
+            <Route
+              path="/DogCartoonGraphics"
+              element={
+                <DogCartoonIMG nav={nav} darkmode={darkmode} setMode={setMode} />
+              }
+              exact
+            />
+            <Route
+              path="/DragonCartoonGraphics"
+              element={
+                <DragonCartoonIMG nav={nav} darkmode={darkmode} setMode={setMode} />
+              }
+              exact
+            />
+            <Route
+              path="/MonsterCartoonGraphics"
+              element={
+                <MonsterCartoonIMG nav={nav} darkmode={darkmode} setMode={setMode} />
+              }
+              exact
+            />
+            <Route
+              path="/SnakeCartoonGraphics"
+              element={
+                <SnakeCartoonIMG nav={nav} darkmode={darkmode} setMode={setMode} />
               }
               exact
             />

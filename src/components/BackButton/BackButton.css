@@ -3,14 +3,14 @@
 .backButtonMain {
     position: fixed;
     inset: auto auto 1.5rem 1.5rem;
-
+    
     user-select: none;
     z-index: 10;
 }
 
 .backBTN {
-    padding: 1em 2em;
-    font-size: var(--p3);
+    padding: .8em 1.6em;
+    font-size: var(--button1);
     color: var(--color1);
     background-color: var(--color5);
     border-radius: 1rem;

@@ -368,7 +368,7 @@ const Photos = [
   },
   {
     id: nanoid(),
-    src: IMG.Peace,
+    src: IMG.PeaceChar,
     alt: "a peace sign riding a skatebord and wearing a hat in color",
     name: "Peace",
     fee: 3,

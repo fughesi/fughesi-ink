@@ -123,7 +123,7 @@ const Photos = [
   },
   {
     id: nanoid(),
-    src: IMG.Icecream,
+    src: IMG.Icecreampocket,
     alt: "two ice cream cones coming out of a pocket in color",
     name: "Ice cream",
     fee: 3,

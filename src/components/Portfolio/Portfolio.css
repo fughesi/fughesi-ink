@@ -1,0 +1,50 @@
+@import url("../../App.css");
+
+.portfolio {
+  padding-top: 1rem;
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  background-color: #eee5;
+}
+
+.photoElement {
+  display: flex;
+  place-content: flex-end;
+  flex-direction: column;
+  outline: var(--outline);
+}
+
+img {
+  width: 100%;
+  padding: 1rem;
+}
+
+.nameIMG {
+  position: relative;
+  display: inline-block;
+  align-self: center;
+  margin-top: 0;
+  margin-bottom: 3rem;
+
+  text-align: center;
+  font-weight: var(--bold);
+
+  font-size: var(--title1);
+  border-bottom: 0.125em solid var(--color3);
+}
+
+.darkModeOn {
+  color: #eee !important;
+  background: #222 !important;
+}
+
+.blur {
+  filter: blur(var(--blur));
+}
+
+@media (min-width: 840px) {
+  .portfolio {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
