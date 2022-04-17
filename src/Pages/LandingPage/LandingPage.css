@@ -4,7 +4,7 @@
   display: grid;
   min-height: 100vh;
   max-width: 100%;
-  grid-template: 100vh auto minmax(35vh, 60vh) / 1.5rem 1fr 1.5rem;
+  grid-template: 100vh auto auto / 1.5rem 1fr 1.5rem;
   grid-template-areas:
     ". top ."
     ". cards ."
@@ -129,8 +129,9 @@
   display: grid;
   gap: 1rem;
   grid-template-rows: repeat(2, auto);
+  width: 100%;
 
-  margin-top: 2rem;
+  margin-top: 1.25rem;
   padding: 0.5rem;
   background: linear-gradient(to left, #3498db, #2c3e50);
   box-shadow: var(--shadow);
@@ -162,8 +163,8 @@
   padding: 1rem;
 }
 
-.infoLeft .btn {
-    padding-left: 0;
+.infoLeft p {
+  max-width: 20em;
 }
 
 .infoRight {
@@ -174,4 +175,10 @@
 
 .infoRight svg {
   padding-bottom: 1rem;
+}
+
+.whatsApp {
+  text-align: center;
+  font-weight: var(--bold);
+  text-shadow: .5px 0 #fff, 0 .5px #fff, -.5px 0 #fff, 0 -.5px 0 #fff;
 }

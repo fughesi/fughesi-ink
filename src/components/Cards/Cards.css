@@ -14,3 +14,17 @@
   padding: 1.5rem 2rem;
   box-shadow: var(--shadow1);
 }
+
+.cardsList {
+  text-align: left;
+  padding: 0;
+  font-size: var(--p1);
+}
+
+.cardsList li {
+  list-style: square;
+}
+
+.cardsList li:first-child {
+  margin-top: 1rem;
+}

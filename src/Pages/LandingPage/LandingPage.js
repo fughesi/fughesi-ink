@@ -3,7 +3,7 @@ import IG from "../../images/Icons/IG";
 import FB from "../../images/Icons/FB";
 import Cards from "../../components/Cards/Cards";
 import "./LandingPage.css";
-import MonkeyHead from "../../images/portraits/monkeyFace3D.png"
+import MonkeyHead from "../../images/portraits/monkeyFace3D.png";
 
 export default function LandingPage({ nav }) {
   // state variables
@@ -34,7 +34,7 @@ export default function LandingPage({ nav }) {
           <span
             data-fill-text="FUGHESI"
             className="fug hoverFill"
-            style={{ transform: `translateY(${offsetY * 0.20}px)` }}
+            style={{ transform: `translateY(${offsetY * 0.2}px)` }}
           >
             FUGHESI
           </span>{" "}
@@ -75,33 +75,45 @@ export default function LandingPage({ nav }) {
 
       <section className="info" aria-labelledby="information">
         <div className="infoLeft">
-          <h2>Your Business On The Web</h2>
+          <h2>Connect with FUGHESI ink</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-            repudiandae perspiciatis sed
+            Click on the social icons to follow our journey and to see updated
+            photos/vides, message us about custom orders, or just say "Hi"
           </p>
-          {/* <a href="#" className="btn">
-            Learn More
-          </a> */}
         </div>
         <div className="infoRight">
           <div className="tooltip">
             <span className="tooltipText">Follow on Instagram</span>
-            <a href="https://www.instagram.com/fughesi/" target="_blank" rel="noreferrer" >
+            <a
+              href="https://www.instagram.com/fughesi/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <IG width={50} />
             </a>
           </div>
 
           <div className="tooltip">
             <span className="tooltipText">Follow on Facebook</span>
-            <a href="https://www.facebook.com/fughesiInk" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.facebook.com/fughesiInk"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FB width={50} />
             </a>
           </div>
+        </div>
+        <div className="whatsApp">
+          {/* {" "}
+          <a href="sms://+18138489006?body=I%27m%20interested%20in%20your%20product.%20Please%20contact%20me.">
+            Send an SMS message
+          </a> */}
+          <a href="https://wa.me/message/PKTZG4VTREDRN1" target="_blank">
+            Message via whatsApp
+          </a>
         </div>
       </section>
     </main>
   );
 }
-
-

@@ -15,17 +15,20 @@
 .monkey {
   width: 250px;
   opacity: 0;
-  animation: splash 4000ms ease-in-out;
+  animation: splash 4000ms ;
 }
 
 @keyframes splash {
   0% {
     opacity: 0;
+    transform: scale(1);
   }
   50% {
     opacity: 1;
+    transform: scale(1.25);
   }
   100% {
     opacity: 0;
+    transform: scale(3);
   }
 }
