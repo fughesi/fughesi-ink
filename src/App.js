@@ -1,20 +1,22 @@
 import "./App.css";
-import React, { useState, lazy, Suspense } from "react";
+import React, { useState, useEffect, lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Loading from "../src/components/Loading/Loading";
 import LandingPage from "./Pages/LandingPage/LandingPage";
 import Navbar from "./components/Navbar/Navbar";
+import NavbarBig from "./components/NavbarBig/NavbarBig";
 import Footer from "./components/Footer/Footer";
 // const Home = lazy(() => import("./Pages/Home/Home"));
+import Splash from "./Pages/Splash/Splash";
 const Graphics = lazy(() => import("./Pages/Graphics/Graphics"));
 const About = lazy(() => import("./Pages/About/About"));
 const Contact = lazy(() => import("./Pages/Contact/Contact"));
+const Cancel = lazy(() => import("./Pages/Cancel/Cancel"));
+const Success = lazy(() => import("./Pages/Success/Success"));
 const CharicatureIMG = lazy(() =>
   import("./components/Portfolio/CharicatureIMG")
 );
-const PocketIMG = lazy(() =>
-  import("./components/Portfolio/PocketIMG")
-);
+const PocketIMG = lazy(() => import("./components/Portfolio/PocketIMG"));
 const CatCartoonIMG = lazy(() =>
   import("./components/Portfolio/CartoonCatIMG")
 );
@@ -30,25 +32,29 @@ const MonsterCartoonIMG = lazy(() =>
 const DragonCartoonIMG = lazy(() =>
   import("./components/Portfolio/CartoonDragonIMG")
 );
-const PopArtIMG = lazy(() =>
-  import("./components/Portfolio/PopArtIMG")
-);
-const PresidentIMG = lazy(() =>
-  import("./components/Portfolio/PresidentIMG")
-);
-const RandomIMG = lazy(() =>
-  import("./components/Portfolio/RandomIMG")
-);
+const PopArtIMG = lazy(() => import("./components/Portfolio/PopArtIMG"));
+const PresidentIMG = lazy(() => import("./components/Portfolio/PresidentIMG"));
+const RandomIMG = lazy(() => import("./components/Portfolio/RandomIMG"));
 const BlackHistoryIMG = lazy(() =>
   import("./components/Portfolio/BlackHistoryIMG")
 );
 const NotFound = lazy(() => import("./Pages/NotFound/NotFound"));
 
-
 function App() {
   //state variables
   const [darkmode, setDarkmode] = useState(false);
   const [nav, setNav] = useState(false);
+  const [width, setWidth] = useState(0);
+  const breakpoint = 700;
+
+  // tracks window width as breakpoint for Navbar
+  useEffect(() => {
+    const handleResizeWindow = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResizeWindow);
+    return () => {
+      window.removeEventListener("resize", handleResizeWindow);
+    };
+  }, []);
 
   // toggling dark mode on or off
   function setMode() {
@@ -62,7 +68,12 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Navbar toggler={toggler} nav={nav} />
+      <Splash />
+      {width > breakpoint ? (
+        <NavbarBig toggler={toggler} nav={nav} />
+      ) : (
+        <Navbar toggler={toggler} nav={nav} />
+      )}
       <main className="appWrap">
         <Suspense fallback={<Loading />}>
           <Routes>
@@ -70,6 +81,8 @@ function App() {
             <Route path="/" element={<LandingPage nav={nav} />} exact />
             <Route path="/About" element={<About nav={nav} />} exact />
             <Route path="/contact" element={<Contact nav={nav} />} exact />
+            <Route path="/cancel" element={<Cancel nav={nav} />} exact />
+            <Route path="/success" element={<Success nav={nav} />} exact />
             <Route
               path="/graphics"
               element={
@@ -119,42 +132,66 @@ function App() {
             <Route
               path="/BlackHistoryGraphics"
               element={
-                <BlackHistoryIMG nav={nav} darkmode={darkmode} setMode={setMode} />
+                <BlackHistoryIMG
+                  nav={nav}
+                  darkmode={darkmode}
+                  setMode={setMode}
+                />
               }
               exact
             />
             <Route
               path="/CatCartoonGraphics"
               element={
-                <CatCartoonIMG nav={nav} darkmode={darkmode} setMode={setMode} />
+                <CatCartoonIMG
+                  nav={nav}
+                  darkmode={darkmode}
+                  setMode={setMode}
+                />
               }
               exact
             />
             <Route
               path="/DogCartoonGraphics"
               element={
-                <DogCartoonIMG nav={nav} darkmode={darkmode} setMode={setMode} />
+                <DogCartoonIMG
+                  nav={nav}
+                  darkmode={darkmode}
+                  setMode={setMode}
+                />
               }
               exact
             />
             <Route
               path="/DragonCartoonGraphics"
               element={
-                <DragonCartoonIMG nav={nav} darkmode={darkmode} setMode={setMode} />
+                <DragonCartoonIMG
+                  nav={nav}
+                  darkmode={darkmode}
+                  setMode={setMode}
+                />
               }
               exact
             />
             <Route
               path="/MonsterCartoonGraphics"
               element={
-                <MonsterCartoonIMG nav={nav} darkmode={darkmode} setMode={setMode} />
+                <MonsterCartoonIMG
+                  nav={nav}
+                  darkmode={darkmode}
+                  setMode={setMode}
+                />
               }
               exact
             />
             <Route
               path="/SnakeCartoonGraphics"
               element={
-                <SnakeCartoonIMG nav={nav} darkmode={darkmode} setMode={setMode} />
+                <SnakeCartoonIMG
+                  nav={nav}
+                  darkmode={darkmode}
+                  setMode={setMode}
+                />
               }
               exact
             />

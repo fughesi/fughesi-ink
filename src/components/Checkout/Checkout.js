@@ -9,7 +9,7 @@ export default function Checkout() {
       {checkout ? (
         <PayPal />
       ) : (
-        <button onClick={() => setCheckout(true)}>PayPal</button>
+        <button onClick={(e) => setCheckout(true)}>PayPal</button>
       )}
     </div>
   );

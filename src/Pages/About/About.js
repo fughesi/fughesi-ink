@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-// import Construction from "../../components/Construction/Construction";
+import Construction from "../../components/Construction/Construction";
 import Checkout from "../../components/Checkout/Checkout";
+import PayPal from "../../components/PayPal/PayPal";
 
 export default function About({ nav }) {
   // state variables
@@ -22,8 +23,9 @@ export default function About({ nav }) {
 
   return (
     <main className={nav ? "aboutMain blur" : "aboutMain"}>
-      {/* <Construction /> */}
-      <Checkout />
+      <Construction />
+      {/* <Checkout /> */}
+      <PayPal />
     </main>
   );
 }

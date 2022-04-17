@@ -1,0 +1,31 @@
+@import url("../../App.css");
+
+.splashMain {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-content: center;
+  z-index: 11;
+  background-color: aliceblue;
+}
+
+.monkey {
+  width: 250px;
+  opacity: 0;
+  animation: splash 4000ms ease-in-out;
+}
+
+@keyframes splash {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

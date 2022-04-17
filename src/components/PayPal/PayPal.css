@@ -1,1 +1,9 @@
 @import url("../../App.css");
+
+.paypalMAin {
+    /* width: 20rem; */
+}
+
+.shirtSelect {
+    font-size: var(--p1);
+}

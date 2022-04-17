@@ -1,0 +1,18 @@
+@import url("../../App.css");
+
+.blur {
+  filter: blur(var(--blur));
+}
+
+.mainNav {
+    position: sticky;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+  
+    background: var(--white);
+    height: 5rem;
+    box-shadow: var(--shadow);
+  
+    z-index: 9;
+}
