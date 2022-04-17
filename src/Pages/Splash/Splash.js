@@ -8,7 +8,7 @@ export default function Splash() {
   // sets timer for splash screen
   useEffect(() => {
     setSplash(true);
-    setTimeout(() => setSplash(false), 4000);
+    setTimeout(() => setSplash(false), 4500);
   }, []);
 
   return (
@@ -16,6 +16,8 @@ export default function Splash() {
       {splash && (
         <main className="splashMain">
           <img src={MonkeyHead} className="monkey" />
+          <h1 className="fughesi fugSplash">FUGHESI</h1>
+          <h1 className="fughesi inkSplash">ink</h1>
         </main>
       )}
     </>

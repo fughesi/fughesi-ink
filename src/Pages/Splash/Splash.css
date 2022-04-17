@@ -15,7 +15,22 @@
 .monkey {
   width: 250px;
   opacity: 0;
-  animation: splash 4000ms ;
+  animation: splash 4000ms;
+}
+
+.fughesi {
+  font-size: 3.5rem;
+  color: var(--color4);
+  opacity: 0;
+  /* animation: splash 4000ms 2s; */
+}
+
+.fugSplash {
+  animation: splash 4000ms 2s, ani 2000ms 3.2s;
+}
+
+.inkSplash {
+  animation: splash 4000ms 2s, ink 2000ms 3.2s;
 }
 
 @keyframes splash {
@@ -30,5 +45,17 @@
   100% {
     opacity: 0;
     transform: scale(3);
+  }
+}
+
+@keyframes ani {
+  100% {
+    transform: translateX(-350%);
+  }
+}
+
+@keyframes ink {
+  100% {
+    transform: translateX(350%);
   }
 }
