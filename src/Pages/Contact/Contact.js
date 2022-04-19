@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Form from "../../components/Form/Form";
-import Construction from "../../components/Construction/Construction";
 import "./Contact.css";
 
 export default function Contact({ nav }) {
   // state variables
   const [offsetY, setOffsetY] = useState(0);
+  
   // callback function to get page location in Y axis
   const handleScroll = () => setOffsetY(window.pageYOffset);
   

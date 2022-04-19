@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Construction from "../../components/Construction/Construction";
-import Checkout from "../../components/Checkout/Checkout";
 import PayPal from "../../components/PayPal/PayPal";
 
 export default function About({ nav }) {

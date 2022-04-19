@@ -3,7 +3,6 @@ import IG from "../../images/Icons/IG";
 import FB from "../../images/Icons/FB";
 import Cards from "../../components/Cards/Cards";
 import "./LandingPage.css";
-import MonkeyHead from "../../images/portraits/monkeyFace3D.png";
 
 export default function LandingPage({ nav }) {
   // state variables
@@ -109,7 +108,7 @@ export default function LandingPage({ nav }) {
           <a href="sms://+18138489006?body=I%27m%20interested%20in%20your%20product.%20Please%20contact%20me.">
             Send an SMS message
           </a> */}
-          <a href="https://wa.me/message/PKTZG4VTREDRN1" target="_blank">
+          <a href="https://wa.me/message/PKTZG4VTREDRN1" target="_blank"  rel="noreferrer noopener">
             Message via whatsApp
           </a>
         </div>

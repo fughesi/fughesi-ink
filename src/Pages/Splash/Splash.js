@@ -15,7 +15,7 @@ export default function Splash() {
     <>
       {splash && (
         <main className="splashMain">
-          <img src={MonkeyHead} className="monkey" />
+          <img src={MonkeyHead} className="monkey" alt="monkey head"/>
           <h1 className="fughesi fugSplash">FUGHESI</h1>
           <h1 className="fughesi inkSplash">ink</h1>
         </main>
