@@ -6,10 +6,11 @@
   width: 100vw;
   top: 0;
   left: 0;
+  z-index: 10;
   display: grid;
   place-content: center;
-  z-index: 11;
-  background-color: aliceblue;
+  background-color: var(--white);
+  /* background-color: aliceblue; */
 }
 
 .monkey {
@@ -25,11 +26,11 @@
 }
 
 .fugSplash {
-  animation: splash 4000ms 2s, ani 2000ms 3.2s;
+  animation: splash 4000ms 2s, ani 2000ms 2500ms;
 }
 
 .inkSplash {
-  animation: splash 4000ms 2s, ink 2000ms 3.2s;
+  animation: splash 4000ms 2s, ink 2000ms 2500ms;
 }
 
 @keyframes splash {
@@ -50,11 +51,13 @@
 @keyframes ani {
   100% {
     transform: translateX(-350%);
+    opacity: 0.7;
   }
 }
 
 @keyframes ink {
   100% {
     transform: translateX(350%);
+    opacity: 0.7;
   }
 }

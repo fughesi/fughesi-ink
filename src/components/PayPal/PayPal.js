@@ -3,7 +3,7 @@ import "./PayPal.css";
 
 export default function PayPal() {
   return (
-    <div className="paypalMAin">
+    <div className="paypalMain">
       <form
         target="paypal"
         action="https://www.paypal.com/cgi-bin/webscr"

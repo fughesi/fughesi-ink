@@ -23,7 +23,6 @@ export default function About({ nav }) {
   return (
     <main className={nav ? "aboutMain blur" : "aboutMain"}>
       <Construction />
-      {/* <Checkout /> */}
       <PayPal />
     </main>
   );

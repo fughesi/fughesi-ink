@@ -1,8 +1,13 @@
-import React from 'react'
-import "./Success.css"
+import React from "react";
+import "./Success.css";
 
 export default function Success() {
   return (
-    <div>Success</div>
-  )
+    <main className="successMain">
+      <div>
+        <h1>Success</h1>
+    
+      </div>
+    </main>
+  );
 }

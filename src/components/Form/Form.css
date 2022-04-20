@@ -4,18 +4,17 @@
   position: relative;
   display: grid;
   place-items: center;
-  height: 100vh;
+  min-height: 100%;
   max-width: 80%;
 }
 
 .form {
   display: grid;
   gap: 0.625rem;
-  grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+  grid-template: repeat(4, auto) / repeat(2, 1fr);
   place-items: center;
-  z-index: 2;
 
-  height: 400px;
+  height: minmax(500px, auto);
   border-radius: 0.625rem;
   background-color: #eee;
   box-shadow: var(--shadow);
