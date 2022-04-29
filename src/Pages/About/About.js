@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Construction from "../../components/Construction/Construction";
+import Thanks from "./../Thanks/Thanks"
 import PayPal from "../../components/PayPal/PayPal";
 
 export default function About({ nav }) {
@@ -22,7 +23,8 @@ export default function About({ nav }) {
 
   return (
     <main className={nav ? "aboutMain blur" : "aboutMain"}>
-      <Construction />
+      {/* <Construction /> */}
+      <Thanks />
       <PayPal />
     </main>
   );

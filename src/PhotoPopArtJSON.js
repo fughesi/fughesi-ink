@@ -46,6 +46,20 @@ const Photos = [
   },
   {
     id: nanoid(),
+    src: IMG.Covfefe,
+    alt: "eraseThis",
+    name: "Covfefe",
+    fee: 3,
+  },
+  {
+    id: nanoid(),
+    src: IMG.Dope,
+    alt: "eraseThis",
+    name: "Dope",
+    fee: 3,
+  },
+  {
+    id: nanoid(),
     src: IMG.Dream,
     alt: "eraseThis",
     name: "Dream",
@@ -62,7 +76,21 @@ const Photos = [
     id: nanoid(),
     src: IMG.Heilstein,
     alt: "eraseThis",
-    name: "Heil stein",
+    name: "Heilstein",
+    fee: 3,
+  },
+  {
+    id: nanoid(),
+    src: IMG.HoHoHoChiMinh,
+    alt: "eraseThis",
+    name: "HoHoHo Chi Minh",
+    fee: 3,
+  },
+  {
+    id: nanoid(),
+    src: IMG.ICantBreathe,
+    alt: "eraseThis",
+    name: "I Can't Breathe",
     fee: 3,
   },
   {
@@ -81,6 +109,20 @@ const Photos = [
   },
   {
     id: nanoid(),
+    src: IMG.MakeAmericaGreyAgain,
+    alt: "eraseThis",
+    name: "Make America Grey Again",
+    fee: 3,
+  },
+  {
+    id: nanoid(),
+    src: IMG.MeowTseTung,
+    alt: "eraseThis",
+    name: "Meow Tse Tung",
+    fee: 3,
+  },
+  {
+    id: nanoid(),
     src: IMG.Merica,
     alt: "eraseThis",
     name: "Merica",
@@ -91,6 +133,20 @@ const Photos = [
     src: IMG.MericaTrump,
     alt: "eraseThis",
     name: "Merica Trump",
+    fee: 3,
+  },
+  {
+    id: nanoid(),
+    src: IMG.NoRacism,
+    alt: "eraseThis",
+    name: "No Racism",
+    fee: 3,
+  },
+  {
+    id: nanoid(),
+    src: IMG.Putintin,
+    alt: "eraseThis",
+    name: "Putintin",
     fee: 3,
   },
   {
@@ -109,9 +165,51 @@ const Photos = [
   },
   {
     id: nanoid(),
+    src: IMG.StraigtOuttaPyongYang,
+    alt: "eraseThis",
+    name: "Straigt Outta Pyong Yang",
+    fee: 3,
+  },
+  {
+    id: nanoid(),
+    src: IMG.SylvesterStalin,
+    alt: "eraseThis",
+    name: "Sylvester Stalin",
+    fee: 3,
+  },
+  {
+    id: nanoid(),
+    src: IMG.TheFuhrer,
+    alt: "eraseThis",
+    name: "The Fuhrer",
+    fee: 3,
+  },
+  {
+    id: nanoid(),
     src: IMG.Trump,
     alt: "eraseThis",
     name: "Trump",
+    fee: 3,
+  },
+  {
+    id: nanoid(),
+    src: IMG.UnderControl,
+    alt: "eraseThis",
+    name: "Under Control",
+    fee: 3,
+  },
+  {
+    id: nanoid(),
+    src: IMG.VivaLaEvolucion,
+    alt: "eraseThis",
+    name: "Viva La Evolucion",
+    fee: 3,
+  },
+  {
+    id: nanoid(),
+    src: IMG.WeCanDoIt,
+    alt: "eraseThis",
+    name: "We Can Do It",
     fee: 3,
   },
 ];
@@ -124,6 +222,5 @@ export default Photos;
 //   name: "eraseThis",
 //   fee: 3,
 // },
-
 
 

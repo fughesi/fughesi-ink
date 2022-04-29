@@ -9,10 +9,14 @@
 .card {
   background: url("../../images/Icons/Dots.svg") repeat;
   object-fit: fill;
-
+  
   text-align: center;
   padding: 1.5rem 2rem;
   box-shadow: var(--shadow1);
+}
+
+.card > h3 {
+font-size: var(--h3);
 }
 
 .cardsList {

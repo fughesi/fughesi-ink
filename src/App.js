@@ -6,8 +6,9 @@ import LandingPage from "./Pages/LandingPage/LandingPage";
 import Navbar from "./components/Navbar/Navbar";
 import NavbarBig from "./components/NavbarBig/NavbarBig";
 import Footer from "./components/Footer/Footer";
-// const Home = lazy(() => import("./Pages/Home/Home"));
 import Splash from "./Pages/Splash/Splash";
+import Thanks from "./Pages/Thanks/Thanks";
+// const Home = lazy(() => import("./Pages/Home/Home"));
 const Graphics = lazy(() => import("./Pages/Graphics/Graphics"));
 const About = lazy(() => import("./Pages/About/About"));
 const Contact = lazy(() => import("./Pages/Contact/Contact"));
@@ -45,7 +46,9 @@ function App() {
   const [darkmode, setDarkmode] = useState(false);
   const [nav, setNav] = useState(false);
   const [width, setWidth] = useState(0);
-  const breakpoint = 700;
+  const breakpoint1 = 424;
+  const breakpoint2 = 767;
+  const breakpoint3 = 1023;
 
   // tracks window width as breakpoint for Navbar
   useEffect(() => {
@@ -65,11 +68,11 @@ function App() {
   function toggler() {
     setNav((i) => !i);
   }
-
+  console.log(width);
   return (
     <BrowserRouter>
       <Splash />
-      {width > breakpoint ? (
+      {width > breakpoint2 ? (
         <NavbarBig toggler={toggler} nav={nav} />
       ) : (
         <Navbar toggler={toggler} nav={nav} />
@@ -83,6 +86,7 @@ function App() {
             <Route path="/contact" element={<Contact nav={nav} />} exact />
             <Route path="/cancel" element={<Cancel nav={nav} />} exact />
             <Route path="/success" element={<Success nav={nav} />} exact />
+            <Route path="/Thanks" element={<Thanks nav={nav} />} exact />
             <Route
               path="/graphics"
               element={

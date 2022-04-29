@@ -93,9 +93,9 @@
 }
 
 .topLandingPage p {
-  margin: 0 0 0 2.5em;
+  margin: 0;
   width: 100%;
-  font-size: var(--p2);
+  font-size: var(--p0);
 }
 
 .colorsDiv div {
