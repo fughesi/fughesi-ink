@@ -37,4 +37,41 @@
   .navBigUL li a {
     font-size: var(--p0);
   }
+
+  .socials {
+    margin: 0 1rem;
+    fill: var(--color4);
+    cursor: pointer;
+  }
+
+  /* .etsy {
+  position: relative;
+
+} */
+
+  .etsy:hover {
+    fill: #e65300;
+    filter: brightness(1.5);
+  }
+
+  /* .etsy::after {
+  content: "ETSY";
+  color: #e65300;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 14px;
+  width: 90px;
+  
+} */
+
+  .FB2:hover {
+    fill: #6e87f5;
+    filter: saturate(5);
+  }
+
+  .IG2:hover {
+    fill: #d6249f;
+    filter: brightness(1.5);
+  }
 }

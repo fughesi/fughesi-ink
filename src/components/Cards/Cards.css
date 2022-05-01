@@ -3,32 +3,35 @@
 .boxes {
   display: grid;
   gap: 1.25rem;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
 }
 
 .card {
-  background: url("../../images/Icons/Dots.svg") repeat;
+  /* background: url("../../images/Icons/Dots.svg") repeat; */
   object-fit: fill;
-  
+
   text-align: center;
-  padding: 1.5rem 2rem;
+  padding: 0.5em;
   box-shadow: var(--shadow1);
 }
 
 .card > h3 {
-font-size: var(--h3);
+  font-size: var(--h3);
+  margin: 0;
+}
+
+.card > p {
+  margin: 0.5em 0 0 0;
+  font-size: var(--p2);
 }
 
 .cardsList {
   text-align: left;
-  padding: 0;
-  font-size: var(--p1);
+  /* padding: 0; */
+  font-size: var(--p2);
 }
 
 .cardsList li {
   list-style: square;
-}
-
-.cardsList li:first-child {
-  margin-top: 1rem;
+  margin-left: -1.5rem;
 }

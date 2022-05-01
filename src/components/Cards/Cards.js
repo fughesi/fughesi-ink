@@ -18,15 +18,13 @@ export default function Cards() {
       </div>
       <div className="card">
         <h3>Select a Shirt</h3>
-        <p>
+        <p className="cardslistUL">
           Two available options:
-          <ul className="cardsList">
-            <li>100% ring-spun cotton (loose fitted)</li>
-            <li>
-              tri-blend premium (50% poly, 25% cotton, 25% algon) (form fitted)
-            </li>
-          </ul>
         </p>
+          <ul className="cardsList">
+            <li>100% ring-spun cotton</li>
+            <li>Tri-blend premium</li>
+          </ul>
       </div>
       <div className="card">
         <h3>Lorem</h3>
