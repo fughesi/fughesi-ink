@@ -8,7 +8,6 @@ import NavbarBig from "./components/NavbarBig/NavbarBig";
 import Footer from "./components/Footer/Footer";
 import Splash from "./Pages/Splash/Splash";
 import Thanks from "./Pages/Thanks/Thanks";
-// const Home = lazy(() => import("./Pages/Home/Home"));
 const Graphics = lazy(() => import("./Pages/Graphics/Graphics"));
 const About = lazy(() => import("./Pages/About/About"));
 const Contact = lazy(() => import("./Pages/Contact/Contact"));
@@ -59,6 +58,7 @@ function App() {
     };
   }, []);
 
+
   // toggling dark mode on or off
   function setMode() {
     setDarkmode((i) => !i);
@@ -80,7 +80,6 @@ function App() {
       <main className="appWrap">
         <Suspense fallback={<Loading />}>
           <Routes>
-            {/* <Route path="/" element={<Home nav={nav} />} exact /> */}
             <Route path="/" element={<LandingPage nav={nav} />} exact />
             <Route path="/About" element={<About nav={nav} />} exact />
             <Route path="/contact" element={<Contact nav={nav} />} exact />
