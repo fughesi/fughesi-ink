@@ -38,12 +38,13 @@ button {
   cursor: pointer;
   grid-column: 1 / span 2;
   background-color: var(--color4);
+  color: var(--color1);
   transition: 0.5s ease;
 }
 
 button:hover,
 button:focus {
-  background-color: red;
+  background-color: var(--color5);
 }
 
 input,

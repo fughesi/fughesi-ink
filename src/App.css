@@ -9,23 +9,25 @@
   --color3: #f77f00;
   --color4: #d62828;
   --color5: #003049; */
-  
-  --color1: #fffcf2;
-  --color2: #ccc5b9;
+
+  --color1: #eeece8;
+  --color2: #c4bfb8;
   --color3: #333533;
   --color4: #202020;
   --color5: #eb5e28;
-  
+  /* --color5: #ee0e0e; */
+
   /* SIZES */
   --p0: clamp(0.69rem, calc(0.5rem + 0.99vw), 1.5rem);
   --p1: clamp(0.75rem, calc(0.48rem + 1.34vw), 0.85rem);
   --p2: clamp(0.63rem, calc(0.52rem + 0.55vw), 0.91rem);
-  --h3: clamp(0.75rem, calc(0.60rem + 0.73vw), 1.13rem);
+  --h3: clamp(0.75rem, calc(0.6rem + 0.73vw), 1.13rem);
   --h1: clamp(2.07rem, calc(1.1rem + 4.89vw), 4.68rem);
   --title1: max(2.5vw, 1.2rem);
   --button1: clamp(0.6rem, 1.2vw, 0.85rem);
 
   /* WEIGHTS */
+  --thin: 200;
   --reg: 400;
   --bold: 700;
 
@@ -44,7 +46,6 @@
 
 html {
   overflow-x: hidden;
-  /* overscroll-behavior: none; */
 }
 
 *,
@@ -67,7 +68,7 @@ body {
   padding: 0;
   max-width: 100%;
   block-size: fit-content;
-  font-family: "Red Hat Text", sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
 .appWrap {
@@ -95,5 +96,5 @@ a {
 
 a:hover,
 a:active {
-  color: var(--color4Link);
+  color: var(--color5);
 }

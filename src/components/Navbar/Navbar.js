@@ -24,42 +24,46 @@ export default function Navbar({ toggler, nav }) {
         <ul>
           <li>
             <Link to="/">
-              <Home
+              {/* <Home
                 width={100}
                 height={55}
                 className="link"
                 onClick={toggler}
-              />
+              /> */}
+              <h2 className="link">HOME</h2>
             </Link>
           </li>
           <li>
             <Link to="/graphics">
-              <Graphics
+              <h2 className="link">GRAPHICS</h2>
+              {/* <Graphics
                 width={100}
                 height={55}
                 className="link"
                 onClick={toggler}
-              />
+              /> */}
             </Link>
           </li>
           <li>
             <Link to="/about">
-              <About
+              {/* <About
                 width={100}
                 height={55}
                 className="link"
                 onClick={toggler}
-              />
+              /> */}
+              <h2 className="link">ABOUT</h2>
             </Link>
           </li>
           <li>
             <Link to="/contact">
-              <Contact
+              {/* <Contact
                 width={100}
                 height={55}
                 className="link"
                 onClick={toggler}
-              />
+              /> */}
+              <h2 className="link">CONTACT</h2>
             </Link>
           </li>
         </ul>

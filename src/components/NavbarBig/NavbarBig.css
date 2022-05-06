@@ -30,7 +30,8 @@
     display: flex;
     justify-content: start;
     align-items: center;
-    font-family: "Amatic SC", cursive;
+    /* font-family: "Amatic SC", cursive; */
+    font-weight: var(--thin);
     padding: 0 2rem 0 0;
   }
 
@@ -39,22 +40,22 @@
   }
 
   .socials {
-    margin: 0 1rem;
+    margin: 0 .5rem;
     fill: var(--color4);
     cursor: pointer;
   }
 
-  /* .etsy {
+  .etsy {
   position: relative;
 
-} */
+}
 
   .etsy:hover {
     fill: #e65300;
     filter: brightness(1.5);
   }
 
-  /* .etsy::after {
+  .etsy::after {
   content: "ETSY";
   color: #e65300;
   position: absolute;
@@ -62,8 +63,7 @@
   left: 0;
   height: 14px;
   width: 90px;
-  
-} */
+}
 
   .FB2:hover {
     fill: #6e87f5;
@@ -73,5 +73,14 @@
   .IG2:hover {
     fill: #d6249f;
     filter: brightness(1.5);
+  }
+
+  .WA:hover {
+    fill: #32CB31;
+  }
+
+  .monkeyHead {
+    margin: 0 1.5rem 0 2rem;
+    fill: var(--color3);
   }
 }

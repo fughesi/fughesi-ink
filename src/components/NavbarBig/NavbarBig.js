@@ -1,12 +1,39 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import MonkeyHead from "./../../images/portraits/monkeyFace3D.png";
+import MonkeyHead from "./../../images/portraits/MonkeyHead";
 import Etsy from "./../../images/Icons/etsy";
 import FB from "./../../images/Icons/FB2";
 import IG from "./../../images/Icons/IG2";
+import WA from "./../../images/Icons/WA";
 import "./NavbarBig.css";
 
 export default function Navbar() {
+  function intent(event) {
+    // tries to execute the uri:scheme
+    function goToUri(uri, href) {
+      event.preventDefault();
+      let start, end, elapsed;
+
+      // start a timer
+      start = new Date().getTime();
+
+      // attempt to redirect to the uri:scheme
+      // the lovely thing about javascript is that it's single threadded.
+      // if this WORKS, it'll stutter for a split second, causing the timer to be off
+      document.location = uri;
+
+      // end timer
+      end = new Date().getTime();
+
+      elapsed = end - start;
+
+      // if there's no elapsed time, then the scheme didn't fire, and we head to the url.
+      if (elapsed < 1) {
+        document.location = href;
+      }
+    }
+  }
+
   return (
     <nav className="mainNav">
       <div className="navDiv">
@@ -29,29 +56,45 @@ export default function Navbar() {
           </li>
         </ul>
       </div>
+
       <a
-        href="https://www.facebook.com/fughesiInk"
+        onClick={intent}
         target="_blank"
+        href="http://facebook.com/fughesiink"
+        data-scheme="fb://profile/fughesiink"
         rel="noreferrer noopener"
       >
         <Etsy height="25" className="etsy socials" />
       </a>
       <a
-        href="https://www.facebook.com/fughesiInk"
+        onClick={intent}
         target="_blank"
+        href="http://facebook.com/fughesiink"
+        data-scheme="fb://profile/fughesiink"
         rel="noreferrer noopener"
       >
         <FB height="25" className="FB2 socials" />
       </a>
-
       <a
-        href="https://www.facebook.com/fughesiInk"
+        onClick={intent}
         target="_blank"
+        href="http://facebook.com/fughesiink"
+        data-scheme="fb://profile/fughesiink"
         rel="noreferrer noopener"
       >
         <IG height="25" className="IG2 socials" />
       </a>
-      <img src={MonkeyHead} alt="logo" height="70%" />
+      <a
+        onClick={intent}
+        href="https://wa.me/message/PKTZG4VTREDRN1"
+        data-scheme="fb://profile/fughesiink"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        <WA height="25" className="WA socials" />
+      </a>
+
+      <MonkeyHead height="70%" className="monkeyHead" />
     </nav>
   );
 }

@@ -7,12 +7,12 @@
 }
 
 .card {
-  /* background: url("../../images/Icons/Dots.svg") repeat; */
+  background: url("../../images/Icons/Dots.svg") repeat;
   object-fit: fill;
 
   text-align: center;
   padding: 0.5em;
-  box-shadow: var(--shadow1);
+  box-shadow: var(--shadow);
 }
 
 .card > h3 {
@@ -27,11 +27,11 @@
 
 .cardsList {
   text-align: left;
-  /* padding: 0; */
   font-size: var(--p2);
 }
 
 .cardsList li {
   list-style: square;
   margin-left: -1.5rem;
+  font-weight: var(--thin);
 }

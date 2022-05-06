@@ -1,15 +1,14 @@
 @import url("../../App.css");
 
 .footer {
-  /* position: relative; */
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
   grid-template-areas: ". b c";
-
   background-color: var(--white);
-  /* box-shadow: var(--shadow); */
+
+  animation: stall 3s;
 }
 
 .copyright {
@@ -34,4 +33,16 @@
   align-self: center;
   justify-self: center;
   padding: 1rem 0.5rem 1rem 0.3rem;
+}
+
+@keyframes stall {
+  0% {
+    visibility: hidden;
+  }
+  95% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
 }

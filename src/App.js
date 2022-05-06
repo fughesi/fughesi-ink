@@ -44,7 +44,7 @@ function App() {
   //state variables
   const [darkmode, setDarkmode] = useState(false);
   const [nav, setNav] = useState(false);
-  const [width, setWidth] = useState(0);
+  const [width, setWidth] = useState(window.innerWidth);
   const breakpoint1 = 424;
   const breakpoint2 = 767;
   const breakpoint3 = 1023;
@@ -68,7 +68,7 @@ function App() {
   function toggler() {
     setNav((i) => !i);
   }
-  console.log(width);
+
   return (
     <BrowserRouter>
       <Splash />
@@ -89,7 +89,7 @@ function App() {
             <Route
               path="/graphics"
               element={
-                <Graphics nav={nav} /> //darkmode={darkmode} setMode={setMode} />
+                <Graphics nav={nav} /> 
               }
               exact
             />
