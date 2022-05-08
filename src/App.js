@@ -42,12 +42,12 @@ const NotFound = lazy(() => import("./Pages/NotFound/NotFound"));
 
 function App() {
   //state variables
-  const [darkmode, setDarkmode] = useState(false);
+  const [darkmode, setDarkmode] = useState(JSON.parse(localStorage.getItem("darkMode")) || false);
   const [nav, setNav] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
-  const breakpoint1 = 424;
+  // const breakpoint1 = 424;
   const breakpoint2 = 767;
-  const breakpoint3 = 1023;
+  // const breakpoint3 = 1023;
 
   // tracks window width as breakpoint for Navbar
   useEffect(() => {
@@ -61,7 +61,10 @@ function App() {
 
   // toggling dark mode on or off
   function setMode() {
-    setDarkmode((i) => !i);
+    setDarkmode((i) => {
+      localStorage.setItem("darkMode", JSON.stringify(!i))
+      return !i
+    });
   }
 
   // toggle state to update navbar

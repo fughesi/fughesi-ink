@@ -8,7 +8,7 @@ export default function Cards() {
       <div className="card">
         <h3>Select a Graphic</h3>
         <p>
-          There are hundreds of graphics available under our{" "}
+          Hundreds of choices available under our{" "}
           <strong>
             {" "}
             <Link to="/graphics">Graphics</Link>

@@ -1,10 +1,51 @@
 @import url("../../App.css");
 
-.aboutMain {
-  display: grid;
-  width: 100vw;
+.accordionSection {
+  width: 100%;
   min-height: 100vh;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-top: 1rem;
 }
+
+.accordionContainer {
+  width: 100%;
+  max-width: 50rem;
+  padding: 0 1.5rem;
+}
+
+.accordionItem {
+  cursor: pointer;
+  background-color: var(--color1);
+  border-radius: 0.4rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  box-shadow: 0.1rem 2px .2rem #0009;
+}
+
+.answer {
+  font-weight: var(--thin);
+  position: relative;
+}
+
+.answer::before {
+  content: "";
+  position: absolute;
+  width: 0.3rem;
+  height: 100%;
+  background-color: var(--color3);
+  left: 0%;
+}
+
+.answer p {
+  color: var(--color4);
+  padding: 0 0 0 1rem;
+}
+
+/* .hideAnswer {
+  display: none;
+} */
 
 .blur {
   filter: blur(var(--blur));

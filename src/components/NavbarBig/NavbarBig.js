@@ -8,32 +8,7 @@ import WA from "./../../images/Icons/WA";
 import "./NavbarBig.css";
 
 export default function Navbar() {
-  function intent(event) {
-    // tries to execute the uri:scheme
-    function goToUri(uri, href) {
-      event.preventDefault();
-      let start, end, elapsed;
-
-      // start a timer
-      start = new Date().getTime();
-
-      // attempt to redirect to the uri:scheme
-      // the lovely thing about javascript is that it's single threadded.
-      // if this WORKS, it'll stutter for a split second, causing the timer to be off
-      document.location = uri;
-
-      // end timer
-      end = new Date().getTime();
-
-      elapsed = end - start;
-
-      // if there's no elapsed time, then the scheme didn't fire, and we head to the url.
-      if (elapsed < 1) {
-        document.location = href;
-      }
-    }
-  }
-
+ 
   return (
     <nav className="mainNav">
       <div className="navDiv">
@@ -58,7 +33,7 @@ export default function Navbar() {
       </div>
 
       <a
-        onClick={intent}
+        // onClick={goToUri}
         target="_blank"
         href="http://facebook.com/fughesiink"
         data-scheme="fb://profile/fughesiink"
@@ -67,7 +42,7 @@ export default function Navbar() {
         <Etsy height="25" className="etsy socials" />
       </a>
       <a
-        onClick={intent}
+        // onClick={goToUri}
         target="_blank"
         href="http://facebook.com/fughesiink"
         data-scheme="fb://profile/fughesiink"
@@ -76,7 +51,7 @@ export default function Navbar() {
         <FB height="25" className="FB2 socials" />
       </a>
       <a
-        onClick={intent}
+        // onClick={goToUri}
         target="_blank"
         href="http://facebook.com/fughesiink"
         data-scheme="fb://profile/fughesiink"
@@ -85,7 +60,7 @@ export default function Navbar() {
         <IG height="25" className="IG2 socials" />
       </a>
       <a
-        onClick={intent}
+        // onClick={goToUri}
         href="https://wa.me/message/PKTZG4VTREDRN1"
         data-scheme="fb://profile/fughesiink"
         target="_blank"

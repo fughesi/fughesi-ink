@@ -35,3 +35,15 @@
   margin-left: -1.5rem;
   font-weight: var(--thin);
 }
+
+@media (max-width: 582px) {
+  .cardsList {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+  }
+  .cardsList li {
+    list-style: none;
+    margin: initial;
+  }
+}

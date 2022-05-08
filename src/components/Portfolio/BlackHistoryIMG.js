@@ -3,6 +3,7 @@ import BackButton from "../BackButton/BackButton";
 import Photos from "../../PhotoBlackHistoryJSON";
 import DarkMode from "../DarkMode/DarkMode";
 import BackToTop from "../BackToTop/BackToTop";
+import Cart from "./../../images/Icons/Cart";
 import "./Portfolio.css";
 import {
   LazyLoadImage,
@@ -25,8 +26,17 @@ function Portfolio({ darkmode, setMode, nav }) {
   const photoArr = Photos.map((i) => {
     return (
       <div className="photoElement">
-        <LazyLoadImage key={i.id} id={i.id} src={i.src} alt={i.alt} />
-        <p className="nameIMG">{i.name}</p>
+        <LazyLoadImage
+          key={i.id}
+          id={i.id}
+          src={i.src}
+          alt={i.alt}
+          className="graphic"
+        />
+        {/* <div > */}
+          <p className="nameIMG">{i.name}</p>
+          {/* <Cart width="20" className="cart" /> */}
+        {/* </div> */}
       </div>
     );
   });

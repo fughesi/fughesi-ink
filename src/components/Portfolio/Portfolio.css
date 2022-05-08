@@ -28,12 +28,18 @@ img {
   align-self: center;
   margin-top: 0;
   margin-bottom: 3rem;
-
+  
   text-align: center;
   font-weight: var(--bold);
-
+  
   font-size: var(--title1);
-  border-bottom: 0.125em solid var(--color3);
+  border-bottom: 0.125em solid var(--color1);
+}
+
+.cart {
+  position: absolute; 
+  top: 0;
+  right: 5%;
 }
 
 .darkModeOn {
