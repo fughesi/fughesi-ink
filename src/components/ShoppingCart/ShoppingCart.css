@@ -1,0 +1,8 @@
+@import url("./../../App.css");
+
+.shoppingCartDiv {
+  width: 2.125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

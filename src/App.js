@@ -9,7 +9,7 @@ import Footer from "./components/Footer/Footer";
 import Splash from "./Pages/Splash/Splash";
 import Thanks from "./Pages/Thanks/Thanks";
 const Graphics = lazy(() => import("./Pages/Graphics/Graphics"));
-const About = lazy(() => import("./Pages/About/About"));
+const FAQ = lazy(() => import("./Pages/FAQ/FAQ"));
 const Contact = lazy(() => import("./Pages/Contact/Contact"));
 const Cancel = lazy(() => import("./Pages/Cancel/Cancel"));
 const Success = lazy(() => import("./Pages/Success/Success"));
@@ -84,7 +84,7 @@ function App() {
         <Suspense fallback={<Loading />}>
           <Routes>
             <Route path="/" element={<LandingPage nav={nav} />} exact />
-            <Route path="/About" element={<About nav={nav} />} exact />
+            <Route path="/FAQ" element={<FAQ nav={nav} />} exact />
             <Route path="/contact" element={<Contact nav={nav} />} exact />
             <Route path="/cancel" element={<Cancel nav={nav} />} exact />
             <Route path="/success" element={<Success nav={nav} />} exact />

@@ -3,7 +3,7 @@ import BackButton from "../BackButton/BackButton";
 import Photos from "../../PhotoBlackHistoryJSON";
 import DarkMode from "../DarkMode/DarkMode";
 import BackToTop from "../BackToTop/BackToTop";
-import Cart from "./../../images/Icons/Cart";
+import ShoppingCart from "./../ShoppingCart/ShoppingCart"
 import "./Portfolio.css";
 import {
   LazyLoadImage,
@@ -35,12 +35,12 @@ function Portfolio({ darkmode, setMode, nav }) {
         />
         {/* <div > */}
           <p className="nameIMG">{i.name}</p>
-          {/* <Cart width="20" className="cart" /> */}
+          {/* <ShoppingCart /> */}
         {/* </div> */}
       </div>
     );
   });
-
+  
   // find scroll position
   const watchHeight = (event) => {
     setScrollHeight(window.scrollY);
@@ -51,19 +51,20 @@ function Portfolio({ darkmode, setMode, nav }) {
       window.removeEventListener("scroll", watchHeight);
     };
   }, []);
-
+  
   // click the arrow at bottom of page to go to top
   function scroll() {
     return window.scrollTo(0, 0);
   }
-
+  
   return (
     <section
-      aria-labelledby="pop art graphics"
-      className={`${nav ? "portfolio blur" : "portfolio"} ${
-        darkmode ? "portfolio darkModeOn" : "portfolio"
-      }`}
+    aria-labelledby="pop art graphics"
+    className={`${nav ? "portfolio blur" : "portfolio"} ${
+      darkmode ? "portfolio darkModeOn" : "portfolio"
+    }`}
     >
+    
       {photoArr}
       {scrollHeight > 2750 && (
         <BackToTop
@@ -74,6 +75,8 @@ function Portfolio({ darkmode, setMode, nav }) {
       )}
       <BackButton />
       <DarkMode handleClick={setMode} darkmode={darkmode} />
+      
+
     </section>
   );
 }

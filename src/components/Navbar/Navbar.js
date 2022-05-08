@@ -35,9 +35,9 @@ export default function Navbar({ toggler, nav }) {
             </Link>
           </li>
           <li>
-            <Link to="/about">
+            <Link to="/FAQ">
               <h2 className="link" onClick={toggler}>
-                ABOUT
+                FAQ
               </h2>
             </Link>
           </li>

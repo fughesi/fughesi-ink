@@ -2,13 +2,7 @@
   /* COLOR */
   --white: hsl(0, 0%, 100%);
   --black: hsl(0, 0%, 0%);
-  --color4Link: #720d0d;
-
-  /* --color1: #eae2b7;
-  --color2: #fcbf49;
-  --color3: #f77f00;
-  --color4: #d62828;
-  --color5: #003049; */
+  --colorLinkHover: #1384e7;
 
   --color1: #eeece8;
   --color2: #c4bfb8;
@@ -95,5 +89,5 @@ a {
 
 a:hover,
 a:active {
-  color: var(--color5);
+  color: var(--colorLinkHover);
 }

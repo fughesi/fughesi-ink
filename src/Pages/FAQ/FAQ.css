@@ -27,6 +27,8 @@
 .answer {
   font-weight: var(--thin);
   position: relative;
+  color: var(--color4);
+  padding: 0 0 0 1rem;
 }
 
 .answer::before {
@@ -38,14 +40,30 @@
   left: 0%;
 }
 
-.answer p {
-  color: var(--color4);
-  padding: 0 0 0 1rem;
+.product:last-child {
+  margin-bottom: 1.75rem;
 }
 
-/* .hideAnswer {
-  display: none;
-} */
+ .FAQdiv {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .FAQitems {
+  margin-bottom: 0;
+}
+
+.product {  
+  margin-top: 0.25em;
+  font-size: var(--p1);
+  text-align: center;
+}
+
+.smallText {
+  font-size: var(--p0);
+}
 
 .blur {
   filter: blur(var(--blur));
