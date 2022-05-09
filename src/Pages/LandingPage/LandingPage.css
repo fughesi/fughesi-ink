@@ -66,6 +66,7 @@
   display: inline-block;
   margin: 0 auto;
   font-size: var(--h1);
+  font-weight: var(--bold);
   color: transparent;
   -webkit-text-stroke: var(--color4) 1px;
 }

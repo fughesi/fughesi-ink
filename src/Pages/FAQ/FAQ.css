@@ -3,9 +3,8 @@
 .accordionSection {
   width: 100%;
   min-height: 100vh;
-  display: flex;
-  align-content: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
   margin-top: 1rem;
 }
 
@@ -40,8 +39,19 @@
   left: 0%;
 }
 
+.FAQlink {
+  color: var(--color5);
+  border-bottom: 1px solid var(--color5);
+}
+
+.FAQlink:hover, 
+.FAQlink:focus {
+ /* transform: translateY(1.1); */
+ font-weight: var(--reg);
+}
+
 .product:last-child {
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.35rem;
 }
 
  .FAQdiv {
@@ -62,7 +72,7 @@
 }
 
 .smallText {
-  font-size: var(--p0);
+  font-size: var(--p1);
 }
 
 .blur {

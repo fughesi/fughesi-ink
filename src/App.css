@@ -2,13 +2,40 @@
   /* COLOR */
   --white: hsl(0, 0%, 100%);
   --black: hsl(0, 0%, 0%);
-  --colorLinkHover: #1384e7;
+  --colorLinkHover: #1b4698;
 
   --color1: #eeece8;
   --color2: #c4bfb8;
   --color3: #333533;
   --color4: #202020;
-  --color5: #eb5e28;
+  /* --color5: #eb5e28; */
+  --color5: #3061ff;
+  --color6: #ffbe03;
+  
+  /* MSNBC colors */
+  --blue-10: #dbebff;
+  --blue-20: #82aeff;
+  --blue-30: #5081ff;
+  --blue-40: #3061ff;
+  --blue-50: #2051d1;
+  --blue-60: #1b4698;
+  --blue-70: #102039;
+  --yellow-10: #ffdf82;
+  --yellow-20: #ffd14d;
+  --yellow-30: #ffc51b;
+  --yellow-40: #ffbe03;
+  --yellow-50: #fbb102;
+  --yellow-60: #f19d01;
+  --yellow-70: #e88500;
+  --red-10: #ffb4b4;
+  --red-20: #fd6f6f;
+  --red-30: #fa3a3a;
+  --red-40: #e91717;
+  --red-50: #cb1111;
+  --red-60: #ae0e0e;
+  --red-70: #911010;
+
+
 
   /* SIZES */
   --p0: clamp(0.69rem, calc(0.5rem + 0.99vw), 1.5rem);
