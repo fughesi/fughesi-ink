@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import MonkeyHead from "./../../images/portraits/MonkeyHead";
-import Ready from "./../../images/portraits/ready.jpg";
 import FB2 from "../../images/Icons/FB2";
 import IG2 from "../../images/Icons/IG2";
 import WA from "../../images/Icons/WA";
@@ -8,50 +7,11 @@ import Etsy from "../../images/Icons/etsy";
 import Cards from "../../components/Cards/Cards";
 import "./LandingPage.css";
 
-export default function LandingPage({ nav }) {
-  // state variables
-  const [offsetY, setOffsetY] = useState(0);
-
-  // callback function to get page location in Y axis
-  const handleScroll = () => setOffsetY(window.pageYOffset);
-
-  // parallax effect
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
+export default function LandingPage({ nav, offsetY, handleScroll }) {
   // window to start at top of page on load
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  // links to socials
-  function intent(event) {
-    // tries to execute the uri:scheme
-    function goToUri(uri, href) {
-      event.preventDefault();
-      let start, end, elapsed;
-
-      // start a timer
-      start = new Date().getTime();
-
-      // attempt to redirect to the uri:scheme
-      // the lovely thing about javascript is that it's single threadded.
-      // if this WORKS, it'll stutter for a split second, causing the timer to be off
-      document.location = uri;
-
-      // end timer
-      end = new Date().getTime();
-
-      elapsed = end - start;
-
-      // if there's no elapsed time, then the scheme didn't fire, and we head to the url.
-      if (elapsed < 1) {
-        document.location = href;
-      }
-    }
-  }
 
   return (
     <main className={nav ? "mainLandingPage blur" : "mainLandingPage"}>
@@ -97,7 +57,6 @@ export default function LandingPage({ nav }) {
           <div></div>
           <div></div>
         </div>
-        {/* <img src={Ready} alt="model with tattoos" width="350" className="ready"/> */}
       </section>
 
       <section className="cards" aria-describedby="info cards">
@@ -116,7 +75,6 @@ export default function LandingPage({ nav }) {
           <div className="tooltip">
             <span className="tooltipText">ETSY store</span>
             <a
-              onClick={intent}
               target="_blank"
               href="http://facebook.com/fughesiink"
               data-scheme="fb://profile/fughesiink"
@@ -128,7 +86,6 @@ export default function LandingPage({ nav }) {
           <div className="tooltip">
             <span className="tooltipText">Follow on Facebook</span>
             <a
-              onClick={intent}
               target="_blank"
               href="http://facebook.com/fughesiink"
               data-scheme="fb://profile/fughesiink"
@@ -141,7 +98,6 @@ export default function LandingPage({ nav }) {
           <div className="tooltip">
             <span className="tooltipText">Follow on Instagram</span>
             <a
-              onClick={intent}
               target="_blank"
               href="http://facebook.com/fughesiink"
               data-scheme="fb://profile/fughesiink"
@@ -153,7 +109,6 @@ export default function LandingPage({ nav }) {
           <div className="tooltip">
             <span className="tooltipText">Message on WhatsApp</span>
             <a
-              onClick={intent}
               target="_blank"
               href="https://wa.me/message/PKTZG4VTREDRN1"
               data-scheme="fb://profile/fughesiink"

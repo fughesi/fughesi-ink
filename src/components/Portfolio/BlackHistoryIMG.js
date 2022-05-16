@@ -34,7 +34,7 @@ function Portfolio({ darkmode, setMode, nav }) {
           className="graphic"
         />
         {/* <div> */}
-          {/* <ShoppingCart key={i.id} id={i.id} src={i.src} alt={i.alt} /> */}
+          {/* <ShoppingCart key={i.id} id={i.id} src={i.src} alt={i.alt} />exit */}
           <p className="nameIMG">{i.name}</p>
         {/* </div> */}
       </div>

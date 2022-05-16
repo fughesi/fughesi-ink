@@ -35,8 +35,6 @@
   --red-60: #ae0e0e;
   --red-70: #911010;
 
-
-
   /* SIZES */
   --p0: clamp(0.69rem, calc(0.5rem + 0.99vw), 1.5rem);
   --p1: clamp(0.75rem, calc(0.48rem + 1.34vw), 0.85rem);
@@ -65,7 +63,9 @@
 }
 
 html {
+  -webkit-overflow-x: hidden;
   overflow-x: hidden;
+  max-width: 100%;
 }
 
 *,
@@ -112,9 +112,11 @@ img {
 
 a {
   color: var(--color4);
+  transition: 200ms;
 }
 
 a:hover,
 a:active {
-  color: var(--colorLinkHover);
+  color: var( --yellow-40);
+  outline: 1px solid red;
 }

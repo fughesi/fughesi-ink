@@ -2,13 +2,19 @@
 
 .mainLandingPage {
   display: grid;
-  min-height: 100vh;
-  max-width: 100%;
-  grid-template: 100vh auto auto / 1.5rem 1fr 1.5rem;
+  /* min-height: 100vh; */
+  max-width: 100vw;
+  /* grid-template: 100vh auto auto / 1.5rem 1fr 1.5rem; */
+  grid-template: 100vh auto auto / 1fr;
+  gap: 1rem;
   grid-template-areas:
-    "top top top "
-    ". cards ."
-    "bottom bottom bottom ";
+    /* "top top top " */
+    "top"
+    /* ". cards ." */
+    "cards"
+    /* "bottom bottom bottom " */
+    
+    "bottom";
   background: var(--white);
 }
 

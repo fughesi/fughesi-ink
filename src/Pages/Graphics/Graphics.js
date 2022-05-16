@@ -3,11 +3,10 @@ import BackToTop from "../../components/BackToTop/BackToTop";
 import { Link } from "react-router-dom";
 import "./Graphics.css";
 
-export default function Graphics({ nav }) {
+export default function Graphics({ nav, offsetY }) {
   // state variables
   const [top, setTop] = useState(true);
   const [bottom, setBottom] = useState(!top);
-  const [scrollHeight, setScrollHeight] = useState(0);
 
   //back to the top of the page when clicked
   function pageup() {
@@ -19,17 +18,6 @@ export default function Graphics({ nav }) {
   function scroll() {
     return window.scrollTo(0, 0);
   }
-
-  // find scroll position
-  const watchHeight = (event) => {
-    setScrollHeight(window.scrollY);
-  };
-  useEffect(() => {
-    window.addEventListener("scroll", watchHeight);
-    return () => {
-      window.removeEventListener("scroll", watchHeight);
-    };
-  }, []);
 
   return (
     <main className={nav ? "graphicsMain blur" : "graphicsMain"}>
@@ -73,7 +61,7 @@ export default function Graphics({ nav }) {
         </li>
       </ul>
 
-      {scrollHeight > 3000 && (
+      {offsetY > 3000 && (
         <BackToTop
           handleClick={(() => pageup, scroll)}
           top={top}

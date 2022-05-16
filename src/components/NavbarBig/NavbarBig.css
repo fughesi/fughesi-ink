@@ -1,15 +1,55 @@
 @import url("./../../App.css");
 
 @media (min-width: 767px) {
-  .navDiv {
+
+ 
+.mainNav{
+  position: sticky;
+  top: 0;
+  width: 100%;
+
+  background: var(--white);
+  height: 5rem;
+  box-shadow: var(--shadow);
+
+  z-index: 9;
+}
+
+
+
+  .mainNavBig {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    
+    /* background: var(--white); */
+    height: 5rem;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    z-index: 9;
+    margin: 4rem;
     width: 100%;
     justify-content: space-between;
+  } 
+
+  .navDivBig {
+    transition: 600ms;
+  }
+
+  .navDiv,
+  .navDivBig {
+    display: flex;
+    justify-content: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100%;
+    z-index: 10;
   }
 
   .mainNav {
-    display: flex;
-    align-items: center;
-    width: 100%;
   }
 
   .fughesiInk {
@@ -26,12 +66,12 @@
     align-items: center;
   }
 
-  .navBigUL {
+  .navBigUL,
+  .navBigULBig {
     display: flex;
     justify-content: start;
     align-items: center;
-    /* font-family: "Amatic SC", cursive; */
-    font-weight: var(--thin);
+    color: var(--black);
     padding: 0 2rem 0 0;
   }
 
@@ -39,16 +79,16 @@
     font-size: var(--p0);
   }
 
-  .socials {
-    margin: 0 .5rem;
+  .socials,
+  .socialsBig {
+    margin: 0 0.5rem;
     fill: var(--color4);
     cursor: pointer;
   }
 
   .etsy {
-  position: relative;
-
-}
+    position: relative;
+  }
 
   .etsy:hover {
     fill: #e65300;
@@ -56,14 +96,14 @@
   }
 
   .etsy::after {
-  content: "ETSY";
-  color: #e65300;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 14px;
-  width: 90px;
-}
+    content: "ETSY";
+    color: #e65300;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 14px;
+    width: 90px;
+  }
 
   .FB2:hover {
     fill: #6e87f5;
@@ -76,11 +116,20 @@
   }
 
   .WA:hover {
-    fill: #32CB31;
+    fill: #32cb31;
   }
 
   .monkeyHead {
     margin: 0 1.5rem 0 2rem;
+    width: 50px;
     fill: var(--color3);
+    transition: 1000ms;
+  }
+  
+  .monkeyHeadBig {
+    /* margin: 0 1.5rem 0 2rem; */
+    width: 150px;
+    fill: var(--color5);
+    transition: 1000ms;
   }
 }
