@@ -1,60 +1,43 @@
 @import url("./../../App.css");
 
 @media (min-width: 767px) {
-
- 
-.mainNav{
-  position: sticky;
-  top: 0;
-  width: 100%;
-
-  background: var(--white);
-  height: 5rem;
-  box-shadow: var(--shadow);
-
-  z-index: 9;
-}
-
-
-
-  .mainNavBig {
+  .mainNav {
     position: sticky;
     top: 0;
     width: 100%;
-    
-    /* background: var(--white); */
     height: 5rem;
-    
-    display: flex;
+    padding: 0.3rem 1rem 1rem;
     justify-content: space-around;
-    align-items: center;
-    width: 100%;
     z-index: 9;
-    margin: 4rem;
-    width: 100%;
-    justify-content: space-between;
-  } 
+  }
+
+  .shadowNav {
+    background: var(--white);
+    box-shadow: var(--shadow);
+    transition-delay: 1000ms ease-in-out;
+    transition-timing-function: ease-in-out;
+    background-color: var(--black);
+  }
+
+  .shadowNav a {
+    color: var(--white);
+  }
 
   .navDivBig {
     transition: 600ms;
-  }
-
-  .navDiv,
-  .navDivBig {
     display: flex;
-    justify-content: flex-start;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     min-height: 100%;
     z-index: 10;
   }
 
-  .mainNav {
+  .fughesiInk {
+    font-weight: var(--bold);
   }
 
-  .fughesiInk {
-    padding-left: 2rem;
-    font-weight: var(--bold);
+  .big {
+    color: var(--white);
   }
 
   .NavBG {
@@ -76,7 +59,48 @@
   }
 
   .navBigUL li a {
+    position: relative;
     font-size: var(--p0);
+    padding: 0 1.25em;
+  }
+
+  .navBigULBig li a {
+    position: relative;
+    padding: 0 0.25em;
+    font-size: var(--p2);
+  }
+
+  .navBigUL li a:after,
+  .navBigULBig li a:after {
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: var(--color3);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+
+  .navBigUL li a:hover:after,
+  .navBigULBig li a:hover:after {
+    width: 50%;
+    left: 25%;
+  }
+
+  .monkeyHead {
+    margin: 0 1.5rem 0 2rem;
+    width: 50px;
+    fill: var(--color3);
+    transition: 1000ms;
+  }
+
+  .monkeyHeadBig {
+    margin: 0.5rem 1.5rem 0 2rem;
+    width: 150px;
+    fill: var(--color5);
+    transition: 1000ms;
   }
 
   .socials,
@@ -117,19 +141,5 @@
 
   .WA:hover {
     fill: #32cb31;
-  }
-
-  .monkeyHead {
-    margin: 0 1.5rem 0 2rem;
-    width: 50px;
-    fill: var(--color3);
-    transition: 1000ms;
-  }
-  
-  .monkeyHeadBig {
-    /* margin: 0 1.5rem 0 2rem; */
-    width: 150px;
-    fill: var(--color5);
-    transition: 1000ms;
   }
 }

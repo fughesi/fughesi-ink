@@ -17,6 +17,7 @@ const CharicatureIMG = lazy(() =>
   import("./components/Portfolio/CharicatureIMG")
 );
 const PocketIMG = lazy(() => import("./components/Portfolio/PocketIMG"));
+const SuperHeroIMG = lazy(() => import("./components/Portfolio/SuperHeroIMG"));
 const CatCartoonIMG = lazy(() =>
   import("./components/Portfolio/CartoonCatIMG")
 );
@@ -130,6 +131,13 @@ function App() {
               path="/PocketGraphics"
               element={
                 <PocketIMG nav={nav} darkmode={darkmode} setMode={setMode} />
+              }
+              exact
+            />
+            <Route
+              path="/SuperHeroGraphics"
+              element={
+                <SuperHeroIMG nav={nav} darkmode={darkmode} setMode={setMode} />
               }
               exact
             />

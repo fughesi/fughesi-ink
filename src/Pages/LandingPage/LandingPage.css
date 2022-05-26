@@ -13,7 +13,6 @@
     /* ". cards ." */
     "cards"
     /* "bottom bottom bottom " */
-    
     "bottom";
   background: var(--white);
 }
@@ -29,8 +28,8 @@
   max-width: 100%;
   padding: 1.5rem;
 
-  /* background: url("./../../images/portraits/ready.jpg") ;
-  background-size:cover;
+  /* background: url("./../../images/portraits/ready.jpg");
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom; */
 }
@@ -39,7 +38,6 @@
   position: absolute;
   right: -5px;
   bottom: 0;
-  
 }
 
 .topLandingPage h1 {

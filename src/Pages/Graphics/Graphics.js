@@ -40,6 +40,9 @@ export default function Graphics({ nav, offsetY }) {
         <li>
           <Link to="/RandomGraphics">Random</Link>
         </li>
+        <li>
+          <Link to="/SuperHeroGraphics">Super Hero</Link>
+        </li>
       </ul>
 
       <h3>Cartoon collection</h3>

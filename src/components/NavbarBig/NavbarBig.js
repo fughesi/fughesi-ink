@@ -8,69 +8,34 @@ import WA from "./../../images/Icons/WA";
 import "./NavbarBig.css";
 
 export default function Navbar({ offsetY }) {
+  console.log(offsetY);
   return (
     <>
-      <nav className={offsetY > 0 ? "mainNav" : "mainNavBig"}>
-        <div className={offsetY > 0 ? "navDiv" : "navDivBig"}>
+      <nav className={offsetY > 0 ? "mainNav shadowNav" : "mainNav"}>
+        <div className="navDivBig">
           <Link to="/">
-            <h3 className="fughesiInk">FUGHESI Ink</h3>
+            <h3 className={offsetY > 0 ? "fughesiInk big" : "fughesiInk"}>FUGHESI Ink</h3>
           </Link>
-        </div>
 
-        <ul className={offsetY > 0 ? "navBigUL" : "navBigULBig"}>
-          <li>
-            <Link to="/">HOME</Link>
-          </li>
-          <li>
-            <Link to="/graphics">GRAPHICS</Link>
-          </li>
-          <li>
-            <Link to="/FAQ">FAQ</Link>
-          </li>
-          <li>
-            <Link to="/contact">CONTACT</Link>
-          </li>
-        </ul>
-        {/* <div className={offsetY > 0 ? "navDiv" : "navDivBig"}>
-        <a
-          target="_blank"
+          <ul className={offsetY > 0 ? "navBigUL" : "navBigULBig"}>
+            <li>
+              <Link to="/">HOME</Link>
+            </li>
+            <li>
+              <Link to="/graphics">GRAPHICS</Link>
+            </li>
+            <li>
+              <Link to="/FAQ">FAQ</Link>
+            </li>
+            <li>
+              <Link to="/contact">CONTACT</Link>
+            </li>
+          </ul>
 
-          data-scheme="fb://profile/fughesiink"
-          rel="noreferrer noopener"
-        >
-          <Etsy
-            height="25"
-            className={offsetY > 0 ? "etsy socials" : "etsy socialsBig"}
+          <MonkeyHead
+            className={offsetY > 0 ? "monkeyHead" : "monkeyHeadBig"}
           />
-        </a>
-        <a
-          target="_blank"
-
-          data-scheme="fb://profile/fughesiink"
-          rel="noreferrer noopener"
-        >
-          <FB height="25" className="FB2 socials" />
-        </a>
-        <a
-          target="_blank"
-
-          data-scheme="fb://profile/fughesiink"
-          rel="noreferrer noopener"
-        >
-          <IG height="25" className="IG2 socials" />
-        </a>
-        <a
-          href="https://wa.me/message/PKTZG4VTREDRN1"
-
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <WA height="25" className="WA socials" />
-        </a>
-
-        />
-      </div> */}
-        <MonkeyHead className={offsetY > 0 ? "monkeyHead" : "monkeyHeadBig"} />
+        </div>
       </nav>
     </>
   );

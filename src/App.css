@@ -117,6 +117,5 @@ a {
 
 a:hover,
 a:active {
-  color: var( --yellow-40);
-  outline: 1px solid red;
+  color: var( --color2);
 }

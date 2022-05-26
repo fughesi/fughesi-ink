@@ -16,7 +16,7 @@ export default function LandingPage({ nav, offsetY, handleScroll }) {
   return (
     <main className={nav ? "mainLandingPage blur" : "mainLandingPage"}>
       <section aria-describedby="top landing page" className="topLandingPage">
-        <MonkeyHead width="75" opacity=".5" />
+        {/* <MonkeyHead width="75" opacity=".5" /> */}
         <h1>
           <em style={{ transform: `translateY(${offsetY * 0.05}px)` }}>
             Welcome to
