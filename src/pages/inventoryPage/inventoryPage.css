@@ -1,0 +1,10 @@
+@import url('./../../App.css');
+
+.inventoryPageMain {
+    margin-bottom: 33rem;
+}
+
+.blur {
+    filter: blur(var(--blur));
+  }
+  

@@ -16,8 +16,9 @@
 
   height: minmax(500px, auto);
   border-radius: 0.625rem;
-  background-color: #eee;
-  box-shadow: var(--shadow);
+  background-color: var(--color2);
+  /* background-color: #eee; */
+  box-shadow: var(--shadow3);
 }
 
 .form * {
@@ -26,6 +27,7 @@
   width: 90%;
   border: 0;
   border-radius: 0.3125rem;
+  box-shadow: var(--shadow1);
 }
 
 .comment {
@@ -44,7 +46,9 @@ button {
 
 button:hover,
 button:focus {
-  background-color: var(--color5);
+  color: var(--fill);
+  background-color: var(--color6);
+  font-weight: var(--bold);
 }
 
 input,

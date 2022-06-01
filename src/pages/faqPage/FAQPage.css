@@ -1,0 +1,80 @@
+@import url("./../../App.css");
+
+.accordionSection {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 7.5rem auto;
+  place-items: center;
+  margin: 0 0 11rem 0;
+}
+
+.accordionContainer {
+  width: 100%;
+  max-width: 50rem;
+  padding: 0 1.5rem;
+}
+
+.accordionItem {
+  cursor: pointer;
+  background-color: var(--color1);
+  border-radius: 0.4rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  box-shadow: var(--shadow1);
+}
+
+.answer {
+  font-weight: var(--thin);
+  position: relative;
+  color: var(--color4);
+  padding: 0 0 0 1rem;
+}
+
+.answer::before {
+  content: "";
+  position: absolute;
+  width: 0.3rem;
+  height: 100%;
+  background-color: var(--color3);
+  left: 0%;
+}
+
+.FAQlink {
+  color: var(--color5);
+  border-bottom: 1px solid var(--color5);
+}
+
+.FAQlink:hover,
+.FAQlink:focus {
+  font-weight: var(--reg);
+}
+
+.product:last-child {
+  margin-bottom: 1.35rem;
+}
+
+.FAQdiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.FAQitems {
+  margin-bottom: 0;
+}
+
+.product {
+  margin-top: 0.25em;
+  font-size: var(--p1);
+  text-align: center;
+}
+
+.smallText {
+  font-size: var(--p1);
+}
+
+.blur {
+  filter: blur(var(--blur));
+}

@@ -1,3 +1,5 @@
+@import url('./../../App.css');
+
 .load {
   position: fixed;
   inset: 0 0 0 0;
@@ -6,13 +8,13 @@
   place-items: center;
   height: 100vh;
 
-  animation: load 2s ease-in;
+  animation: load 250ms ease-in-out;
 }
 
 .load h1 {
   letter-spacing: 0.8rem;
   font-size: minmax(2rem, 5rem);
-  color: var(--color4);
+  color: var(--color6);
 }
 
 .elipse span {

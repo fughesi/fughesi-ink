@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Form from "../../components/Form/Form";
+import Form from "../../components/form/Form";
 import "./Contact.css";
 
 export default function Contact({ nav }) {
@@ -11,6 +11,15 @@ export default function Contact({ nav }) {
   return (
     <main className={nav ? "contactMain blur" : "contactMain"}>
       <Form />
+      <div className="whatsApp">
+          <a
+            href="https://wa.me/message/PKTZG4VTREDRN1"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Message via WhatsApp
+          </a>
+        </div>
     </main>
   );
 }

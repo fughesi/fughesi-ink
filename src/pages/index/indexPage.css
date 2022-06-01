@@ -1,0 +1,6 @@
+@import url('./../../App.css');
+
+.blur {
+    filter: blur(var(--blur));
+  }
+  

@@ -1,0 +1,27 @@
+@import url("./../../App.css");
+
+.footer {
+  position: fixed;
+  inset: auto 0 0 0;
+  z-index: 2;
+  margin: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 5rem;
+  background-color: var(--color6);
+  box-shadow: var(--shadow1);
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer svg, 
+.footer a {
+  fill: var(--color4);
+  padding: .12rem;
+  align-items: center;
+}
+
+.navLinks {
+    display: flex;
+}

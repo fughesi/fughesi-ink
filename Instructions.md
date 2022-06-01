@@ -1,1 +1,0 @@
-Trying to make a click-event on an arrow at the bottom of long pages (graphics page) where a user can click and be brought back to top.  May also want to implement a "to the bottom" feature as well.  ....Currently I have a state variable on Graphics.js that is passed down via props to Portfolio.js and BackToTop.js.  

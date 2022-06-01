@@ -1,0 +1,29 @@
+@import url('./../../App.css');
+
+.topButton {
+  position: fixed;
+  inset: 1.5rem 0 auto 0;
+  z-index: 3;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.backToTop {
+  border-radius: 5rem;
+  background: var(--color6);
+  box-shadow: var(--shadow1);
+  padding: 0.5em 1.25em;
+  
+  font-size: var(--p1);
+  color: var(--color4);
+  text-align: center;
+  font-weight: var(--bold);
+
+  cursor: pointer;
+  user-select: none;
+}
+
+

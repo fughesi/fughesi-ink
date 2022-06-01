@@ -1,55 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Logo from "./../../resources/logos/MonkeyHead";
 import "./Navbar.css";
 
-export default function Navbar({ toggler, nav }) {
+export default function Navbar({ handleClick }) {
+  // state variables
+  const [hideNav, setHideNav] = useState(false);
+
+  function operateNav() {
+    return setHideNav((i) => !i);
+  }
+
   return (
-    <nav className="mainNav">
-      <div className="navDiv">
-        <Link to="/">
-          <h3 className="fughesiInk">FUGHESI Ink</h3>
-        </Link>
-        <div className="togDiv" onClick={toggler}>
-          <div className="hamburger">
-            <div className={nav ? "rotate" : ""}></div>
-          </div>
-        </div>
-      </div>
-      <section
-        aria-describedby="nav links"
-        className={nav ? "NavBG scale" : "NavBG"}
+    <div className="navbar">
+      {/* ----------flyout menu --------- */}
+      <div
+        className={hideNav ? "hamburgerMain" : "hamburgerMain closed"}
+        onClick={operateNav}
       >
-        <ul>
-          <li>
-            <Link to="/">
-              <h2 className="link" onClick={toggler}>
-                HOME
-              </h2>
-            </Link>
-          </li>
-          <li>
-            <Link to="/graphics">
-              <h2 className="link" onClick={toggler}>
-                GRAPHICS
-              </h2>
-            </Link>
-          </li>
-          <li>
-            <Link to="/FAQ">
-              <h2 className="link" onClick={toggler}>
-                FAQ
-              </h2>
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact">
-              <h2 className="link" onClick={toggler}>
-                CONTACT
-              </h2>
-            </Link>
-          </li>
-        </ul>
-      </section>
-    </nav>
+        <Link to="/" className="flyoutLink">
+          HOME
+        </Link>
+        <Link to="/FAQ" className="flyoutLink">
+          FAQ
+        </Link>
+        <Link to="/Contact" className="flyoutLink">
+          CONTACT
+        </Link>
+        <p className="smallText">*click anywhere to close</p>
+      </div>
+      {/* ---------clickbox to activate function -------------- */}
+      <div
+        className="hamburgerClickBox"
+        onClick={() => (operateNav(), handleClick)}
+      ></div>
+      {/* ---------hamburger bars ------------- */}
+      <div>
+        <div className="hamburger"></div>
+        <div className="hamburger"></div>
+      </div>
+
+      <Link to="/">
+        <h3>FUGHESI ink</h3>
+      </Link>
+      <div className="logo">
+        <Logo width={35} ButtonsButtons />
+      </div>
+    </div>
   );
 }

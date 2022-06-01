@@ -1,11 +1,11 @@
-@import url("../../App.css");
+@import url('./../../App.css');
 
 .portfolio {
   padding-top: 1rem;
   display: grid;
   gap: 1.25rem;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  background-color: #eee5;
+  /* background-color: #eee5; */
 }
 
 .photoElement {
@@ -43,8 +43,8 @@ img {
 }
 
 .darkModeOn {
-  color: #eee !important;
-  background: #222 !important;
+  color: var(--white) !important;
+  background: var(--color4) !important;
 }
 
 .blur {
