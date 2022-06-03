@@ -1,5 +1,5 @@
 import { nanoid } from "nanoid";
-import BlackHistory from "./../resources/buttons/BlackHistory.png";
+import Cat from "./../resources/buttons/CartoonCats.png";
 import Charicatures from "./../resources/buttons/Charicatures.png";
 import Popart from "./../resources/buttons/Popart.png";
 import Presidents from "./../resources/buttons/Presidents.png";
@@ -9,10 +9,10 @@ import SuperHeroes from "./../resources/buttons/SuperHeroes.png";
 const inventory = [
   {
     id: nanoid(),
-    src: BlackHistory,
-    alt: "Black History",
-    link: "/BHGraphics",
-    name: "Black History",
+    src: Cat,
+    alt: "Cartoon Cats",
+    link: "/CatGraphics",
+    name: "Cartoon Cats",
     quantity: 2,
   },
   {

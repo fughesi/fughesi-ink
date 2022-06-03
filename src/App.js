@@ -80,7 +80,7 @@ function App() {
   //######################## RETURN ###################################
   return (
     <BrowserRouter>
-      {/* <SplashPage /> */}
+      <SplashPage />
       <main className="App">
         <Suspense fallback={<LoadingPage />}>
           <Navbar handleClick={toggler} />

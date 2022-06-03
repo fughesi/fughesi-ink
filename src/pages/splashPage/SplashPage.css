@@ -25,13 +25,15 @@
 }
 
 .fugSplash {
+  font-family: initial;
   animation: splash 2000ms 2s, ani 5000ms 500ms;
   line-height: 1;
 }
 
 .inkSplash {
-    animation: splash 2000ms 2s, ink 5000ms 500ms;
-    line-height: 1;
+  font-family: initial;
+  animation: splash 2000ms 2s, ink 5000ms 500ms;
+  line-height: 1;
 }
 
 @keyframes splash {

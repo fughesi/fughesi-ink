@@ -23,7 +23,3 @@ export default function FooterMobile({ darkmode, setMode }) {
     </div>
   );
 }
-
-{
-  /* <Tshirt width={25} className="navLinks"/> */
-}

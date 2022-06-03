@@ -180,8 +180,8 @@ const Photos = [
   {
     id: nanoid(),
     src: IMG.DAERAVILFUNKOVECTOR,
-    alt: "DAERAVIL FUNKOVECTOR",
-    name: "DAERAVIL FUNKOVECTOR",
+    alt: "DAREDEVIL",
+    name: "DAREDEVIL",
     fee: 3,
   },
   {
@@ -194,8 +194,8 @@ const Photos = [
   {
     id: nanoid(),
     src: IMG.deadpool01,
-    alt: "deadpool 01",
-    name: "deadpool 01",
+    alt: "deadpool 1",
+    name: "deadpool 1",
     fee: 3,
   },
   {
