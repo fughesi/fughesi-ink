@@ -21,6 +21,9 @@ export default function Navbar({ handleClick }) {
         <Link to="/" className="flyoutLink">
           HOME
         </Link>
+        <Link to="/Inventory" className="flyoutLink">
+          GRAPHICS
+        </Link>
         <Link to="/FAQ" className="flyoutLink">
           FAQ
         </Link>

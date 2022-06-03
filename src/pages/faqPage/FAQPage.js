@@ -105,7 +105,7 @@ export default function FAQPage({ nav }) {
                     <li>No bleach or fabric softeners</li>
                   </ul>
                   <br />
-                  <span className="smallText">
+                  <span className="FAQsmallText">
                     <sup>*</sup>As a general rule, no high heat or harsh
                     chemicals and you should be fine.
                   </span>

@@ -10,13 +10,13 @@ import { Link } from "react-router-dom";
 export default function FooterMobile({ darkmode, setMode }) {
   return (
     <div className="footer">
-      <Link to="/" className="navLinks">
+      <Link to="/Inventory" className="navLinks">
         <Back width={25} />
       </Link>
-      <Link to="/" className="navLinks">
+      <Link to="/Inventory" className="navLinks">
         <CC width={25} />
       </Link>
-      <Link to="/" className="navLinks">
+      <Link to="/Inventory" className="navLinks">
         <Cart width={25} />
       </Link>
       <DarkMode darkmode={darkmode} setMode={setMode} className="navLinks" />

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+
 // ############################# Pages imports ##############################
 import {
   LoadingPage,
@@ -9,22 +10,24 @@ import {
   IndexPage,
   InventoryPage,
   SplashPage,
-} from "./pages/Pages";
-// ############################# Portfolio imports ##############################
+} from "./pages/_Pages";
+
+// ############################ JSON imports for graphics ##########################
+import Portfolio from "./components/portfolio/PortfolioIMG";
 import {
-  BlackHistoryIMG,
-  CartoonCatIMG,
-  CartoonDogIMG,
-  CartoonDragonIMG,
-  CartoonMonsterIMG,
-  CartoonSnakeIMG,
-  CharicatureIMG,
-  PocketIMG,
-  PopArtIMG,
-  PresidentIMG,
-  RandomIMG,
-  SuperHeroIMG,
-} from "./components/portfolio/_Portfolio";
+  BH,
+  Cat,
+  Dog,
+  Dragon,
+  Monster,
+  Snake,
+  Charicature,
+  Pocket,
+  PopArt,
+  President,
+  Random,
+  SuperHero,
+} from "./JSON/__exportAllJSON";
 
 // ############################# components ##############################
 const Navbar = lazy(() => import("./components/navbar/Navbar"));
@@ -93,63 +96,99 @@ function App() {
 
             {/* -------- graphics ---------------- */}
             <Route
-              path="/CharicaturesGraphics"
-              element={<CharicatureIMG nav={nav} darkmode={darkmode} />}
+              path="/BHGraphics"
+              element={
+                <Portfolio nav={nav} darkmode={darkmode} portfolio={BH} />
+              }
               exact
             />
             <Route
-              path="/BlackHistoryGraphics"
-              element={<BlackHistoryIMG nav={nav} darkmode={darkmode} />}
+              path="/CatGraphics"
+              element={
+                <Portfolio nav={nav} darkmode={darkmode} portfolio={Cat} />
+              }
               exact
             />
             <Route
-              path="/CartoonCatGraphics"
-              element={<CartoonCatIMG nav={nav} darkmode={darkmode} />}
+              path="/DogGraphics"
+              element={
+                <Portfolio nav={nav} darkmode={darkmode} portfolio={Dog} />
+              }
               exact
             />
             <Route
-              path="/CartoonDogGraphics"
-              element={<CartoonDogIMG nav={nav} darkmode={darkmode} />}
+              path="/DragonGraphics"
+              element={
+                <Portfolio nav={nav} darkmode={darkmode} portfolio={Dragon} />
+              }
               exact
             />
             <Route
-              path="/CartoonDragonGraphics"
-              element={<CartoonDragonIMG nav={nav} darkmode={darkmode} />}
+              path="/MonsterGraphics"
+              element={
+                <Portfolio nav={nav} darkmode={darkmode} portfolio={Monster} />
+              }
               exact
             />
             <Route
-              path="/CartoonMonsterGraphics"
-              element={<CartoonMonsterIMG nav={nav} darkmode={darkmode} />}
+              path="/SnakeGraphics"
+              element={
+                <Portfolio nav={nav} darkmode={darkmode} portfolio={Snake} />
+              }
               exact
             />
             <Route
-              path="/CartoonSnakeGraphics"
-              element={<CartoonSnakeIMG nav={nav} darkmode={darkmode} />}
+              path="/CharicatureGraphics"
+              element={
+                <Portfolio
+                  nav={nav}
+                  darkmode={darkmode}
+                  portfolio={Charicature}
+                />
+              }
               exact
             />
             <Route
               path="/PocketGraphics"
-              element={<PocketIMG nav={nav} darkmode={darkmode} />}
+              element={
+                <Portfolio nav={nav} darkmode={darkmode} portfolio={Pocket} />
+              }
               exact
             />
             <Route
               path="/PopArtGraphics"
-              element={<PopArtIMG nav={nav} darkmode={darkmode} />}
+              element={
+                <Portfolio nav={nav} darkmode={darkmode} portfolio={PopArt} />
+              }
               exact
             />
             <Route
               path="/PresidentGraphics"
-              element={<PresidentIMG nav={nav} darkmode={darkmode} />}
+              element={
+                <Portfolio
+                  nav={nav}
+                  darkmode={darkmode}
+                  portfolio={President}
+                />
+              }
               exact
             />
             <Route
               path="/RandomGraphics"
-              element={<RandomIMG nav={nav} darkmode={darkmode} />}
+              element={
+                <Portfolio nav={nav} darkmode={darkmode} portfolio={Random} />
+              }
               exact
             />
             <Route
               path="/SuperHeroGraphics"
-              element={<SuperHeroIMG nav={nav} darkmode={darkmode} />}
+              element={
+                <Portfolio
+                  nav={nav}
+                  darkmode={darkmode}
+                  portfolio={SuperHero}
+                />
+              }
               exact
             />
           </Routes>

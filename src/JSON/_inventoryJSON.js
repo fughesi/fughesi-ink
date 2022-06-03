@@ -11,7 +11,7 @@ const inventory = [
     id: nanoid(),
     src: BlackHistory,
     alt: "Black History",
-    link: "/BlackHistoryGraphics",
+    link: "/BHGraphics",
     name: "Black History",
     quantity: 2,
   },
@@ -19,7 +19,7 @@ const inventory = [
     id: nanoid(),
     src: Charicatures,
     alt: "Charicatures",
-    link: "/CharicaturesGraphics",
+    link: "/CharicatureGraphics",
     name: "Charicatures",
     quantity: 2,
   },
@@ -58,3 +58,4 @@ const inventory = [
 ];
 
 export default inventory;
+

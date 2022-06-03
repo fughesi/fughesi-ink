@@ -1,4 +1,4 @@
-import IMG from "./_photoIMPORTS";
+import IMG from "./__photoIMPORTS";
 import { nanoid } from "nanoid";
 
 const Photos = [

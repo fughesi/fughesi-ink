@@ -1,13 +1,12 @@
-import Photos from '../../JSON/PhotoRandomJSON';
 import React, { useState, useEffect } from "react";
 import Top from "../top/BackToTop";
-import "./_Portfolio.css";
+import "./Portfolio.css";
 import {
   LazyLoadImage,
   trackWindowScroll,
 } from "react-lazy-load-image-component";
 
-function Portfolio({ darkmode, nav }) {
+function Portfolio({ darkmode, nav, portfolio }) {
   // ---------- state variables ---------------------
   const [top, setTop] = useState(true);
   const [bottom, setBottom] = useState(!top);
@@ -20,7 +19,7 @@ function Portfolio({ darkmode, nav }) {
   }
 
   // ------- map over the photoJSON file for all the graphics --------
-  const photoArr = Photos.map((i) => {
+  const photoArr = portfolio.map((i) => {
     return (
       <div className="photoElement">
         <LazyLoadImage

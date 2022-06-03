@@ -11,7 +11,7 @@ const inventory = [
     id: nanoid(),
     src: BlackHistory,
     alt: "Black History",
-    link: "/BlackHistoryGraphics",
+    link: "/BHGraphics",
     name: "Black History",
     quantity: 2,
   },
@@ -19,7 +19,7 @@ const inventory = [
     id: nanoid(),
     src: Charicatures,
     alt: "Charicatures",
-    link: "/CharicaturesGraphics",
+    link: "/CharicatureGraphics",
     name: "Charicatures",
     quantity: 2,
   },
@@ -57,17 +57,17 @@ const inventory = [
   },
   {
     id: nanoid(),
-    src: SuperHeroes,
-    alt: "Super Heroes",
-    link: "/SuperHeroGraphics",
+    src: Presidents,
+    alt: "Presidents",
+    link: "/PresidentGraphics",
     name: "",
     quantity: 2,
   },
   {
     id: nanoid(),
-    src: SuperHeroes,
-    alt: "Super Heroes",
-    link: "/SuperHeroGraphics",
+    src: Random,
+    alt: "Random",
+    link: "/RandomGraphics",
     name: "",
     quantity: 2,
   },
@@ -82,3 +82,4 @@ const inventory = [
 ];
 
 export default inventory;
+
