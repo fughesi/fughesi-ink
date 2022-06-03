@@ -1,7 +1,7 @@
 import Photos from '../../JSON/PhotoMonsterCartoonJSON';
 import React, { useState, useEffect } from "react";
 import Top from "../top/BackToTop";
-import "./Portfolio.css";
+import "./_Portfolio.css";
 import {
   LazyLoadImage,
   trackWindowScroll,

@@ -1,11 +1,10 @@
 import { nanoid } from "nanoid";
 import React from "react";
 import { Link } from "react-router-dom";
-import InventoryJSON from "./../../JSON/inventoryJSON";
 import "./Inventory.css";
 
-export default function Inventory() {
-  const inventory = InventoryJSON.map((i) => {
+export default function Inventory({ images }) {
+  const inventory = images.map((i) => {
     return (
       <div className="inventoryCards">
         <Link to={i.link}><img src={i.src} alt={i.alt} key={nanoid()} className="carouselLinks"/></Link> 

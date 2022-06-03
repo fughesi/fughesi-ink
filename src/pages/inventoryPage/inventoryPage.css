@@ -4,6 +4,10 @@
     margin-bottom: 33rem;
 }
 
+.inventoryPageMain h3 {
+    margin: 1rem 0 -2.5rem 0;
+}
+
 .blur {
     filter: blur(var(--blur));
   }

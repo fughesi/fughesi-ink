@@ -1,62 +1,51 @@
 import React, { useState, useEffect, lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+// ############################# Pages imports ##############################
+import {
+  LoadingPage,
+  ContactPage,
+  FAQPage,
+  IndexPage,
+  InventoryPage,
+  SplashPage,
+} from "./pages/Pages";
+// ############################# Portfolio imports ##############################
+import {
+  BlackHistoryIMG,
+  CartoonCatIMG,
+  CartoonDogIMG,
+  CartoonDragonIMG,
+  CartoonMonsterIMG,
+  CartoonSnakeIMG,
+  CharicatureIMG,
+  PocketIMG,
+  PopArtIMG,
+  PresidentIMG,
+  RandomIMG,
+  SuperHeroIMG,
+} from "./components/portfolio/_Portfolio";
+
 // ############################# components ##############################
-import Splash from "./pages/splashPage/SplashPage";
-import Loading from "./../src/components/loading/Loading";
-// ############################## Pages - all lazy loaded ######################
 const Navbar = lazy(() => import("./components/navbar/Navbar"));
-const FAQPage = lazy(() => import("./pages/faqPage/FAQPage"));
-const ContactPage = lazy(() => import("./pages/contact/Contact"));
-const InventoryPage = lazy(() => import("./pages/inventoryPage/inventoryPage"));
-const BlackHistoryIMG = lazy(() =>
-  import("./../src/components/portfolio/BlackHistoryIMG")
-);
-const CartoonCatIMG = lazy(() =>
-  import("./../src/components/portfolio/CartoonCatIMG")
-);
-const CartoonDogIMG = lazy(() =>
-  import("./../src/components/portfolio/CartoonDogIMG")
-);
-const CartoonDragonIMG = lazy(() =>
-  import("./../src/components/portfolio/CartoonDragonIMG")
-);
-const CartoonMonsterIMG = lazy(() =>
-  import("./../src/components/portfolio/CartoonMonsterIMG")
-);
-const CartoonSnakeIMG = lazy(() =>
-  import("./../src/components/portfolio/CartoonSnakeIMG")
-);
-const CharicatureIMG = lazy(() =>
-  import("./../src/components/portfolio/CharicatureIMG")
-);
-const PocketIMG = lazy(() => import("./../src/components/portfolio/PocketIMG"));
-const PopArtIMG = lazy(() => import("./../src/components/portfolio/PopArtIMG"));
-const PresidentIMG = lazy(() =>
-  import("./../src/components/portfolio/PresidentIMG")
-);
-const RandomIMG = lazy(() => import("./../src/components/portfolio/RandomIMG"));
-const SuperHeroIMG = lazy(() =>
-  import("./../src/components/portfolio/SuperHeroIMG")
-);
 const FooterMobile = lazy(() =>
   import("./components/footerMobile/FooterMobile")
 );
 
 // ################################ Start of function ########################
 function App() {
-  //state variables
+  // variables
+  const [nav, setNav] = useState(false);
   const [darkmode, setDarkmode] = useState(
     JSON.parse(localStorage.getItem("darkMode")) || false
   );
-  const [nav, setNav] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
   const [offsetY, setOffsetY] = useState(0);
-  const breakpoint1 = 424;
-  const breakpoint2 = 767;
-  const breakpoint3 = 1023;
+  // const breakpoint1 = 424;
+  // const breakpoint2 = 767;
+  // const breakpoint3 = 1023;
 
-  // tracks window width as breakpoint for Navbar
+  // tracks window width as breakpoint for Navbar ------------- setWidth
   useEffect(() => {
     const handleResizeWindow = () => setWidth(window.innerWidth);
     window.addEventListener("resize", handleResizeWindow);
@@ -65,7 +54,7 @@ function App() {
     };
   }, []);
 
-  // toggling dark mode on or off
+  // toggling dark mode on or off -------------- SETMODE
   function setMode() {
     setDarkmode((i) => {
       localStorage.setItem("darkMode", JSON.stringify(!i));
@@ -73,12 +62,12 @@ function App() {
     });
   }
 
-  // toggle state to update navbar
+  // toggle state to update navbar ---------- TOGGLER
   function toggler() {
     setNav((i) => !i);
   }
 
-  // callback function to get page location in Y axis && parallax effect
+  // callback function to get page location in Y axis && parallax effect ----- HANDLESCROLL
   const handleScroll = () => setOffsetY(window.pageYOffset);
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -88,126 +77,81 @@ function App() {
   //######################## RETURN ###################################
   return (
     <BrowserRouter>
-      {/* <Splash /> */}
+      {/* <SplashPage /> */}
       <main className="App">
-        <Suspense fallback={<Loading />}>
+        <Suspense fallback={<LoadingPage />}>
           <Navbar handleClick={toggler} />
 
           {/* ###################### all of the routes ######################### */}
           <Routes>
             {/* -------- pages ---------------- */}
 
-            <Route path="/" element={<InventoryPage nav={nav} />} />
+            <Route path="/" element={<IndexPage nav={nav} />} />
+            <Route path="/Inventory" element={<InventoryPage nav={nav} />} />
             <Route path="/FAQ" element={<FAQPage nav={nav} />} />
             <Route path="/Contact" element={<ContactPage nav={nav} />} />
-            
+
             {/* -------- graphics ---------------- */}
             <Route
               path="/CharicaturesGraphics"
-              element={
-                <CharicatureIMG
-                  nav={nav}
-                  darkmode={darkmode}
-                />
-              }
+              element={<CharicatureIMG nav={nav} darkmode={darkmode} />}
               exact
             />
             <Route
               path="/BlackHistoryGraphics"
-              element={
-                <BlackHistoryIMG
-                  nav={nav}
-                  darkmode={darkmode}
-                />
-              }
+              element={<BlackHistoryIMG nav={nav} darkmode={darkmode} />}
               exact
             />
             <Route
               path="/CartoonCatGraphics"
-              element={
-                <CartoonCatIMG
-                  nav={nav}
-                  darkmode={darkmode}
-                />
-              }
+              element={<CartoonCatIMG nav={nav} darkmode={darkmode} />}
               exact
             />
             <Route
               path="/CartoonDogGraphics"
-              element={
-                <CartoonDogIMG
-                  nav={nav}
-                  darkmode={darkmode}
-                />
-              }
+              element={<CartoonDogIMG nav={nav} darkmode={darkmode} />}
               exact
             />
             <Route
               path="/CartoonDragonGraphics"
-              element={
-                <CartoonDragonIMG
-                  nav={nav}
-                  darkmode={darkmode}
-                />
-              }
+              element={<CartoonDragonIMG nav={nav} darkmode={darkmode} />}
               exact
             />
             <Route
               path="/CartoonMonsterGraphics"
-              element={
-                <CartoonMonsterIMG
-                  nav={nav}
-                  darkmode={darkmode}
-                />
-              }
+              element={<CartoonMonsterIMG nav={nav} darkmode={darkmode} />}
               exact
             />
             <Route
               path="/CartoonSnakeGraphics"
-              element={
-                <CartoonSnakeIMG
-                  nav={nav}
-                  darkmode={darkmode}
-                />
-              }
+              element={<CartoonSnakeIMG nav={nav} darkmode={darkmode} />}
               exact
             />
             <Route
               path="/PocketGraphics"
-              element={
-                <PocketIMG nav={nav} darkmode={darkmode} />
-              }
+              element={<PocketIMG nav={nav} darkmode={darkmode} />}
               exact
             />
             <Route
               path="/PopArtGraphics"
-              element={
-                <PopArtIMG nav={nav} darkmode={darkmode} />
-              }
+              element={<PopArtIMG nav={nav} darkmode={darkmode} />}
               exact
             />
             <Route
               path="/PresidentGraphics"
-              element={
-                <PresidentIMG nav={nav} darkmode={darkmode} />
-              }
+              element={<PresidentIMG nav={nav} darkmode={darkmode} />}
               exact
             />
             <Route
               path="/RandomGraphics"
-              element={
-                <RandomIMG nav={nav} darkmode={darkmode} />
-              }
+              element={<RandomIMG nav={nav} darkmode={darkmode} />}
               exact
             />
             <Route
               path="/SuperHeroGraphics"
-              element={
-                <SuperHeroIMG nav={nav} darkmode={darkmode} />
-              }
+              element={<SuperHeroIMG nav={nav} darkmode={darkmode} />}
               exact
             />
-
           </Routes>
 
           <FooterMobile darkmode={darkmode} setMode={setMode} />

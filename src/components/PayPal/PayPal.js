@@ -1,4 +1,5 @@
 import React from "react";
+import AddToCart from "./../../resources/buttons/addToCart.png";
 import "./PayPal.css";
 
 export default function PayPal() {
@@ -32,17 +33,18 @@ export default function PayPal() {
         <input type="hidden" name="currency_code" value="USD" />
         <input
           type="image"
-          src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+          src={AddToCart}
           border="0"
           name="submit"
           alt="PayPal - The safer, easier way to pay online!"
+          width="120"
         />
         <img
           alt=""
           border="0"
           src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif"
-          width="1"
-          height="1"
+          width="100"
+          height="100"
         />
       </form>
     </div>

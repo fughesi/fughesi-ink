@@ -1,10 +1,10 @@
 import { nanoid } from "nanoid";
-import BlackHistory from './../resources/buttons/BlackHistory.png'
-import Charicatures from './../resources/buttons/Charicatures.png'
-import Popart from './../resources/buttons/Popart.png'
-import Presidents from './../resources/buttons/Presidents.png'
-import Random from './../resources/buttons/Random.png'
-import SuperHeroes from './../resources/buttons/SuperHeroes.png'
+import BlackHistory from "./../resources/buttons/BlackHistory.png";
+import Charicatures from "./../resources/buttons/Charicatures.png";
+import Popart from "./../resources/buttons/Popart.png";
+import Presidents from "./../resources/buttons/Presidents.png";
+import Random from "./../resources/buttons/Random.png";
+import SuperHeroes from "./../resources/buttons/SuperHeroes.png";
 
 const inventory = [
   {
@@ -57,41 +57,25 @@ const inventory = [
   },
   {
     id: nanoid(),
-    src: "https://picsum.photos/200",
-    alt: "",
-    link: "/BlackHistoryGraphics",
+    src: SuperHeroes,
+    alt: "Super Heroes",
+    link: "/SuperHeroGraphics",
     name: "",
     quantity: 2,
   },
   {
     id: nanoid(),
-    src: "https://picsum.photos/200",
-    alt: "",
-    link: "/BlackHistoryGraphics",
+    src: SuperHeroes,
+    alt: "Super Heroes",
+    link: "/SuperHeroGraphics",
     name: "",
     quantity: 2,
   },
   {
     id: nanoid(),
-    src: "https://picsum.photos/200",
-    alt: "",
-    link: "/BlackHistoryGraphics",
-    name: "",
-    quantity: 2,
-  },
-  {
-    id: nanoid(),
-    src: "https://picsum.photos/200",
-    alt: "",
-    link: "/BlackHistoryGraphics",
-    name: "",
-    quantity: 2,
-  },
-  {
-    id: nanoid(),
-    src: "https://picsum.photos/200",
-    alt: "",
-    link: "/BlackHistoryGraphics",
+    src: SuperHeroes,
+    alt: "Super Heroes",
+    link: "/SuperHeroGraphics",
     name: "",
     quantity: 2,
   },
