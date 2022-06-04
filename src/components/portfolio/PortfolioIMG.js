@@ -6,6 +6,7 @@ import {
   trackWindowScroll,
 } from "react-lazy-load-image-component";
 
+
 function Portfolio({ darkmode, nav, portfolio }) {
   // ---------- state variables ---------------------
   const [top, setTop] = useState(true);
@@ -30,7 +31,7 @@ function Portfolio({ darkmode, nav, portfolio }) {
           className="graphic"
         />
         {/* <div> */}
-        {/* <ShoppingCart key={i.id} id={i.id} src={i.src} alt={i.alt} />exit */}
+        {/* <ShoppingCart key={i.id} id={i.id} src={i.src} alt={i.alt} /> */}
         <p className="nameIMG">{i.name}</p>
         {/* </div> */}
       </div>
@@ -52,6 +53,8 @@ function Portfolio({ darkmode, nav, portfolio }) {
   function scroll() {
     return window.scrollTo(0, 0);
   }
+
+  console.log(photoArr);
 
   // ##################  return  ##################
   return (

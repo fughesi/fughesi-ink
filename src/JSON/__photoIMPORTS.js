@@ -1,6 +1,5 @@
 const IMG = {
-
-//charicatureGraphics
+  //charicatureGraphics ---------------------------------------------
 
   AstronautIceCream: require("../resources/graphics/charicatureGraphics/Astronaut Ice Cream.png"),
   BarberSkater: require("../resources/graphics/charicatureGraphics/Barber Skater.png"),
@@ -102,9 +101,9 @@ const IMG = {
   WarTank: require("../resources/graphics/charicatureGraphics/War Tank.png"),
   YourTimeWillCome: require("../resources/graphics/charicatureGraphics/Your Time Will Come.png"),
   ZombieCassette: require("../resources/graphics/charicatureGraphics/Zombie Cassette.png"),
-  
-  //pocketGraphics
-  
+
+  //pocketGraphics ---------------------------------------------
+
   Abduction: require("../resources/graphics/pocketGraphics/alien abduction pocketSource.png"),
   AngryWaves: require("../resources/graphics/pocketGraphics/Angry waves pocket.png"),
   Aquarium: require("../resources/graphics/pocketGraphics/aquarium pocket.png"),
@@ -140,9 +139,9 @@ const IMG = {
   TropicalFruit: require("../resources/graphics/pocketGraphics/Tropical fruits pocket.png"),
   WateringFlowers: require("../resources/graphics/pocketGraphics/Watering flowers.png"),
   ZombieHands: require("../resources/graphics/pocketGraphics/Zombie hands pocket.png"),
-  
-  // popArtGraphics
-  
+
+  // popArtGraphics ---------------------------------------------
+
   AlbertKisstein: require("../resources/graphics/PopArtGraphics/ALBERT KISSTEIN low.png"),
   AmericanPsycho2: require("../resources/graphics/PopArtGraphics/AMERICAN PSYCHO 2 low.png"),
   AmericanPsycho: require("../resources/graphics/PopArtGraphics/AMERICAN PSYCHO low.png"),
@@ -173,9 +172,9 @@ const IMG = {
   UnderControl: require("../resources/graphics/PopArtGraphics/UNDER CONTROL.png"),
   VivaLaEvolucion: require("../resources/graphics/PopArtGraphics/viva la evolucion low.png"),
   WeCanDoIt: require("../resources/graphics/PopArtGraphics/WE CAN DO IT.png"),
-  
-  // presidentGraphics 
-  
+
+  // presidentGraphics ---------------------------------------------
+
   Franklin: require("../resources/graphics/presidentGraphics/franklin.png"),
   Grant: require("../resources/graphics/presidentGraphics/grant.png"),
   Hamilton: require("../resources/graphics/presidentGraphics/hamilton.png"),
@@ -183,9 +182,9 @@ const IMG = {
   Jefferson: require("../resources/graphics/presidentGraphics/jefferson.png"),
   Lincoln: require("../resources/graphics/presidentGraphics/lincoln.png"),
   Washington: require("../resources/graphics/presidentGraphics/washington.png"),
-  
-  // randomGraphics
-  
+
+  // randomGraphics ---------------------------------------------
+
   AnchorBones: require("../resources/graphics/randomGraphics/Anchor Bones-02.png"),
   Anchor: require("../resources/graphics/randomGraphics/Anchor.png"),
   Astrocode: require("../resources/graphics/randomGraphics/Astrocode.png"),
@@ -231,6 +230,7 @@ const IMG = {
   GoodIdea: require("../resources/graphics/randomGraphics/Good Idea.png"),
   GramophoneDonut: require("../resources/graphics/randomGraphics/Gramophone Donut.png"),
   GreenMonster: require("../resources/graphics/randomGraphics/Green Monster.png"),
+  // eslint-disable-next-line
   Grenade: require("../resources/graphics/randomGraphics/Grenade.png"),
   HandOfRevolution: require("../resources/graphics/randomGraphics/Hand Of Revolution.png"),
   HandOfZombies: require("../resources/graphics/randomGraphics/Hand Of Zombies.png"),
@@ -284,9 +284,9 @@ const IMG = {
   WildLife: require("../resources/graphics/randomGraphics/Wild Life.png"),
   YinYangCats: require("../resources/graphics/randomGraphics/YinYang Cats.png"),
   ZebraBones: require("../resources/graphics/randomGraphics/Zebra Bones.png"),
-  
-  //BlackHistoryGraphics
-  
+
+  //BlackHistoryGraphics ---------------------------------------------
+
   BHM365Days: require("../resources/graphics/BlackHistoryGraphics/BLACK HISTORY MONT 365 DAYS.png"),
   BHMMalcolmX: require("../resources/graphics/BlackHistoryGraphics/BLACK HISTORY MONTH MALCOLM X.png"),
   BHMMap: require("../resources/graphics/BlackHistoryGraphics/BLACK HISTORY MONTH MAP.png"),
@@ -308,10 +308,11 @@ const IMG = {
   MalcolmXBH: require("../resources/graphics/BlackHistoryGraphics/MALCOLM X BLACK HISTORY.png"),
   MLKBH: require("../resources/graphics/BlackHistoryGraphics/MARTIN LUTHER KING BLACK HISTORY.png"),
   Riot: require("../resources/graphics/BlackHistoryGraphics/RIOT.png"),
+  // eslint-disable-next-line
   WeCanDoIt: require("../resources/graphics/BlackHistoryGraphics/WE CAN DO IT.png"),
-  
-  //CartoonGraphics
-  
+
+  //CartoonGraphics ---------------------------------------------
+
   Cat1: require("../resources/graphics/CartoonGraphics/Cat 1.png"),
   Cat2: require("../resources/graphics/CartoonGraphics/Cat 2.png"),
   Cat3: require("../resources/graphics/CartoonGraphics/Cat 3.png"),
@@ -464,8 +465,8 @@ const IMG = {
   Snake24: require("../resources/graphics/CartoonGraphics/Snake 24.png"),
   Snake25: require("../resources/graphics/CartoonGraphics/Snake 25.png"),
 
-  // Super Hero Graphics
-  
+  // Super Hero Graphics ---------------------------------------------
+
   ANTIVENOMPOP: require("../resources/graphics/SuperHeroGraphics/ANTI VENOM POP.png"),
   ANTMANENDGAME: require("../resources/graphics/SuperHeroGraphics/ANTMAN ENDGAME.png"),
   ARYASTARK: require("../resources/graphics/SuperHeroGraphics/ARYA STARK.png"),
@@ -567,5 +568,3 @@ const IMG = {
 };
 
 export default IMG;
-
-

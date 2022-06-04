@@ -39,11 +39,11 @@ const FooterMobile = lazy(() =>
 function App() {
   // variables
   const [nav, setNav] = useState(false);
+  const [offsetY, setOffsetY] = useState(0);
   const [darkmode, setDarkmode] = useState(
     JSON.parse(localStorage.getItem("darkMode")) || false
   );
   const [width, setWidth] = useState(window.innerWidth);
-  const [offsetY, setOffsetY] = useState(0);
   // const breakpoint1 = 424;
   // const breakpoint2 = 767;
   // const breakpoint3 = 1023;
@@ -77,6 +77,9 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+
+
+
   //######################## RETURN ###################################
   return (
     <BrowserRouter>
@@ -89,7 +92,16 @@ function App() {
           <Routes>
             {/* -------- pages ---------------- */}
 
-            <Route path="/" element={<IndexPage nav={nav} />} />
+            <Route
+              path="/"
+              element={
+                <IndexPage
+                  nav={nav}
+                  offsetY={offsetY}
+                  handleScroll={handleScroll}
+                />
+              }
+            />
             <Route path="/Inventory" element={<InventoryPage nav={nav} />} />
             <Route path="/FAQ" element={<FAQPage nav={nav} />} />
             <Route path="/Contact" element={<ContactPage nav={nav} />} />

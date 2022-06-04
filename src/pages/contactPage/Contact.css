@@ -6,6 +6,12 @@
   min-height: 85vh;
   width: minmax(23.125rem, 100%);
   place-items: start center;
+  margin-bottom: 1.5rem;
+}
+
+.contactMain h1 {
+  margin-bottom: 1.5rem;
+  font-size: var(--h1);
 }
 
 .whatsApp {

@@ -2,7 +2,6 @@ import React from "react";
 import "./FooterMobile.css";
 import Cart from "./../../resources/icons/Cart";
 import CC from "./../../resources/icons/CC";
-import Tshirt from "./../../resources/icons/Tshirt";
 import Back from "./../../resources/icons/Back";
 import DarkMode from "./../darkMode/DarkMode";
 import { Link } from "react-router-dom";

@@ -10,6 +10,7 @@ export default function Contact({ nav }) {
 
   return (
     <main className={nav ? "contactMain blur" : "contactMain"}>
+      <h1>Contact form</h1>
       <Form />
       <div className="whatsApp">
           <a

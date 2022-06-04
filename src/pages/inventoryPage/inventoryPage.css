@@ -1,23 +1,26 @@
-@import url('./../../App.css');
+@import url("./../../App.css");
 
 .inventoryPageMain {
-    margin-bottom: 33rem;
+  margin-bottom: 33rem;
 }
 
-.inventoryTitle h1, 
+.inventoryTitle h1,
 .inventoryTitle p {
-    text-align: center;
+  text-align: center;
+}
+
+.inventoryTitle h1 {
+  font-size: var(--h1);
 }
 
 .inventoryTitle p {
-    font-size: var(--p1);
+  font-size: var(--p1);
 }
 
 .inventoryPageMain h3 {
-    margin: 2rem 0 -3.5rem .3rem;
+  margin: 2rem 0 -3.5rem 0.3rem;
 }
 
 .blur {
-    filter: blur(var(--blur));
-  }
-  
+  filter: blur(var(--blur));
+}
