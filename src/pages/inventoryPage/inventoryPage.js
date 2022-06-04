@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Inventory from "./../../components/inventory/Inventory";
-import pics from "../../JSON/_inventoryJSON";
+import pics from "../../JSON/_generalJSON";
 import stuff from "../../JSON/_cartoonJSON";
 import "./inventoryPage.css";
 
@@ -12,9 +12,13 @@ export default function inventoryPage({ nav }) {
 
   return (
     <main className={nav ? "inventoryPageMain blur" : "inventoryPageMain"}>
-      <h3>Good stuff</h3>
+      <div className="inventoryTitle">
+        <h1>Select a Graphic</h1>
+        <p>click a title below to view</p>
+      </div>
+      <h3>General collection</h3>
       <Inventory images={pics} />
-      <h3>Better stuff</h3>
+      <h3>Cartoon collection</h3>
       <Inventory images={stuff} />
     </main>
   );

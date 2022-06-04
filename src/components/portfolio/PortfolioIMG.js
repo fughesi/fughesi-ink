@@ -53,11 +53,12 @@ function Portfolio({ darkmode, nav, portfolio }) {
     return window.scrollTo(0, 0);
   }
 
+  // ##################  return  ##################
   return (
     <section
       aria-labelledby="graphics"
       className={`${nav ? "portfolio blur" : "portfolio"} ${
-        darkmode ? "portfolio darkModeOn" : "portfolio"
+        darkmode ? "darkModeOn" : ""
       }`}
     >
       {photoArr}

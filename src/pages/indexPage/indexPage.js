@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Paypal from './../../components/paypal/PayPal'
 import "./indexPage.css";
 
 
@@ -10,5 +9,5 @@ export default function indexPage({ nav }) {
     window.scrollTo(0, 0);
   }, []);
 
-  return <main className={nav ? "indexMain blur" : "indexMain"}><Paypal /></main>;
+  return <main className={nav ? "indexMain blur" : "indexMain"}>index page</main>;
 }

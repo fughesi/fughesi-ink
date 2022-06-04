@@ -1,8 +1,8 @@
 import { nanoid } from "nanoid";
 import Cat from "./../resources/buttons/CartoonCats.png";
-import Charicatures from "./../resources/buttons/Charicatures.png";
-import Popart from "./../resources/buttons/Popart.png";
-import Presidents from "./../resources/buttons/Presidents.png";
+import Dragon from "./../resources/buttons/cartoonDragons.png";
+import Monster from "./../resources/buttons/CartoonMonster.png";
+import Dog from "./../resources/buttons/cartoonDogs.png";
 import Random from "./../resources/buttons/Random.png";
 import SuperHeroes from "./../resources/buttons/SuperHeroes.png";
 
@@ -17,26 +17,26 @@ const inventory = [
   },
   {
     id: nanoid(),
-    src: Charicatures,
-    alt: "Charicatures",
-    link: "/CharicatureGraphics",
-    name: "Charicatures",
+    src: Dragon,
+    alt: "Dragon",
+    link: "/DragonGraphics",
+    name: "Dragon",
     quantity: 2,
   },
   {
     id: nanoid(),
-    src: Popart,
-    alt: "Pop Art",
-    link: "/PopArtGraphics",
-    name: "",
+    src: Monster,
+    alt: "Monster",
+    link: "/MonsterGraphics",
+    name: "Monster",
     quantity: 2,
   },
   {
     id: nanoid(),
-    src: Presidents,
-    alt: "Presidents",
-    link: "/PresidentGraphics",
-    name: "",
+    src: Dog,
+    alt: "Dogs",
+    link: "/DogGraphics",
+    name: "Dogs",
     quantity: 2,
   },
   {
@@ -52,14 +52,6 @@ const inventory = [
     src: SuperHeroes,
     alt: "Super Heroes",
     link: "/SuperHeroGraphics",
-    name: "",
-    quantity: 2,
-  },
-  {
-    id: nanoid(),
-    src: Presidents,
-    alt: "Presidents",
-    link: "/PresidentGraphics",
     name: "",
     quantity: 2,
   },
@@ -82,4 +74,3 @@ const inventory = [
 ];
 
 export default inventory;
-

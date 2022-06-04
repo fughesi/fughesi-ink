@@ -5,6 +5,7 @@
   display: grid;
   gap: 1.25rem;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-bottom: 4rem;
 }
 
 .photoElement {
