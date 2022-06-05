@@ -1,6 +1,6 @@
 import { lazy } from "react";
 
-const ContactPage = lazy(() => import("./contactPage/Contact"));
+const ContactPage = lazy(() => import("./contactPage/ContactPage"));
 const FAQPage = lazy(() => import("./faqPage/FAQPage"));
 const IndexPage = lazy(() => import("./indexPage/indexPage"));
 const InventoryPage = lazy(() => import("./inventoryPage/inventoryPage"));

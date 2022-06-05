@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Form from "../../components/form/Form";
-import "./Contact.css";
+import "./ContactPage.css";
 
 export default function Contact({ nav }) {
   // window to start at top of page on load
