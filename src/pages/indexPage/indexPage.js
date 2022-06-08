@@ -11,6 +11,8 @@ import res from "express/lib/response";
 
 export default function indexPage({ nav, offsetY }) {
   const [IGAPI, setIGAPI] = useState([]);
+  const url =
+    "https://graph.instagram.com/5256198047808423/media?fields=id,caption&access_token=IGQVJWZAnhDVE1rcGdPcUUtY19nLTVqYUIwdTY3NkxKX3hydjNLQU5xQ0ZAteU5PY0VZAeEZAFVDVBVlFiWHlxZA2JFWkltLTJ2Unl6TFpuMW5fOVJZAc3k0aGE5WmloSWpUZAW5aVWxvQ3FSeWRpZA0lQNndGVgZDZD"; // ----- URL for fughesi_ink IG feed with access token ------
 
   // start position to top on page load
   useEffect(() => {
@@ -20,14 +22,13 @@ export default function indexPage({ nav, offsetY }) {
   // trying to get IG photos ------- IG photos
   function getAPI() {
     // const apiget = () => {
-    fetch(
-      "https://graph.instagram.com/5256198047808423/media?fields=id,caption&access_token=IGQVJWZAnhDVE1rcGdPcUUtY19nLTVqYUIwdTY3NkxKX3hydjNLQU5xQ0ZAteU5PY0VZAeEZAFVDVBVlFiWHlxZA2JFWkltLTJ2Unl6TFpuMW5fOVJZAc3k0aGE5WmloSWpUZAW5aVWxvQ3FSeWRpZA0lQNndGVgZDZD"
-    )
+    fetch(url)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
         setIGAPI(data);
-      });
+      })
+      .catch((e) => console.log(e));
     // };
   }
 
@@ -148,7 +149,7 @@ export default function indexPage({ nav, offsetY }) {
           </a>
         </div>
       </section>
-      <div>{getAPI()}</div>
+      {/* <div>{getAPI}</div> */}
     </main>
   );
 }
