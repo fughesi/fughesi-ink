@@ -1,1 +1,10 @@
 @import url('./../../App.css');
+
+.shoppingCartMain {
+    margin-bottom: 8rem;
+}
+
+.addToCart {
+    width: 5rem;
+    aspect-ratio: 2/1;
+}

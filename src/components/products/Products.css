@@ -1,0 +1,11 @@
+@import url('./../../App.css');
+
+
+.prodBTN {
+    width: 8rem;
+    aspect-ratio: 2/1;
+}
+
+.imgSmall {
+    max-width: 8rem;
+}
