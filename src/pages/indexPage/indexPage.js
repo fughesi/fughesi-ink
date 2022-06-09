@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import FB from "./../../resources/icons/FB";
 import IG from "./../../resources/icons/IG";
 import WA from "./../../resources/icons/WA";
@@ -7,11 +7,34 @@ import Etsy from "./../../resources/icons/Etsy";
 // import Video from "./../../resources/videos/inkVideoLQ.mov";
 // import Video from "./../../resources/videos/inkDrip.mp4";
 import "./indexPage.css";
+import res from "express/lib/response";
 
 export default function indexPage({ nav, offsetY }) {
+  const [IGAPI, setIGAPI] = useState([]);
+  const url =
+    "https://graph.instagram.com/5256198047808423/media?fields=id,caption&access_token=IGQVJWZAnhDVE1rcGdPcUUtY19nLTVqYUIwdTY3NkxKX3hydjNLQU5xQ0ZAteU5PY0VZAeEZAFVDVBVlFiWHlxZA2JFWkltLTJ2Unl6TFpuMW5fOVJZAc3k0aGE5WmloSWpUZAW5aVWxvQ3FSeWRpZA0lQNndGVgZDZD"; // ----- URL for fughesi_ink IG feed with access token ------
+
   // start position to top on page load
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  // trying to get IG photos ------- IG photos
+  function getAPI() {
+    // const apiget = () => {
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setIGAPI(data);
+      })
+      .catch((e) => console.log(e));
+    // };
+  }
+
+  // calling the API function with useEffect
+  useEffect(() => {
+    getAPI();
   }, []);
 
   return (
@@ -78,7 +101,7 @@ export default function indexPage({ nav, offsetY }) {
               data-scheme="fb://profile/fughesiink"
               rel="noreferrer noopener"
             >
-              <Etsy width={50} />
+              <Etsy className="socialsSVG" />
             </a>
           </div>
           <div className="tooltip">
@@ -89,7 +112,7 @@ export default function indexPage({ nav, offsetY }) {
               data-scheme="fb://profile/fughesiink"
               rel="noreferrer noopener"
             >
-              <FB width={50} />
+              <FB className="socialsSVG" />
             </a>
           </div>
 
@@ -101,7 +124,7 @@ export default function indexPage({ nav, offsetY }) {
               data-scheme="fb://profile/fughesiink"
               rel="noreferrer noopener"
             >
-              <IG width={50} />
+              <IG className="socialsSVG" />
             </a>
           </div>
           <div className="tooltip">
@@ -112,7 +135,7 @@ export default function indexPage({ nav, offsetY }) {
               data-scheme="fb://profile/fughesiink"
               rel="noreferrer noopener"
             >
-              <WA width={50} />
+              <WA className="socialsSVG" />
             </a>
           </div>
         </div>
@@ -126,6 +149,7 @@ export default function indexPage({ nav, offsetY }) {
           </a>
         </div>
       </section>
+      {/* <div>{getAPI}</div> */}
     </main>
   );
 }

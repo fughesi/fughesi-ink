@@ -224,6 +224,11 @@
   color: var(--white);
 }
 
+.socialsSVG {
+  fill: var(--black);
+  width: 3.125rem;
+}
+
 .blur {
   filter: blur(var(--blur));
 }
