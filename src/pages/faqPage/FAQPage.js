@@ -22,7 +22,7 @@ export default function FAQPage({ nav }) {
             id={1}
           >
             Quality of the shirts
-            {hide === 1 && (
+            {hide == 1 && (
               <div className="answer">
                 <p>
                   Fughesi Ink wants you to enjoy the feel and fit of the shirts
@@ -57,7 +57,7 @@ export default function FAQPage({ nav }) {
             id={2}
           >
             The inking process
-            {hide === 2 && (
+            {hide == 2 && (
               <div className="answer">
                 <p>
                   Graphics are applied to the shirt using a process called "heat
@@ -87,7 +87,7 @@ export default function FAQPage({ nav }) {
             id={3}
           >
             Care of the garment{" "}
-            {hide === 3 && (
+            {hide == 3 && (
               <div className="answer">
                 <p>
                   To maximize the life of the garment and the integrity of the
@@ -120,7 +120,7 @@ export default function FAQPage({ nav }) {
             id={4}
           >
             Can I customize the graphics
-            {hide === 4 && (
+            {hide == 4 && (
               <div className="answer">
                 <p>
                   Yes. There are many readily made graphics under the{" "}
@@ -140,7 +140,7 @@ export default function FAQPage({ nav }) {
             id={5}
           >
             Can I submit my own graphics or text
-            {hide === 5 && (
+            {hide == 5 && (
               <div className="answer">
                 <p>
                   Yes. Contact Fughesi Ink via our form in the{" "}
@@ -160,7 +160,7 @@ export default function FAQPage({ nav }) {
             id={6}
           >
             Shipping method and time
-            {hide === 6 && (
+            {hide == 6 && (
               <div className="answer">
                 <p>
                   Your custom garment will ship in a flexible poly-mailer that
@@ -192,7 +192,7 @@ export default function FAQPage({ nav }) {
             id={7}
           >
             Return policy
-            {hide === 7 && (
+            {hide == 7 && (
               <div className="answer">
                 <p>
                   Due to the nature of providing custom and permanent artwork on
@@ -223,7 +223,7 @@ export default function FAQPage({ nav }) {
             id={8}
           >
             How long does it take
-            {hide === 8 && (
+            {hide == 8 && (
               <div className="answer">
                 <p>
                   Provided that the size, color and style of shirt is in stock

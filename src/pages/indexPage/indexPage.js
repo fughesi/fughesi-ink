@@ -7,7 +7,6 @@ import Etsy from "./../../resources/icons/Etsy";
 // import Video from "./../../resources/videos/inkVideoLQ.mov";
 // import Video from "./../../resources/videos/inkDrip.mp4";
 import "./indexPage.css";
-import res from "express/lib/response";
 
 export default function indexPage({ nav, offsetY }) {
   const [IGAPI, setIGAPI] = useState([]);
@@ -21,16 +20,17 @@ export default function indexPage({ nav, offsetY }) {
 
   // trying to get IG photos ------- IG photos
   function getAPI() {
-    // const apiget = () => {
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setIGAPI(data);
-      })
-      .catch((e) => console.log(e));
+    // const APICall = () => {
+      fetch(url)
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          setIGAPI(data);
+        })
+        .catch((e) => console.log(e));
     // };
   }
+
 
   // calling the API function with useEffect
   useEffect(() => {
@@ -149,7 +149,7 @@ export default function indexPage({ nav, offsetY }) {
           </a>
         </div>
       </section>
-      {/* <div>{getAPI}</div> */}
+      <div>{getAPI}</div>
     </main>
   );
 }
