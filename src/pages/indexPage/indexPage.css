@@ -155,10 +155,6 @@
   background-color: var(--color1);
 }
 
-/* .cards {
-  grid-area: cards;
-} */
-
 .info {
   grid-area: bottom;
   display: grid;
@@ -227,6 +223,30 @@
 .socialsSVG {
   fill: var(--black);
   width: 3.125rem;
+}
+
+.IGphotogrid {
+  margin: 0 0.75rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(6.5rem, 1fr));
+  place-items: center;
+  gap: 0.5rem;
+}
+
+.IGblock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.IGfeed {
+  width: 40%;
+  margin-bottom: 0.75rem;
+}
+
+.IGphotos {
+  padding: 0;
 }
 
 .blur {
