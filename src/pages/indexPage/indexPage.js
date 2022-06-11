@@ -3,7 +3,9 @@ import FB from "./../../resources/icons/FB";
 import IG from "./../../resources/icons/IG";
 import WA from "./../../resources/icons/WA";
 import Etsy from "./../../resources/icons/Etsy";
-import IGtext from './../../resources/icons/IGtext'
+import IGtext from "./../../resources/icons/IGtext";
+import Loading from "../loadingPage/Loading";
+import IGsmall from "../../resources/icons/IGsmall";
 // import Video from "./../../resources/videos/girlWalkSlow.mp4";
 // import Video from "./../../resources/videos/inkVideoLQ.mov";
 // import Video from "./../../resources/videos/inkDrip.mp4";
@@ -11,6 +13,7 @@ import "./indexPage.css";
 
 export default function indexPage({ nav, offsetY }) {
   const [IGAPI, setIGAPI] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
   const url =
     "https://graph.instagram.com/5256198047808423/media?fields=id,caption,permalink,media_url&access_token=IGQVJWZAnhDVE1rcGdPcUUtY19nLTVqYUIwdTY3NkxKX3hydjNLQU5xQ0ZAteU5PY0VZAeEZAFVDVBVlFiWHlxZA2JFWkltLTJ2Unl6TFpuMW5fOVJZAc3k0aGE5WmloSWpUZAW5aVWxvQ3FSeWRpZA0lQNndGVgZDZD"; // ----- URL for fughesi_ink IG feed with access token ------
 
@@ -19,19 +22,22 @@ export default function indexPage({ nav, offsetY }) {
     window.scrollTo(0, 0);
   }, []);
 
-  // function for API URL and updates state variable w/ returned data ------- IG photos
+  // API function to get photos from fughesi_ink IG page (up to 20) ------- IG photos
   function getAPI() {
+    setIsLoading(true);
+
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
         let x = [];
-        for (let i = 0; i < data.data.length; i++) {
+        for (let i = 0; i < data.data.length && i < 13; i++) {
           x.push(
             <a
               href={data.data[i].permalink}
               target="_blank"
               rel="noreferrer noopener"
             >
+              <IGsmall className="IGsmall" />
               <img
                 src={data.data[i].media_url}
                 alt={data.data[i].caption}
@@ -42,7 +48,8 @@ export default function indexPage({ nav, offsetY }) {
         }
         setIGAPI(x);
       })
-      .catch((e) => console.log(e));
+      .catch((e) => console.log(e))
+      .finally(() => setIsLoading(false));
   }
 
   // calling the API function with useEffect
@@ -162,10 +169,12 @@ export default function indexPage({ nav, offsetY }) {
           </a>
         </div>
       </section>
-      <div className="IGblock">
-      <IGtext className="IGfeed"/>
-      <div className="IGphotogrid">{IGAPI}</div>
-      </div>
+
+      <section className="IGblock" aria-label="Instagram photo grid">
+        <IGtext className="IGfeed" />
+        {isLoading && <Loading element={"element"} />}
+        {!isLoading && <div className="IGphotogrid">{IGAPI}</div>}
+      </section>
     </main>
   );
 }

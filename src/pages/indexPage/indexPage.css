@@ -140,7 +140,7 @@
 }
 
 .colorsDiv div:nth-child(2) {
-  background-color: var(--color5);
+  background-color: var(--color6);
 }
 .colorsDiv div:nth-child(3) {
   background-color: var(--color4);
@@ -162,12 +162,13 @@
   grid-template-rows: repeat(2, auto);
   width: 100%;
 
-  margin-top: 1.25rem;
   padding: 0.5rem;
-  background: linear-gradient(to left, #3498db, #3061ff);
-  /* background: linear-gradient(to left, #3498db, #2c3e50); */
+  background-color: var(--black);
+  box-shadow: var(--shadow3);
+}
 
-  box-shadow: var(--shadow);
+.info > * {
+  color: var(--white);
 }
 
 .tooltip {
@@ -177,8 +178,8 @@
 .tooltipText {
   visibility: hidden;
   position: absolute;
-  top: -50%;
-  left: calc(-50% - 0.3125rem);
+  top: -35%;
+  left: calc(-50% - 0.75rem);
   width: 7.5rem;
   background-color: rgba(0, 0, 0, 0.7);
   color: var(--white);
@@ -194,10 +195,6 @@
 
 .infoLeft {
   padding: 1rem;
-}
-
-.infoLeft p {
-  max-width: 20em;
 }
 
 .infoRight {
@@ -221,16 +218,31 @@
 }
 
 .socialsSVG {
-  fill: var(--black);
+  fill: var(--white);
   width: 3.125rem;
 }
 
 .IGphotogrid {
   margin: 0 0.75rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(6.5rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(6.5rem, 1fr));
   place-items: center;
   gap: 0.5rem;
+}
+
+.IGphotogrid > a {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 128.336px;
+}
+
+.IGsmall {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1.5rem;
+  fill: var(--white);
 }
 
 .IGblock {
@@ -247,6 +259,9 @@
 
 .IGphotos {
   padding: 0;
+  margin: 0;
+  box-shadow: var(--outline);
+  aspect-ratio: 1/1;
 }
 
 .blur {
