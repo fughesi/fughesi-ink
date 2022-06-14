@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
-import FB from "./../../resources/icons/FB";
-import IG from "./../../resources/icons/IG";
-import WA from "./../../resources/icons/WA";
-import Etsy from "./../../resources/icons/Etsy";
+import indexPageArr from "./indexPageJSON";
 import IGtext from "./../../resources/icons/IGtext";
 import Loading from "../loadingPage/Loading";
 import IGsmall from "../../resources/icons/IGsmall";
@@ -113,60 +110,19 @@ export default function indexPage({ nav, offsetY }) {
           </p>
         </div>
         <div className="infoRight">
-          <div className="tooltip">
-            <span className="tooltipText">ETSY store</span>
-            <a
-              target="_blank"
-              href="http://facebook.com/fughesiink"
-              data-scheme="fb://profile/fughesiink"
-              rel="noreferrer noopener"
-            >
-              <Etsy className="socialsSVG" />
-            </a>
-          </div>
-          <div className="tooltip">
-            <span className="tooltipText">Follow on Facebook</span>
-            <a
-              target="_blank"
-              href="http://facebook.com/fughesiink"
-              data-scheme="fb://profile/fughesiink"
-              rel="noreferrer noopener"
-            >
-              <FB className="socialsSVG" />
-            </a>
-          </div>
-
-          <div className="tooltip">
-            <span className="tooltipText">Follow on Instagram</span>
-            <a
-              target="_blank"
-              href="https://www.instagram.com/fughesi_ink/"
-              data-scheme="fb://profile/fughesiink"
-              rel="noreferrer noopener"
-            >
-              <IG className="socialsSVG" />
-            </a>
-          </div>
-          <div className="tooltip">
-            <span className="tooltipText">Message on WhatsApp</span>
-            <a
-              target="_blank"
-              href="https://wa.me/message/PKTZG4VTREDRN1"
-              data-scheme="fb://profile/fughesiink"
-              rel="noreferrer noopener"
-            >
-              <WA className="socialsSVG" />
-            </a>
-          </div>
-        </div>
-        <div className="whatsApp">
-          <a
-            href="https://wa.me/message/PKTZG4VTREDRN1"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            Message via WhatsApp
-          </a>
+          {indexPageArr.map((i) => (
+            <div className="tooltip">
+              <span className="tooltipText">{i.text}</span>
+              <a
+                target="_blank"
+                href={i.link}
+                data-scheme="fb://profile/fughesiink"
+                rel="noreferrer noopener"
+              >
+                {i.icon}
+              </a>
+            </div>
+          ))}
         </div>
       </section>
 

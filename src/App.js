@@ -29,6 +29,11 @@ import {
   SuperHero,
 } from "./JSON/__exportAllJSON";
 
+// ############################# icons ##############################
+
+import Tshirt from "./resources/icons/Tshirt";
+import Heart from "./resources/icons/Heart";
+
 // ############################# components ##############################
 const Navbar = lazy(() => import("./components/navbar/Navbar"));
 const FooterMobile = lazy(() =>
@@ -76,9 +81,6 @@ function App() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-
-
 
   //######################## RETURN ###################################
   return (
@@ -206,6 +208,14 @@ function App() {
           </Routes>
 
           <FooterMobile darkmode={darkmode} setMode={setMode} />
+
+          <section aria-label="bottomSig">
+            <div className="bottomSig">
+              <Tshirt width={12} />
+              <span className="plussign">+</span>
+              <Heart width={11} />
+            </div>
+          </section>
         </Suspense>
       </main>
     </BrowserRouter>

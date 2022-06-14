@@ -1,6 +1,7 @@
 @import url("./../../App.css");
 
 .inventoryPageMain {
+  min-height: 100vh;
   margin-bottom: 33rem;
 }
 
