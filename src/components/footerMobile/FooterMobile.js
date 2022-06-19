@@ -10,13 +10,13 @@ export default function FooterMobile({ darkmode, setMode }) {
   return (
     <div className="footer">
       <Link to="/Inventory" className="navLinks">
-        <Back width={25} />
+        <Back  className="footerSVG" />
       </Link>
       <Link to="/Inventory" className="navLinks">
-        <CC width={25} />
+        <CC  className="footerSVG" />
       </Link>
       <Link to="/Inventory" className="navLinks">
-        <Cart width={25} />
+        <Cart  className="footerSVG" />
       </Link>
       <DarkMode darkmode={darkmode} setMode={setMode} className="navLinks" />
     </div>

@@ -1,12 +1,15 @@
 @import url("./../../App.css");
 
 .navbar {
-  position: relative;
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  padding: 2rem;
+  padding: 2rem 2rem 1rem;
+  background-color: var(--white);
+  box-shadow: var(--shadow1);
+  z-index: 2;
   width: 100%;
 }
 
@@ -21,13 +24,14 @@
 
 .navbar h3 {
   color: var(--color3);
+  font-size: clamp(1.1875rem, 0.8661rem + 1.6071vw, 2.3125rem);
 }
 
 .hamburger:first-child,
 .hamburger:last-child {
   position: relative;
-  width: 2rem;
-  height: 2px;
+  width: clamp(2rem, 1.5rem + 2.5vw, 3.75rem);
+  height: 2.5px;
   background-color: var(--color3);
 }
 
@@ -39,10 +43,11 @@
 .hamburger:last-child::before {
   position: absolute;
   content: "";
-  width: 1.5rem;
-  height: 2px;
-  top: -0.3rem;
+  top: 0;
   left: 0;
+  height: 2.5px;
+  width: clamp(1.625rem, 1.125rem + 2.5vw, 3.375rem);
+  transform: translateY(-200%);
   background-color: var(--color6);
 }
 
@@ -57,6 +62,10 @@
 
   background-color: var(--color2);
   transition: 350ms ease-in-out;
+}
+
+.logoSVG {
+  width: clamp(2.1875rem, 1.4196rem + 3.8393vw, 4.875rem);
 }
 
 .flyoutLink {

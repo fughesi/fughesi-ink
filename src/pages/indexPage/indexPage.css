@@ -11,6 +11,7 @@
     "cards"
     "bottom";
   margin-bottom: 6rem;
+  overflow-x: hidden;
 }
 
 .topLandingPage {
@@ -19,45 +20,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   min-height: 100%;
   max-width: 100%;
   padding: 1.5rem;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  /* background-color: var(--color6);
-  mix-blend-mode: hue;
-  opacity: 0.7; */
-}
-
-.videoBG {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -2;
-  overflow-x: hidden;
-  user-select: none;
-  opacity: 0.7;
-}
-
-.ready {
-  position: absolute;
-  right: -5px;
-  bottom: 0;
-}
-
-.topLandingPage h1 {
-  margin-bottom: 0;
 }
 
 .topLandingPage em {
@@ -81,56 +47,28 @@
   background-color: var(--color4);
 }
 
-.hoverFill {
-  position: relative;
-  display: inline-block;
-  margin: 0 auto;
+.dissapearingInk {
   font-size: var(--h1);
-  font-weight: var(--bold);
-  color: transparent;
-  -webkit-text-stroke: var(--color4) 1px;
+  color: var(--white);
+  text-shadow: var(--shadow3), var(--shadow2);
 }
 
-.fug::before,
-.ink::before {
-  content: attr(data-fill-text);
-  position: absolute;
-  width: 0%;
-  color: var(--color4);
-  -webkit-text-stroke: transparent 0px;
-  overflow: hidden;
-  transition: width 0.8s ease-in-out;
-}
-
-.dot {
-  position: relative;
-  display: inline-block;
-  transform: rotate(-45deg) translateY(-30%);
-  font-size: 0.75rem;
+.welcomeTo {
+  display: block;
   font-size: var(--p1);
-  margin-right: 0.6rem;
+  font-weight: var(--bold);
+  text-align: center;
 }
 
-.dot::after {
-  content: "";
-  position: absolute;
-  bottom: 15%;
-  left: 103%;
-  height: 0.25em;
-  width: 0.25em;
-  border-radius: 50%;
-  background-color: var(--color4);
+.dissapearingInk h1 {
+  margin: -.75rem;
+  padding: 0;
 }
 
-.fug:hover::before,
-.ink:hover::before {
-  width: 100%;
-}
 
-.topLandingPage p {
-  margin: 0;
-  width: 100%;
-  font-size: var(--p0);
+.colorsDiv p {
+  color: var(--color4);
+  font-weight: var(--bold);
 }
 
 .colorsDiv div {
@@ -267,3 +205,5 @@
 .blur {
   filter: blur(var(--blur));
 }
+
+/* --------media quiries---------- */

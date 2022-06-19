@@ -47,7 +47,7 @@ export default function Navbar({ handleClick }) {
         <h3>FUGHESI ink</h3>
       </Link>
       <div className="logo">
-        <Logo width={35} ButtonsButtons />
+        <Logo className="logoSVG" />
       </div>
     </div>
   );

@@ -57,51 +57,41 @@ export default function indexPage({ nav, offsetY }) {
   return (
     <main className={nav ? "indexMain blur" : "indexMain"}>
       <section aria-describedby="index page" className="topLandingPage">
-        {/* <div className="overlay"></div> */}
-        {/* <video src={Video} autoPlay loop muted className="videoBG" /> */}
-        <h1>
-          <em style={{ transform: `translateY(${offsetY * 0.05}px)` }}>
-            Welcome to
-          </em>{" "}
-          <span
-            data-fill-text="FUGHESI"
-            className="fug hoverFill"
-            style={{ transform: `translateY(${offsetY * 0.075}px)` }}
-          >
-            FUGHESI
-          </span>{" "}
-          <span
-            className="dot"
+        <div
+          className="dissapearingInk"
+          style={{
+            transform: `translateY(${offsetY * 0.075}px)`,
+            filter: `blur(${offsetY < 750 ? offsetY * 0.15 : offsetY * 0}px)`,
+          }}
+        >
+          <p className="welcomeTo">WELCOME TO</p>
+          <h1>FUGHESI INK</h1>
+        </div>
+        <div className="colorsDiv">
+          <p
             style={{
-              transform: `translateY(${offsetY * 0.1}px) rotate(-45deg)`,
+              transform: `translateY(${offsetY * 0.2}px)`,
+              transform: `scale(${offsetY * 0.009})`,
+              opacity: `${offsetY * 18.9}`,
             }}
           >
-            dot
-          </span>
-          <span
-            data-fill-text="INK"
-            className="ink hoverFill"
-            style={{ transform: `translateY(${offsetY * 0.15}px)` }}
-          >
-            INK
-          </span>
-        </h1>
-
-        <div
-          className="colorsDiv"
-          style={{ transform: `translateY(${offsetY * 0.2}px)` }}
-        >
-          <p>a custom graphics T-shirt and apparel company!</p>
-
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+            A CUSTOM APPAREL COMPANY
+          </p>
         </div>
+        {/* <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div> */}
       </section>
 
-      <section className="info" aria-labelledby="information and socials">
+      <section className="IGblock" aria-label="Instagram photo grid">
+        <IGtext className="IGfeed" />
+        {isLoading && <Loading element={"element"} />}
+        {!isLoading && <div className="IGphotogrid">{IGAPI}</div>}
+      </section>
+
+      <section className="info" aria-label="information and socials">
         <div className="infoLeft">
           <h2>Connect with FUGHESI ink</h2>
           <p>
@@ -124,12 +114,6 @@ export default function indexPage({ nav, offsetY }) {
             </div>
           ))}
         </div>
-      </section>
-
-      <section className="IGblock" aria-label="Instagram photo grid">
-        <IGtext className="IGfeed" />
-        {isLoading && <Loading element={"element"} />}
-        {!isLoading && <div className="IGphotogrid">{IGAPI}</div>}
       </section>
     </main>
   );

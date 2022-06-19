@@ -3,7 +3,7 @@
 .contactMain {
   display: grid;
   height: 30rem;
-  min-height: 85vh;
+  min-height: 100vh;
   width: minmax(23.125rem, 100%);
   place-items: start center;
   margin-bottom: 1.5rem;

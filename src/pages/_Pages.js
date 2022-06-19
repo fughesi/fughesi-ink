@@ -6,6 +6,7 @@ const IndexPage = lazy(() => import("./indexPage/indexPage"));
 const InventoryPage = lazy(() => import("./inventoryPage/inventoryPage"));
 const SplashPage = lazy(() => import("./splashPage/SplashPage"));
 const LoadingPage = lazy(() => import("./loadingPage/Loading"));
+const ConfirmOrderPage = lazy(() => import("./confirmOrderPage/confirmOrderPage"));
 
 export {
   ContactPage,
@@ -14,4 +15,5 @@ export {
   InventoryPage,
   SplashPage,
   LoadingPage,
+  ConfirmOrderPage,
 };

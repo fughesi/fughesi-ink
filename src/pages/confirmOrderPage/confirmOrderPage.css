@@ -1,0 +1,8 @@
+@import url("./../../App.css");
+
+.confirmMain h1 {
+  text-shadow: var(--shadow3), var(--shadow2);
+  color: #fff;
+  text-align: center;
+  font-size: var(--size1);
+}

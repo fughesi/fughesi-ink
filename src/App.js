@@ -10,6 +10,7 @@ import {
   IndexPage,
   InventoryPage,
   SplashPage,
+  ConfirmOrderPage,
 } from "./pages/_Pages";
 
 // ############################ JSON imports for graphics ##########################
@@ -107,6 +108,7 @@ function App() {
             <Route path="/Inventory" element={<InventoryPage nav={nav} />} />
             <Route path="/FAQ" element={<FAQPage nav={nav} />} />
             <Route path="/Contact" element={<ContactPage nav={nav} />} />
+            <Route path="/Confirmation" element={<ConfirmOrderPage nav={nav} />} />
 
             {/* -------- graphics ---------------- */}
             <Route
