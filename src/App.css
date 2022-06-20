@@ -12,7 +12,8 @@
   --color4: #202020;
   --color5: #3061ff;
   --color6: #ffbe03;
-  --color6: #0d96d6;
+  --color7: #0d96d6;
+  --color6: #ff8c00;
   
 
   /* SIZES */
@@ -33,8 +34,9 @@
   --shadow1: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   --shadow2: 0px 0px 10px #0005;
-  --shadow3: 0.1rem 2px 0.2rem #0009;
+  --shadow3: 0 .3125rem .625rem #0007;
   --shadow4: 0rem 0px 1.0rem var(--color6);
+  --shadow5: 0.1rem 2px 0.2rem #0009;
   --outline: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
 }
 

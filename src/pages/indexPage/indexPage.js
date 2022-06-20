@@ -71,7 +71,7 @@ export default function indexPage({ nav, offsetY }) {
           <p
             style={{
               transform: `translateY(${offsetY * 0.2}px)`,
-              transform: `scale(${offsetY * 0.009})`,
+              transform: `scale(${offsetY * 0.007})`,
               opacity: `${offsetY * 18.9}`,
             }}
           >

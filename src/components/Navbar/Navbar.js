@@ -12,43 +12,46 @@ export default function Navbar({ handleClick }) {
   }
 
   return (
-    <div className="navbar">
-      {/* ----------flyout menu --------- */}
-      <div
-        className={hideNav ? "hamburgerMain" : "hamburgerMain closed"}
-        onClick={operateNav}
-      >
-        <Link to="/" className="flyoutLink">
-          HOME
-        </Link>
-        <Link to="/Inventory" className="flyoutLink">
-          GRAPHICS
-        </Link>
-        <Link to="/FAQ" className="flyoutLink">
-          FAQ
-        </Link>
-        <Link to="/Contact" className="flyoutLink">
-          CONTACT
-        </Link>
-        <p className="smallText">*click anywhere to close</p>
-      </div>
-      {/* ---------clickbox to activate function -------------- */}
-      <div
-        className="hamburgerClickBox"
-        onClick={() => (operateNav(), handleClick)}
-      ></div>
-      {/* ---------hamburger bars ------------- */}
-      <div>
-        <div className="hamburger"></div>
-        <div className="hamburger"></div>
-      </div>
+    <nav className="navbarNav">
+      <div className="navbar">
+        {/* ----------flyout menu --------- */}
+        <div
+          className={hideNav ? "hamburgerMain" : "hamburgerMain closed"}
+          onClick={operateNav}
+        >
+          <Link to="/" className="flyoutLink">
+            HOME
+          </Link>
+          <Link to="/Inventory" className="flyoutLink">
+            GRAPHICS
+          </Link>
+          <Link to="/FAQ" className="flyoutLink">
+            FAQ
+          </Link>
+          <Link to="/Contact" className="flyoutLink">
+            CONTACT
+          </Link>
+          <p className="smallText">*click anywhere to close</p>
+        </div>
+        {/* ---------clickbox to activate function -------------- */}
+        <div
+          className="hamburgerClickBox"
+          onClick={() => (operateNav(), handleClick)}
+        ></div>
+        {/* ---------hamburger bars ------------- */}
+        <div>
+          <div className="hamburger"></div>
+          <div className="hamburger"></div>
+        </div>
 
-      <Link to="/">
-        <h3>FUGHESI ink</h3>
-      </Link>
-      <div className="logo">
-        <Logo className="logoSVG" />
+        <Link to="/">
+          <h3>FUGHESI ink</h3>
+        </Link>
+        <div className="logo">
+          <Logo className="logoSVG" />
+        </div>
       </div>
-    </div>
+      <div className="blurBottonNav"></div>
+    </nav>
   );
 }
