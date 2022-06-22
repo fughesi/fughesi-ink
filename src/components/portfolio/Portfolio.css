@@ -9,6 +9,7 @@
 }
 
 .photoElement {
+  position: relative;
   display: flex;
   place-content: flex-end;
   flex-direction: column;
@@ -36,10 +37,11 @@ img {
   border-bottom: 0.125em solid var(--color1);
 }
 
-.cart {
+.cartIcon {
   position: absolute; 
-  top: 0;
-  right: 5%;
+  bottom: 0;
+  right: 5%; 
+  width: 25px;
 }
 
 .darkModeOn {

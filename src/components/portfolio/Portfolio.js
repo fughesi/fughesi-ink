@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Top from "../backToTop/BackToTop";
+import useLocalStorage from "../../useLocalStorage";
+import ShoppingCartIcon from "../../resources/icons/Cart";
 import AllPhotos from "../../JSON/__photoJSON";
+import Top from "../backToTop/BackToTop";
 import "./Portfolio.css";
 import {
   LazyLoadImage,
@@ -12,12 +14,19 @@ function Portfolio({ darkmode, blur, category }) {
   const [top, setTop] = useState(true);
   const [bottom, setBottom] = useState(!top);
   const [scrollHeight, setScrollHeight] = useState(window.scrollY);
+  const [cart, setCart] = useLocalStorage("cart", "");
 
   // ---------------- back to the top of the page when clicked -----------------
   function pageup() {
     setTop((i) => !i);
     setBottom((b) => !b);
   }
+
+  // ------------------ add item to cart and local storage ----------------
+  const addToCart = (item) => {
+    setCart([...cart, item]);
+    console.log("clicked the thing");
+  };
 
   //  ---------- filters photoJSON based on category ------------
   const selectedPhotos = AllPhotos.filter((i) => i.category === category);
@@ -33,16 +42,22 @@ function Portfolio({ darkmode, blur, category }) {
           alt={i.alt}
           className="graphic"
         />
-        {/* <div> */}
-        {/* <ShoppingCart key={i.id} id={i.id} src={i.src} alt={i.alt} /> */}
         <p className="nameIMG">{i.name}</p>
-        {/* </div> */}
+        <div onClick={() => addToCart(i)}>
+          <ShoppingCartIcon
+            key={i.id}
+            id={i.id}
+            src={i.src}
+            alt={i.alt}
+            className="cartIcon"
+          />
+        </div>
       </div>
     );
   });
 
   // -------- find scroll position ---------------
-  const watchHeight = (event) => {
+  const watchHeight = () => {
     setScrollHeight(window.scrollY);
   };
   useEffect(() => {
@@ -67,7 +82,7 @@ function Portfolio({ darkmode, blur, category }) {
     >
       {photoArr}
       {scrollHeight > 4000 && (
-        <Top handleClick={(() => pageup, scroll)} top={top} bottom={bottom} />
+        <Top handleClick={(() => pageup, scroll)}  />
       )}
     </section>
   );

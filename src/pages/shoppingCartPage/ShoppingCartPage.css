@@ -24,3 +24,7 @@
 .blur {
     filter: blur(var(--blur));
   }
+
+  .makeSmaller {
+      width: 60px;
+  }

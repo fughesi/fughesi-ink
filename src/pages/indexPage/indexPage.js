@@ -70,8 +70,8 @@ export default function indexPage({ blur, offsetY }) {
         <div className="colorsDiv">
           <p
             style={{
-              transform: `translateY(${offsetY * 0.2}px)`,
-              transform: `scale(${offsetY * 0.007})`,
+              transform: `translateY(${offsetY * 0.2}px) scale(${offsetY *
+                0.007})`,
               opacity: `${offsetY * 18.9}`,
             }}
           >

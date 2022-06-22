@@ -1,24 +1,24 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import useLocalStorage from "../../useLocalStorage";
 import products from "../../JSON/deletethis";
-import BlackHistory from "../../JSON/__photoJSON";
 import "./ShoppingCartPage.css";
 
 export default function ShoppingCartPage({ blur }) {
-  const [cart, setCart] = useState(
-    JSON.parse(localStorage.getItem("cart")) || []
-  );
+  
+  const [cart, setCart] = useLocalStorage("stuff", "")
+
+
+  // const [cart, setCart] = useState(
+  //   JSON.parse(localStorage.getItem("cart")) || []
+  // );
 
   const addToCart = (product) => {
     setCart([...cart, product]);
   };
 
-  function locallyStoreCart() {
-    localStorage.setItem("cart", JSON.stringify(cart));
-  }
-
-  useEffect(() => {
-    locallyStoreCart();
-  }, [cart]);
+  // useEffect(() => {
+  //   localStorage.setItem("cart", JSON.stringify(cart));
+  // }, [cart]);
 
 
   return (
@@ -29,7 +29,7 @@ export default function ShoppingCartPage({ blur }) {
           <div className="productsDiv">
             <h3>{product.name}</h3>
             <h4>$ {product.price}</h4>
-            <img src={product.image} alt={product.name} key={index} />
+            <img src={product.image} alt={product.name} key={index} className="makeSmaller"/>
             <button
               onClick={() => {
                 addToCart(product);
