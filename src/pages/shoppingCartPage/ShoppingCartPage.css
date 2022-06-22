@@ -8,3 +8,19 @@
     width: 5rem;
     aspect-ratio: 2/1;
 }
+
+.shoppingCartGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 2rem 20rem;
+}
+
+.productsDiv {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+.blur {
+    filter: blur(var(--blur));
+  }

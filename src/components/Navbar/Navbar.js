@@ -5,11 +5,11 @@ import "./Navbar.css";
 
 export default function Navbar({ handleClick }) {
   // state variables
-  const [hideNav, setHideNav] = useState(false);
+  const [hideNav, setHideNav] = useState(false); //holds boolean value for operateNav
 
   function operateNav() {
     return setHideNav((i) => !i);
-  }
+  } //opens and closes nav
 
   return (
     <nav className="navbarNav">
@@ -33,12 +33,12 @@ export default function Navbar({ handleClick }) {
           </Link>
           <p className="smallText">*click anywhere to close</p>
         </div>
-        {/* ---------clickbox to activate function -------------- */}
+        {/* -----------clickbox to activate function -------------- */}
         <div
           className="hamburgerClickBox"
           onClick={() => (operateNav(), handleClick)}
         ></div>
-        {/* ---------hamburger bars ------------- */}
+        {/* -------------hamburger bars ------------- */}
         <div>
           <div className="hamburger"></div>
           <div className="hamburger"></div>

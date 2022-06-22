@@ -8,7 +8,7 @@ import IGsmall from "../../resources/icons/IGsmall";
 // import Video from "./../../resources/videos/inkDrip.mp4";
 import "./indexPage.css";
 
-export default function indexPage({ nav, offsetY }) {
+export default function indexPage({ blur, offsetY }) {
   const [IGAPI, setIGAPI] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const url =
@@ -55,7 +55,7 @@ export default function indexPage({ nav, offsetY }) {
   }, []);
 
   return (
-    <main className={nav ? "indexMain blur" : "indexMain"}>
+    <main className={blur ? "indexMain blur" : "indexMain"}>
       <section aria-describedby="index page" className="topLandingPage">
         <div
           className="dissapearingInk"

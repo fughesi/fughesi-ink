@@ -14,7 +14,6 @@
   --color6: #ffbe03;
   --color7: #0d96d6;
   --color6: #ff8c00;
-  
 
   /* SIZES */
   --p0: clamp(0.69rem, calc(0.5rem + 0.99vw), 1.5rem);
@@ -34,10 +33,13 @@
   --shadow1: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   --shadow2: 0px 0px 10px #0005;
-  --shadow3: 0 .3125rem .625rem #0007;
-  --shadow4: 0rem 0px 1.0rem var(--color6);
+  --shadow3: 0 0.3125rem 0.625rem #0007;
+  --shadow4: 0rem 0px 1rem var(--color6);
   --shadow5: 0.1rem 2px 0.2rem #0009;
   --outline: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+
+  /* BLUR */
+  --blur: 5px;
 }
 
 *,
@@ -79,7 +81,7 @@ li {
 }
 
 .plussign {
-  padding: 0 .75rem;
+  padding: 0 0.75rem;
 }
 
 @keyframes FCP {

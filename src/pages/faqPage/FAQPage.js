@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./FAQPage.css";
 
-export default function FAQPage({ nav }) {
+export default function FAQPage({ blur }) {
   // state variables
   const [hide, setHide] = useState(null);
 
@@ -12,7 +12,7 @@ export default function FAQPage({ nav }) {
   }, []);
 
   return (
-    <main className={nav ? "aboutMain blur" : "aboutMain"}>
+    <main className={blur ? "aboutMain blur" : "aboutMain"}>
       <section className="accordionSection" aria-label="FAQ section">
         <h1>Frequently Asked Questions</h1>
         <div className="accordionContainer">

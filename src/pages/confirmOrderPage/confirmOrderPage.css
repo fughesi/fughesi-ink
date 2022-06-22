@@ -6,3 +6,7 @@
   text-align: center;
   font-size: var(--size1);
 }
+
+.blur {
+  filter: blur(var(--blur));
+}

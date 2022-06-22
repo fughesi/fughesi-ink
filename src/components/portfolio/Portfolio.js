@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import Top from "../top/BackToTop";
+import Top from "../backToTop/BackToTop";
+import AllPhotos from "../../JSON/__photoJSON";
 import "./Portfolio.css";
 import {
   LazyLoadImage,
   trackWindowScroll,
 } from "react-lazy-load-image-component";
 
-
-function Portfolio({ darkmode, nav, portfolio }) {
+function Portfolio({ darkmode, blur, category }) {
   // ---------- state variables ---------------------
   const [top, setTop] = useState(true);
   const [bottom, setBottom] = useState(!top);
@@ -19,8 +19,11 @@ function Portfolio({ darkmode, nav, portfolio }) {
     setBottom((b) => !b);
   }
 
-  // ------- map over the photoJSON file for all the graphics --------
-  const photoArr = portfolio.map((i) => {
+  //  ---------- filters photoJSON based on category ------------
+  const selectedPhotos = AllPhotos.filter((i) => i.category === category);
+
+  // ------- map over the selectedPhotos file for all the graphics ----------------
+  const photoArr = selectedPhotos.map((i) => {
     return (
       <div className="photoElement">
         <LazyLoadImage
@@ -54,18 +57,16 @@ function Portfolio({ darkmode, nav, portfolio }) {
     return window.scrollTo(0, 0);
   }
 
-  console.log(photoArr);
-
   // ##################  return  ##################
   return (
     <section
       aria-labelledby="graphics"
-      className={`${nav ? "portfolio blur" : "portfolio"} ${
+      className={`${blur ? "portfolio blur" : "portfolio"} ${
         darkmode ? "darkModeOn" : ""
       }`}
     >
       {photoArr}
-      {scrollHeight > 3000 && (
+      {scrollHeight > 4000 && (
         <Top handleClick={(() => pageup, scroll)} top={top} bottom={bottom} />
       )}
     </section>
