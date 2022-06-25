@@ -1,45 +1,25 @@
-import React from "react";
-import useLocalStorage from "../../useLocalStorage";
-import products from "../../JSON/deletethis";
+import React, { useState, useEffect } from "react";
 import "./ShoppingCartPage.css";
 
-export default function ShoppingCartPage({ blur }) {
-  
-  const [cart, setCart] = useLocalStorage("stuff", "")
+export default function ShoppingCartPage({ blur, cart }) {
+  const [cartItems, setCartItems] = useState(
+    JSON.parse(localStorage.getItem("cart"))
+  );
 
+  useEffect(() => {
+    setCartItems(JSON.parse(localStorage.getItem("cart")));
+  }, [cart]);
 
-  // const [cart, setCart] = useState(
-  //   JSON.parse(localStorage.getItem("cart")) || []
-  // );
-
-  const addToCart = (product) => {
-    setCart([...cart, product]);
-  };
-
-  // useEffect(() => {
-  //   localStorage.setItem("cart", JSON.stringify(cart));
-  // }, [cart]);
-
-
+  for (const item of cartItems) {
+    console.log(item.fee);
+  }
   return (
-    <section aria-label="shopping cart" className="shoppingCartGrid">
-      <h1>Products</h1>
-      {products.map((product, index) => (
-        <>
-          <div className="productsDiv">
-            <h3>{product.name}</h3>
-            <h4>$ {product.price}</h4>
-            <img src={product.image} alt={product.name} key={index} className="makeSmaller"/>
-            <button
-              onClick={() => {
-                addToCart(product);
-              }}
-            >
-              Add to cart {cart.length}
-            </button>
-          </div>
-        </>
-      ))}
-    </section>
+    <main className="shoppingCartMain">
+      <section className="shoppingCartGrid" aria-label="shopping cart grid">
+        <div className="shoppingCartTitle">Shopping Cart</div>
+        <div>total items: ({cartItems ? cartItems.length : 0})</div>
+        {/* <div>subtotal: {cartItems.fee.reduce()}</div> */}
+      </section>
+    </main>
   );
 }

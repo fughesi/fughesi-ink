@@ -1,30 +1,21 @@
-@import url('./../../App.css');
+@import url("./../../App.css");
 
-.shoppingCartMain {
-    margin-bottom: 8rem;
-}
 
-.addToCart {
-    width: 5rem;
-    aspect-ratio: 2/1;
-}
 
 .shoppingCartGrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 0 2rem 20rem;
+  margin: 0 2rem 20rem;
+  display: grid;
+  grid-template: repeat(4, 1fr) / 100%;
 }
 
-.productsDiv {
-    display: flex;
-    flex-direction: column;
-    place-items: center;
+.shoppingCartTitle {
+  font-size: var(--h1);
+  background-color: var(--color3);
+  font-weight: var(--bold);
+  color: var(--color6);
+  padding: 1.25em;
 }
 
 .blur {
-    filter: blur(var(--blur));
-  }
-
-  .makeSmaller {
-      width: 60px;
-  }
+  filter: blur(var(--blur));
+}

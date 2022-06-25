@@ -1,5 +1,6 @@
 import React, { useState, useEffect, lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import useLocalStorage from "./useLocalStorage";
 import "./App.css";
 
 // ########################## Pages / Components imports ##########################
@@ -29,14 +30,15 @@ const FooterMobile = lazy(() =>
 function App() {
   // variables
   const [blur, setBlur] = useState(false); //toggles blur on page
-  const [offsetY, setOffsetY] = useState(0); //tracks scrolling
+  
+  const [cart, setCart] = useLocalStorage("cart", ""); //manages the cart
   const [darkmode, setDarkmode] = useState(
     JSON.parse(localStorage.getItem("darkMode")) || false
-  ); //uses local storage to set and retrieve dark mode boolean
+  ); //-------- uses local storage to set and retrieve dark mode boolean -------
   const [width, setWidth] = useState(window.innerWidth); //tracks window width
-  // const breakpoint1 = 424;
-  // const breakpoint2 = 767;
-  // const breakpoint3 = 1023;
+  const breakpoint1 = 475;
+  const breakpoint2 = 767;
+  const breakpoint3 = 1023;
 
   // tracks window width as breakpoint for Navbar ------------- setWidth
   useEffect(() => {
@@ -45,28 +47,31 @@ function App() {
     return () => {
       window.removeEventListener("resize", handleResizeWindow);
     };
-  }, []);
+  }, [window.innerWidth]);
 
   // toggling dark mode on or off -------------- SetDarkMode
   function setMode() {
     setDarkmode((i) => {
-      localStorage.setItem("darkMode", JSON.stringify(!i));
       return !i;
     });
   }
+
+  // ---------- add item to cart and local storage -------------- addToCart
+  function addToCart(item) {
+    setCart([...cart, item]);
+  }
+
+  // adds dark mode to local storage when state changes  ----- dark mode local storage
+  useEffect(() => {
+    localStorage.setItem("darkMode", JSON.stringify(darkmode));
+  }, [darkmode]);
 
   // toggle state to update page blur ---------- TOGGLER
   function toggleBlur() {
     setBlur((i) => !i);
   }
 
-  // get page location in Y axis && parallax effect ----- HANDLESCROLL
-  const handleScroll = () => setOffsetY(window.pageYOffset);
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
+ 
   //######################## RETURN ################################
   return (
     <BrowserRouter>
@@ -84,8 +89,6 @@ function App() {
               element={
                 <IndexPage
                   blur={blur}
-                  offsetY={offsetY}
-                  handleScroll={handleScroll}
                 />
               }
             />
@@ -98,7 +101,7 @@ function App() {
             />
             <Route
               path="/ShoppingCart"
-              element={<ShoppingCartPage blur={blur} />}
+              element={<ShoppingCartPage blur={blur} cart={cart} />}
             />
 
             {/* ---------------------------- graphics ------------------------ */}
@@ -109,6 +112,8 @@ function App() {
                   blur={blur}
                   darkmode={darkmode}
                   category={"BlackHistory"}
+                  // offsetY={offsetY}
+                  addToCart={(i) => addToCart(i)}
                 />
               }
               exact
@@ -120,6 +125,8 @@ function App() {
                   blur={blur}
                   darkmode={darkmode}
                   category={"CatCartoon"}
+                  // offsetY={offsetY}
+                  addToCart={(i) => addToCart(i)}
                 />
               }
               exact
@@ -131,6 +138,8 @@ function App() {
                   blur={blur}
                   darkmode={darkmode}
                   category={"DogCartoon"}
+                  // offsetY={offsetY}
+                  addToCart={(i) => addToCart(i)}
                 />
               }
               exact
@@ -142,6 +151,8 @@ function App() {
                   blur={blur}
                   darkmode={darkmode}
                   category={"DragonCartoon"}
+                  // offsetY={offsetY}
+                  addToCart={(i) => addToCart(i)}
                 />
               }
               exact
@@ -153,6 +164,8 @@ function App() {
                   blur={blur}
                   darkmode={darkmode}
                   category={"MonsterCartoon"}
+                  // offsetY={offsetY}
+                  addToCart={(i) => addToCart(i)}
                 />
               }
               exact
@@ -164,6 +177,8 @@ function App() {
                   blur={blur}
                   darkmode={darkmode}
                   category={"SnakeCartoon"}
+                  // offsetY={offsetY}
+                  addToCart={(i) => addToCart(i)}
                 />
               }
               exact
@@ -175,6 +190,8 @@ function App() {
                   blur={blur}
                   darkmode={darkmode}
                   category={"Charicatures"}
+                  // offsetY={offsetY}
+                  addToCart={(i) => addToCart(i)}
                 />
               }
               exact
@@ -186,6 +203,8 @@ function App() {
                   blur={blur}
                   darkmode={darkmode}
                   category={"Pocket"}
+                  // offsetY={offsetY}
+                  addToCart={(i) => addToCart(i)}
                 />
               }
               exact
@@ -197,6 +216,8 @@ function App() {
                   blur={blur}
                   darkmode={darkmode}
                   category={"PopArt"}
+                  // offsetY={offsetY}
+                  addToCart={(i) => addToCart(i)}
                 />
               }
               exact
@@ -208,6 +229,8 @@ function App() {
                   blur={blur}
                   darkmode={darkmode}
                   category={"President"}
+                  // offsetY={offsetY}
+                  addToCart={(i) => addToCart(i)}
                 />
               }
               exact
@@ -219,6 +242,8 @@ function App() {
                   blur={blur}
                   darkmode={darkmode}
                   category={"Random"}
+                  // offsetY={offsetY}
+                  addToCart={(i) => addToCart(i)}
                 />
               }
               exact
@@ -230,6 +255,8 @@ function App() {
                   blur={blur}
                   darkmode={darkmode}
                   category={"SuperHero"}
+                  // offsetY={offsetY}
+                  addToCart={(i) => addToCart(i)}
                 />
               }
               exact
@@ -237,7 +264,9 @@ function App() {
           </Routes>
 
           {/* -------------------- menu bar for mobile ------------------------ */}
-          <FooterMobile darkmode={darkmode} setMode={setMode} />
+          {width < breakpoint3 && (
+            <FooterMobile darkmode={darkmode} setMode={setMode} />
+          )}
 
           <section aria-label="bottomSig">
             <div className="bottomSig">

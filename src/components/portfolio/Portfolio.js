@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import useLocalStorage from "../../useLocalStorage";
 import ShoppingCartIcon from "../../resources/icons/Cart";
 import AllPhotos from "../../JSON/__photoJSON";
 import Top from "../backToTop/BackToTop";
@@ -9,24 +8,20 @@ import {
   trackWindowScroll,
 } from "react-lazy-load-image-component";
 
-function Portfolio({ darkmode, blur, category }) {
-  // ---------- state variables ---------------------
-  const [top, setTop] = useState(true);
-  const [bottom, setBottom] = useState(!top);
-  const [scrollHeight, setScrollHeight] = useState(window.scrollY);
-  const [cart, setCart] = useLocalStorage("cart", "");
+function Portfolio({ darkmode, blur, category, addToCart, offsetY }) {
+  const [top, setTop] = useState(0); //state variable for scrolling back to top
+
+  // -------------get page location in Y axis  ----- TopScroll
+  const TopScroll = () => setTop(window.pageYOffset);
+  useEffect(() => {
+    window.addEventListener("scroll", TopScroll);
+    return () => window.removeEventListener("scroll", TopScroll);
+  }, []);
 
   // ---------------- back to the top of the page when clicked -----------------
   function pageup() {
-    setTop((i) => !i);
-    setBottom((b) => !b);
+    window.scrollTo(0, 0);
   }
-
-  // ------------------ add item to cart and local storage ----------------
-  const addToCart = (item) => {
-    setCart([...cart, item]);
-    console.log("clicked the thing");
-  };
 
   //  ---------- filters photoJSON based on category ------------
   const selectedPhotos = AllPhotos.filter((i) => i.category === category);
@@ -56,17 +51,6 @@ function Portfolio({ darkmode, blur, category }) {
     );
   });
 
-  // -------- find scroll position ---------------
-  const watchHeight = () => {
-    setScrollHeight(window.scrollY);
-  };
-  useEffect(() => {
-    window.addEventListener("scroll", watchHeight);
-    return () => {
-      window.removeEventListener("scroll", watchHeight);
-    };
-  }, []);
-
   // --------- click the arrow at bottom of page to go to top --------
   function scroll() {
     return window.scrollTo(0, 0);
@@ -76,14 +60,12 @@ function Portfolio({ darkmode, blur, category }) {
   return (
     <section
       aria-labelledby="graphics"
-      className={`${blur ? "portfolio blur" : "portfolio"} ${
+      className={`portfolio ${blur ? "blur" : ""} ${
         darkmode ? "darkModeOn" : ""
       }`}
     >
       {photoArr}
-      {scrollHeight > 4000 && (
-        <Top handleClick={(() => pageup, scroll)}  />
-      )}
+      {top > 4000 && <Top handleClick={(() => pageup, scroll)} />}
     </section>
   );
 }

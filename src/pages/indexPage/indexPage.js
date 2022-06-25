@@ -3,23 +3,29 @@ import indexPageArr from "./indexPageJSON";
 import IGtext from "./../../resources/icons/IGtext";
 import Loading from "../loadingPage/Loading";
 import IGsmall from "../../resources/icons/IGsmall";
-// import Video from "./../../resources/videos/girlWalkSlow.mp4";
-// import Video from "./../../resources/videos/inkVideoLQ.mov";
-// import Video from "./../../resources/videos/inkDrip.mp4";
 import "./indexPage.css";
 
-export default function indexPage({ blur, offsetY }) {
+export default function indexPage({ blur }) {
   const [IGAPI, setIGAPI] = useState([]);
+  const [offsetY, setOffsetY] = useState(0); //tracks scrolling
   const [isLoading, setIsLoading] = useState(false);
-  const url =
-    "https://graph.instagram.com/5256198047808423/media?fields=id,caption,permalink,media_url&access_token=IGQVJWZAnhDVE1rcGdPcUUtY19nLTVqYUIwdTY3NkxKX3hydjNLQU5xQ0ZAteU5PY0VZAeEZAFVDVBVlFiWHlxZA2JFWkltLTJ2Unl6TFpuMW5fOVJZAc3k0aGE5WmloSWpUZAW5aVWxvQ3FSeWRpZA0lQNndGVgZDZD"; // ----- URL for fughesi_ink IG feed with access token ------
+  const IG_key = process.env.REACT_APP_INSTAGRAM_API_KEY;
+  const url = `https://graph.instagram.com/5256198047808423/media?fields=id,caption,permalink,media_url&access_token=${IG_key}`; // ----- URL for fughesi_ink IG feed with access token ------
 
   // start position to top on page load
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  // API function to get photos from fughesi_ink IG page (up to 20) ------- IG photos
+   // get page location in Y axis && parallax effect ----- HandleScroll
+   const handleScroll = () => setOffsetY(window.pageYOffset);
+   useEffect(() => {
+     window.addEventListener("scroll", handleScroll);
+     return () => window.removeEventListener("scroll", handleScroll);
+   }, []);
+ 
+
+  // API function to get photos from fughesi_ink IG page (up to 12) ------- IG photos
   function getAPI() {
     setIsLoading(true);
 
@@ -45,7 +51,7 @@ export default function indexPage({ blur, offsetY }) {
         }
         setIGAPI(x);
       })
-      .catch((e) => console.log(e))
+      .catch((e) => console.error("failed to fetch"))
       .finally(() => setIsLoading(false));
   }
 
