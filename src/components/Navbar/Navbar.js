@@ -28,6 +28,12 @@ export default function Navbar({ handleClick }) {
           <Link to="/FAQ" className="flyoutLink">
             FAQ
           </Link>
+          <Link to="/ShoppingCart" className="flyoutLink">
+            CART
+          </Link>
+          <Link to="/ShoppingCart" className="flyoutLink">
+            CHECKOUT
+          </Link>
           <Link to="/Contact" className="flyoutLink">
             CONTACT
           </Link>

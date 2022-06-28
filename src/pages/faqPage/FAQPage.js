@@ -12,10 +12,13 @@ export default function FAQPage({ blur }) {
   }, []);
 
   return (
-    <main className={blur ? "aboutMain blur" : "aboutMain"}>
-      <section className="accordionSection" aria-label="FAQ section">
+    <main className={`FAQMain ${blur ? "blur" : ""}`}>
+      <section className="FAQtitleSection" aria-label="FAQ title section">
         <h1>Frequently Asked Questions</h1>
-        <div className="accordionContainer">
+      </section>
+      
+      <section className="accordionSection" aria-label="FAQ accordion section">
+        {/* <div className="accordionContainer"> */}
           <div
             className="accordionItem"
             onClick={(index) => setHide(index.target.id)}
@@ -233,7 +236,7 @@ export default function FAQPage({ blur }) {
               </div>
             )}
           </div>
-        </div>
+        {/* </div> */}
       </section>
     </main>
   );

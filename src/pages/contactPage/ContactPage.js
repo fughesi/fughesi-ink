@@ -17,6 +17,7 @@ export default function Contact({ blur }) {
             href="https://wa.me/message/PKTZG4VTREDRN1"
             target="_blank"
             rel="noreferrer noopener"
+            className="WAlink"
           >
             Message via WhatsApp
           </a>

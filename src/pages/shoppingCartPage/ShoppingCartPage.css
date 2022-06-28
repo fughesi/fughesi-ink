@@ -1,11 +1,18 @@
 @import url("./../../App.css");
 
-
-
-.shoppingCartGrid {
-  margin: 0 2rem 20rem;
+.shoppingCartMain {
   display: grid;
-  grid-template: repeat(4, 1fr) / 100%;
+  height: 100vh;
+  grid: repeat(4, 1fr) / 95vw;
+  grid-template-areas:
+    "title"
+    "stuff";
+  place-content: center;
+}
+
+.shoppingCartHead {
+  grid-area: title;
+  margin-top: 10rem;
 }
 
 .shoppingCartTitle {
@@ -14,6 +21,12 @@
   font-weight: var(--bold);
   color: var(--color6);
   padding: 1.25em;
+}
+
+.stuff {
+  grid-area: stuff;
+  font-size: var(--p0);
+  overflow-y: scroll;
 }
 
 .blur {

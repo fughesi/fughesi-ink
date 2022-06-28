@@ -1,26 +1,25 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import pics from "../../JSON/_generalJSON";
 import cartoons from "../../JSON/_cartoonJSON";
-import { nanoid } from "nanoid";
 import "./inventoryPage.css";
 
-export default function inventoryPage({ blur }) {
+export default function InventoryPage({ blur }) {
   // start position to top on page load
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  // ------- create inventory instances ---------------
+  // ------- create inventory buttons that lead to graphics categories ---------------
   function inventory(images) {
-    return images.map((i) => {
+    return images.map((i, index) => {
       return (
         <div className="inventoryCards">
-          <Link to={i.link}>
+          <Link to={i.link} key={index}>
             <img
               src={i.src}
               alt={i.alt}
-              key={nanoid()}
+              key={index}
               className="carouselLinks"
             />
           </Link>
@@ -31,14 +30,25 @@ export default function inventoryPage({ blur }) {
 
   return (
     <main className={`inventoryPageMain ${blur ? "blur" : ""}`}>
-      <div className="inventoryTitle">
-        <h1>Select a Graphic</h1>
-        <p>click a title below to view</p>
-      </div>
-      <h3>General collection</h3>
-      <div className="inventory">{inventory(pics)}</div>
-      <h3>Cartoon collection</h3>
-      <div className="inventory">{inventory(cartoons)}</div>
+      
+      <section className="inventoryTitle" aria-label="title section">
+        <div className="inventoryTitle">
+          <h1>Select a Graphic</h1>
+          <p>click a title below to view</p>
+        </div>
+      </section>
+
+      <section  className="scrollImageBTN" aria-label="general image section">
+        <h3>General collection</h3>
+        <div className="inventory">{inventory(pics)}</div>
+      </section>
+
+      <section  className="scrollImageBTN" aria-label="cartoon image section">
+        <h3>Cartoon collection</h3>
+        <div className="inventory">{inventory(cartoons)}</div>
+      </section>
+
+      <Outlet />
     </main>
   );
 }

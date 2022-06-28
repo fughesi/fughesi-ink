@@ -8,7 +8,7 @@ import {
   trackWindowScroll,
 } from "react-lazy-load-image-component";
 
-function Portfolio({ darkmode, blur, category, addToCart, offsetY }) {
+function Portfolio({ darkmode, blur, category, addToCart }) {
   const [top, setTop] = useState(0); //state variable for scrolling back to top
 
   // -------------get page location in Y axis  ----- TopScroll
@@ -18,7 +18,7 @@ function Portfolio({ darkmode, blur, category, addToCart, offsetY }) {
     return () => window.removeEventListener("scroll", TopScroll);
   }, []);
 
-  // ---------------- back to the top of the page when clicked -----------------
+  // ---------------- back to the top of the page when clicked ----------------- pageup
   function pageup() {
     window.scrollTo(0, 0);
   }
@@ -26,12 +26,12 @@ function Portfolio({ darkmode, blur, category, addToCart, offsetY }) {
   //  ---------- filters photoJSON based on category ------------
   const selectedPhotos = AllPhotos.filter((i) => i.category === category);
 
-  // ------- map over the selectedPhotos file for all the graphics ----------------
-  const photoArr = selectedPhotos.map((i) => {
+  // ------- map over the selectedPhotos file for all the graphics ---------------- photoarr
+  const photoArr = selectedPhotos.map((i, index) => {
     return (
-      <div className="photoElement">
+      <div className="photoElement" key={index}>
         <LazyLoadImage
-          key={i.id}
+          key={index}
           id={i.id}
           src={i.src}
           alt={i.alt}
@@ -40,7 +40,7 @@ function Portfolio({ darkmode, blur, category, addToCart, offsetY }) {
         <p className="nameIMG">{i.name}</p>
         <div onClick={() => addToCart(i)}>
           <ShoppingCartIcon
-            key={i.id}
+            key={index + 1000}
             id={i.id}
             src={i.src}
             alt={i.alt}
@@ -51,7 +51,7 @@ function Portfolio({ darkmode, blur, category, addToCart, offsetY }) {
     );
   });
 
-  // --------- click the arrow at bottom of page to go to top --------
+  // --------- click the BackToTop button to go to top of page --------
   function scroll() {
     return window.scrollTo(0, 0);
   }
@@ -65,6 +65,8 @@ function Portfolio({ darkmode, blur, category, addToCart, offsetY }) {
       }`}
     >
       {photoArr}
+
+      {/* -----back to top button --------- */}
       {top > 4000 && <Top handleClick={(() => pageup, scroll)} />}
     </section>
   );

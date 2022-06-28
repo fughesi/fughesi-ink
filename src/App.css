@@ -62,9 +62,16 @@ body {
 
 .App {
   min-height: 100vh;
-  opacity: 0;
-  animation: FCP 1500ms ease-in forwards;
+  /* opacity: 0;
+  animation: FCP 1500ms ease-in forwards; */
   overflow-x: hidden;
+}
+
+.darkModeOn section,
+.darkModeOn *::after,
+.darkModeOn *::before,
+.darkModeOn svg {
+  fill: #0d96d6;
 }
 
 a {
@@ -84,9 +91,9 @@ li {
 .plussign {
   padding: 0 0.75rem;
 }
-
+/* 
 @keyframes FCP {
   100% {
     opacity: 1;
   }
-}
+} */
