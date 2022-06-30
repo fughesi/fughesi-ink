@@ -71,13 +71,16 @@ function App() {
   }
 
   //changes accent color(s) different depending on if darkmode is on
+  const DM = document.documentElement.style;
   useEffect(() => {
     if (darkmode === true) {
-      document.documentElement.style.setProperty("--color6", "#0d96d6");
-      document.documentElement.style.setProperty("color-scheme", "dark");
+      DM.setProperty("--color6", "#0d96d6");
+      DM.setProperty("color-scheme", "dark");
+      DM.setProperty("--textInset", "initial");
     } else {
-      document.documentElement.style.setProperty("--color6", "#ff8c00");
-      document.documentElement.style.setProperty("color-scheme", "light");
+      DM.setProperty("--color6", "#ff8c00");
+      DM.setProperty("color-scheme", "light");
+      DM.setProperty("--textInset", "2px 3px 4px #fff, 0 0 0 #000");
     }
   }, [darkmode]);
 

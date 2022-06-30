@@ -24,17 +24,17 @@ export default function ShoppingCartPage({ blur, cart }) {
         className="shoppingCartHead"
         aria-label="title with subtotal and count"
       >
-        <div className="shoppingCartTitle">Shopping Cart</div>
+        <div className="shoppingCartTitle">
+          <h3 className="shoppingCart">Shopping Cart</h3>
+        </div>
         <div>
           total items: ({cartItems ? cartItems.length : 0})
           <br />
-          subtotal: $ {sum.toFixed(2)}
+          subtotal: <span className="moneySign">$</span>{sum.toFixed(2)}
         </div>
       </section>
 
-      <div className="stuff">
-        {/* stuff will go here */}
-      </div>
+      <div className="stuff">stuff will go here</div>
     </main>
   );
 }

@@ -1,4 +1,4 @@
-@import url('./../../App.css');
+@import url("./../../App.css");
 
 .topButton {
   position: fixed;
@@ -8,15 +8,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .backToTop {
   border-radius: 5rem;
   background: var(--color6);
-  box-shadow: var(--shadow1);
+  box-shadow: var(--shadow2);
   padding: 0.5em 1.25em;
-  
+
   font-size: var(--p1);
   color: var(--color4);
   text-align: center;
@@ -25,5 +24,3 @@
   cursor: pointer;
   user-select: none;
 }
-
-

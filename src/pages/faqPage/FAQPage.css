@@ -20,11 +20,12 @@
 
 .accordionItem {
   cursor: pointer;
-  background-color: var(--color1);
-  border-radius: 0.4rem;
   margin-bottom: 1rem;
+  border-radius: 0.4rem;
   padding: 1rem;
+  color: var(--color4);
   box-shadow: var(--shadow1);
+  background-color: var(--color1);
 }
 
 .answer {

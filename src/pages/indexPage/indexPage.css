@@ -28,9 +28,9 @@
 }
 
 .dissapearingInk {
+  position: relative;
   font-size: var(--h1);
-  color: var(--white);
-  text-shadow: var(--shadow5), var(--shadow2), var(--shadow3);
+  text-shadow: var(--shadow5), var(--shadow2);
 }
 
 .welcomeTo {
@@ -43,48 +43,6 @@
 .dissapearingInk h1 {
   margin: -0.75rem 0 -0.2rem;
   padding: 0;
-}
-
-.IGphotogrid {
-  margin: 0 0.75rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(6.5rem, 1fr));
-  place-items: center;
-  gap: 0.5rem;
-}
-
-.IGphotogrid > a {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  height: 128.336px;
-}
-
-.IGsmall {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 1.5rem;
-  fill: var(--white);
-}
-
-.IGblock {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.IGfeed {
-  width: 40%;
-  margin-bottom: 0.75rem;
-}
-
-.IGphotos {
-  padding: 0;
-  margin: 0;
-  box-shadow: var(--outline);
-  aspect-ratio: 1/1;
 }
 
 .socialSection {
@@ -154,8 +112,55 @@
   width: 3.125rem;
 }
 
+.IGphotogrid {
+  margin: 0 0.75rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(6.5rem, 1fr));
+  place-items: center;
+  gap: 0.5rem;
+}
+
+.IGphotogrid > a {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 128.336px;
+}
+
+.IGsmall {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1.5rem;
+  fill: var(--white);
+}
+
+.IGblock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.IGfeed {
+  width: 40%;
+  margin-bottom: 0.75rem;
+}
+
+.IGphotos {
+  padding: 0;
+  margin: 0;
+  box-shadow: var(--outline);
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
 .blur {
   filter: blur(var(--blur));
 }
 
 /* --------media quiries---------- */
+
+.information {
+  transform: translate3d(5deg, 190deg, 120deg);
+}

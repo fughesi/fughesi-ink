@@ -77,18 +77,24 @@ export default function IndexPage({ blur }) {
         </div>
         <div className="dissapearingInk">
           <p className="welcomeTo">WELCOME TO</p>
-          <h1>FUGHESI INK</h1>
+          <h1 style={{
+            transform: `translateY(${offsetY * 0.05}px)`,
+          }}>FUGHESI INK</h1>
         </div>
         <div
           style={{
-            transform: `translateY(${offsetY * 0.075}px)`,
+            transform: `translateY(${offsetY * 0.175}px)`,
           }}
         >
           <p>A CUSTOM APPAREL COMPANY</p>
         </div>
       </section>
 
-      <section className="information" aria-label="information">
+      <section  aria-label="information">
+        
+        <div className="information"> 
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus eum ducimus veniam velit illo nam eveniet facere, tempore aperiam vero sunt totam iure! Temporibus ea molestias obcaecati id iste distinctio natus autem, suscipit facere debitis, quasi doloribus quaerat similique magni quod consectetur dolorum alias consequuntur vero delectus ducimus commodi cumque sint eaque? Veniam tempore corporis odio, dignissimos, officiis soluta non quidem voluptates facere dolorem voluptas doloremque distinctio omnis architecto deserunt iusto quam maiores sed ipsam debitis similique dolor vero. Repudiandae a deleniti nesciunt, magnam hic earum dolor in molestiae! Minus ipsum numquam veritatis! Iure enim perspiciatis fugiat incidunt accusamus exercitationem nobis quidem odit eum atque temporibus repellat facilis quasi natus, numquam magnam deleniti aperiam totam quis. Odit aperiam dignissimos, illum, molestiae tempora sunt vero quidem repellat esse ullam possimus iusto laboriosam fugit! Perspiciatis id suscipit facilis fugiat incidunt totam modi adipisci odio facere. Quasi, natus ullam iusto distinctio velit mollitia magni numquam modi nemo, eius explicabo. Repudiandae a cumque est quibusdam, repellendus neque maiores eos iure, quia aspernatur, quo vitae asperiores doloremque dolorum illum ipsam architecto. Pariatur ut nulla maiores aliquid, molestiae perspiciatis, asperiores accusamus reiciendis quos, necessitatibus perferendis! Quidem iure incidunt vero repudiandae distinctio facilis quos! Repellat, quo ex.
+          </div>
         {/* THINGS! */}
       </section>
 

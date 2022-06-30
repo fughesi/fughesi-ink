@@ -1,3 +1,35 @@
+/* ######### FONT STACKS ######### */
+/* oswald-300 - latin */
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 300;
+  src: local("oswald"),
+    url("./fonts/oswald-v48-latin-300.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("./fonts/oswald-v48-latin-300.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* oswald-regular - latin */
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: local("oswald"),
+    url("./fonts/oswald-v48-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("./fonts/oswald-v48-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* oswald-700 - latin */
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 700;
+  src: local("oswald"),
+    url("./fonts/oswald-v48-latin-700.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("./fonts/oswald-v48-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 :root {
   /* COLORS */
   --white: hsl(0, 0%, 100%);
@@ -30,8 +62,9 @@
   --bold: 700;
 
   /* SHADOWS */
-  --shadow1: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  --textInset: 2px 3px 4px #fff, 0 0 0 #000;
+  --shadow1: 0px 2px 1px -1px #0002, 0px 1px 1px 0px #00000014,
+    0px 1px 3px 0px #00000012;
   --shadow2: 0px 0px 10px #0005;
   --shadow3: 0 0.3125rem 0.625rem #0007;
   --shadow4: 0rem 0px 1rem var(--color6);
@@ -62,8 +95,8 @@ body {
 
 .App {
   min-height: 100vh;
-  /* opacity: 0;
-  animation: FCP 1500ms ease-in forwards; */
+  opacity: 0;
+  animation: FCP 1500ms ease-in forwards;
   overflow-x: hidden;
 }
 
@@ -91,9 +124,11 @@ li {
 .plussign {
   padding: 0 0.75rem;
 }
-/* 
+
+/***** ------- ANIMATIONS ------- *****/
+
 @keyframes FCP {
   100% {
     opacity: 1;
   }
-} */
+}

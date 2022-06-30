@@ -18,15 +18,21 @@
 .shoppingCartTitle {
   font-size: var(--h1);
   background-color: var(--color3);
-  font-weight: var(--bold);
   color: var(--color6);
+  font-weight: var(--bold);
   padding: 1.25em;
+}
+.moneySign {
+  font-size: medium;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .stuff {
   grid-area: stuff;
   font-size: var(--p0);
   overflow-y: scroll;
+  opacity: 0;
+  animation: FCP 1500ms ease-in forwards;
 }
 
 .blur {
