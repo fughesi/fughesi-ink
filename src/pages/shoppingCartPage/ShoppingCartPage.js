@@ -3,8 +3,10 @@ import "./ShoppingCartPage.css";
 
 export default function ShoppingCartPage({ blur, cart }) {
   const [cartItems, setCartItems] = useState(
-    JSON.parse(localStorage.getItem("cart") || 0)
-  ); // start with all items in cart---------------------------
+    JSON.parse(localStorage.getItem("cart") || [])
+  );
+
+  // console.log(Object.values(cartItems).map((i)=>{name}))
 
   // retrieve "cart" items from local storage if state variable cart updates -----
   useEffect(() => {
@@ -20,7 +22,7 @@ export default function ShoppingCartPage({ blur, cart }) {
   // ##################### RETURN ##################
   return (
     <main className="shoppingCartMain">
-      <section
+      <header
         className="shoppingCartHead"
         aria-label="title with subtotal and count"
       >
@@ -30,11 +32,40 @@ export default function ShoppingCartPage({ blur, cart }) {
         <div>
           total items: ({cartItems ? cartItems.length : 0})
           <br />
-          subtotal: <span className="moneySign">$</span>{sum.toFixed(2)}
+          subtotal: <span className="moneySign">$</span>
+          {sum.toFixed(2)}
         </div>
-      </section>
+      </header>
 
-      <div className="stuff">stuff will go here</div>
+      <section className="shoppingCartItems" aria-label="items in the cart">
+        <h3>Cart Items</h3>
+        {cart ? (
+          [...new Map(cartItems.map((i) => [i["name"], i])).values()].map(
+            (i) => {
+              return (
+                <div>
+                  <img src={i.src} alt={i.alt} width={50} />
+                  <p>{i.name}</p>
+                </div>
+              );
+            }
+          )
+        ) : (
+          <p>no items in cart</p>
+        )}
+      </section>
+      <aside
+        className="shoppingCartSidebar"
+        aria-label="add and remove items in cart"
+      >
+        <h3>Totals</h3>
+        {/* {cart ? 
+        [...new Map(cartItems.map((i)=>{ 
+          return(i["name"],i.fee)
+        }))].reduce((x,y)=>{x +=y}) : ""
+      } */}
+        
+      </aside>
     </main>
   );
 }

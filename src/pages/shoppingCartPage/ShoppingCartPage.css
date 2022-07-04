@@ -3,16 +3,18 @@
 .shoppingCartMain {
   display: grid;
   height: 100vh;
-  grid: repeat(4, 1fr) / 95vw;
+  grid-gap: 0.5rem;
+  grid: repeat(2, 1fr) / 60% 30%;
   grid-template-areas:
-    "title"
-    "stuff";
+    "title title"
+    "items sidebar";
   place-content: center;
+  margin: 5rem 0 10rem;
 }
 
 .shoppingCartHead {
   grid-area: title;
-  margin-top: 10rem;
+  margin: 10rem 0 3rem;
 }
 
 .shoppingCartTitle {
@@ -22,17 +24,43 @@
   font-weight: var(--bold);
   padding: 1.25em;
 }
+
 .moneySign {
   font-size: medium;
   font-family: "Courier New", Courier, monospace;
 }
 
-.stuff {
-  grid-area: stuff;
-  font-size: var(--p0);
-  overflow-y: scroll;
+.shoppingCartItems,
+.shoppingCartSidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: var(--p1);
+  text-decoration: underline;
   opacity: 0;
+}
+
+.shoppingCartItems {
+  grid-area: items;
   animation: FCP 1500ms ease-in forwards;
+}
+
+.shoppingCartItems > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0.75rem;
+  font-size: var(--p0);
+}
+
+.shoppingCartSidebar {
+  grid-area: sidebar;
+  animation: FCP 2500ms ease-in forwards;
+}
+
+.shoppingCartSidebar > div {
+  display: flex;
+  flex-direction: column;
 }
 
 .blur {
